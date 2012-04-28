@@ -4,18 +4,18 @@
  * Mobile Dev Camp NYC 2012
  **/
 
-(function($) {
+(function ($) {
     /************************ Public functions ************************/
     $.icrowd = {
 
         // initialize
-        init: function(){
+        init:function () {
             __initView();
             __initFeedback();
         },
 
         // handle mouse motion
-        mouseDidMove: function(e) {
+        mouseDidMove:function (e) {
             // if not currently touching, do nothing
             if (!__feedbackIsTouching) return;
             // stash ints of pageX, pageY
@@ -26,20 +26,20 @@
             // intensity from 0 (indifferent) to 1 (intense)
             var i = 1 - ( y / $(window).height() );
             // update feedback with f,i
-            console.log('x=' + x + ', y=' + y + ' in window w=' + $(window).width() + ', h=' + $(window).height()  + ' will update view to f=' + f + ', i=' + i);
-            __updateFeedback(f,i);
+//            console.log('x=' + x + ', y=' + y + ' in window w=' + $(window).width() + ', h=' + $(window).height()  + ' will update view to f=' + f + ', i=' + i);
+            __updateFeedback(f, i);
         },
 
         // handle mouse touch / exit
-        mouseDidTouch:function(e) {
+        mouseDidTouch:function (e) {
             __feedbackTouch();
         },
-        mouseDidExit:function(e) {
+        mouseDidExit:function (e) {
             __feedbackExit();
         },
 
         // report if feedback is touching
-        feedbackIsTouching : function() {
+        feedbackIsTouching:function () {
             return __feedbackIsTouching;
         }
 
@@ -47,33 +47,45 @@
 
     /************************ Private functions ************************/
 
-    // view initialization
+        // view initialization
     function __initView() {
 
     }
 
     // view update
-    function __updateView(f,i) {
-        var green = (f+1)/2;
-        var red = 1-green;
-        red *= i;
-        green *= i;
-        // TODO: change the color of DIV#mainColorBlock to color specified by red and green at intensity i
+    function __updateView(f, i) {
+        // change the color of DIV#mainColorBlock to color specified by red and green at intensity i
+        var green = (f + 1) / 2;
+        var red = 1 - green;
+        var redHex = __hexTwoDigitFromRatio(red * i);
+        var greenHex = __hexTwoDigitFromRatio(green * i);
+        var colorstring = '#' + redHex + greenHex + '00';
+        $("#mainColorBlock").css({
+            backgroundColor:colorstring
+        });
     }
 
     // feedback initialization
     function __initFeedback() {
         // bind function to handle mouse move
-        $(document).mousemove(function(e){ $.icrowd.mouseDidMove(e); });
-        $(document).mousedown(function(e){ $.icrowd.mouseDidTouch(e); });
-        $(document).mouseup(function(e){ $.icrowd.mouseDidExit(e); });
-        $(document).mouseleave(function(e){ $.icrowd.mouseDidExit(e); });
+        $(document).mousemove(function (e) {
+            $.icrowd.mouseDidMove(e);
+        });
+        $(document).mousedown(function (e) {
+            $.icrowd.mouseDidTouch(e);
+        });
+        $(document).mouseup(function (e) {
+            $.icrowd.mouseDidExit(e);
+        });
+        $(document).mouseleave(function (e) {
+            $.icrowd.mouseDidExit(e);
+        });
     }
 
     // feedback update
-    function __updateFeedback(f,i) {
+    function __updateFeedback(f, i) {
         // TODO: send grain of data to host
-        __updateView(f,i);
+        __updateView(f, i);
     }
 
     // track if user is currently touching screen
@@ -81,8 +93,18 @@
     function __feedbackTouch(f) {
         __feedbackIsTouching = true;
     }
+
     function __feedbackExit(f) {
         __feedbackIsTouching = false;
+    }
+
+    // utilities
+    function __hexTwoDigitFromRatio(r) {
+        var hex = Math.floor(r * 255).toString(16);
+        while (hex.length < 2) {
+            hex = '0' + hex;
+        }
+        return hex;
     }
 
 })(jQuery);
