@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+
+/*
+* iCrowd
+* Nick Kaye & Chris Luken
+* Mobile Dev Camp NYC 2012
+**/
+
+?><!DOCTYPE html>
 <html>
 <head>
     <title></title>

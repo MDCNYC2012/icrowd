@@ -1,5 +1,7 @@
 /*
- * js file used for iCrowd client application
+ * iCrowd
+ * Nick Kaye & Chris Luken
+ * Mobile Dev Camp NYC 2012
  **/
 
 (function($) {
