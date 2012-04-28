@@ -1,0 +1,21 @@
+/*
+ * iCrowd
+ * Nick Kaye & Chris Luken
+ * Mobile Dev Camp NYC 2012
+ **/
+
+html,body {
+    overflow:hidden;
+    width:100%;
+    height:100%;
+}
+
+#mainColorBlock {
+    display:block;
+    background-color: #999;
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+}
