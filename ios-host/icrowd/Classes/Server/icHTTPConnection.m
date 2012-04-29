@@ -54,7 +54,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
     
 #pragma mark HTTP request handler for HELLO NEW USER
     /**
-     *  HELLO new USER
+     *  HELLO NEW USER
      */
 	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/hello"])
 	{
@@ -66,20 +66,17 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 		if (postData)
 			postStr = [[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding];
 		
-        postParameters = [postStr URLQueryParameters];
-        omLogDev(@"POST HELLO NEW USER parsed %i parameters",[postParameters count]);
-        for (NSString *key in postParameters)
-            omLogDev(@"%@:%@", key, [postParameters objectForKey:key]);
+        postParameters = [postStr URLQueryParameters];            
         
-        int userIdx = 1;
-        
-        NSString * userName = [[NSString alloc] initWithFormat:@"Nick"];
-        int userAge = 29;
-        int userGender = 2;
+        NSString * userName = (NSString *) [postParameters objectForKey:@"n"];
+        int userAge = [(NSString *) [postParameters objectForKey:@"a"] intValue];
+        int userGender = (gender) [(NSString *) [postParameters objectForKey:@"g"] intValue];
         
         response = [[[NSString alloc] initWithFormat:@"{user:{idx:\"%i\",name:\"%@\",age:\"%i\",gender:\"%i\"}}",userIdx,userName,userAge,userGender] dataUsingEncoding:NSUTF8StringEncoding];
         
-		omLogDev(@"HELLO NEW USER, response: %s", [response description]);
+        int userIdx = 1;
+        
+		omLogDev(@"HELLO NEW user:{idx:\"%i\",name:\"%@\",age:\"%i\",gender:\"%i\"}}",userIdx,userName,userAge,userGender);
 
 		return [[HTTPDataResponse alloc] initWithData:response];        
 	}  	

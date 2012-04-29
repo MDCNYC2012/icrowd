@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Outright Mental. All rights reserved.
 //
 
-#ifndef ontimeTests_alpha_global_h
-#define ontimeTests_alpha_global_h
+#ifndef ic_global_h
+#define ic_global_h
 
 #define DEBUG 1
 
@@ -16,5 +16,10 @@
 #else
 #define omLogDev(...) do{}while(0)
 #endif
+
+typedef enum {
+    female = 1,
+    male
+} gender;
 
 #endif
