@@ -101,9 +101,7 @@
 -(UITableViewCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user
 {
     UITableViewCell *cell = [self tableCellInit:tableView withIdentifier:@"UserCell"];
-   [cell.textLabel setText: user.name]; 
-//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//    cell.isAccessibilityElement = YES;
+    NSString *brief;
     
     // if we have a most recent grain, use it to set the color of the person's cell.
     if ([user.grain count]>=1) {
@@ -114,15 +112,19 @@
         if (1>red) red=1;
         green *= [grain.intensity floatValue];
         red *= [grain.intensity floatValue];
-        omLogDev(@"cell bgcolor red:%f green:%f",red,green);
-        
+        brief = [[NSString alloc] initWithFormat:@"%i grains from %@ yr %@",[user.grain count],user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];
         cell.contentView.backgroundColor = [UIColor colorWithRed:red green:green blue:0.f alpha:1.f]; 
-        NSString * brief = [[NSString alloc] initWithFormat:@"%i grains from %@ yr %@",[user.grain count],user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];
-        [cell.detailTextLabel setText: brief];
-    } else {
-        NSString * brief = [[NSString alloc] initWithFormat:@"%@ yr %@",user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];        
-        [cell.detailTextLabel setText: brief];
+        
+    // white cell bg
+    } else {        
+        brief = [[NSString alloc] initWithFormat:@"%@ yr %@",user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];        
+        cell.contentView.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f];         
     }
+    
+    [cell.detailTextLabel setText: brief];
+    [cell.detailTextLabel setBackgroundColor:[UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.f] ];
+    [cell.textLabel setText: user.name]; 
+    [cell.textLabel setBackgroundColor:[UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.f] ];
     
     return cell;
 }
