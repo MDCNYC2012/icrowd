@@ -43,8 +43,7 @@
 
         // user hello receive response
         userHelloRecv:function (p) {
-            // TODO: parse payload and save user id
-            console.log("received payload for user hello response",p);
+            __userHelloRecv(p);
         },
 
         // report if feedback is touching
@@ -81,7 +80,7 @@
     }
 
     // view update
-    function __updateView(f, i) {
+    function __viewUpdate(f, i) {
         // algorithm One: linear A>B fade
         /*
          var green = (f + 1) / 2;
@@ -99,14 +98,23 @@
         });
     }
 
+    // view switch off hello form and show main control
+    function __viewHelloDone() {
+        $('#helloForm').hide();
+        __initFeedback();
+    }
+
     var __userId;
+    var __userName;
+    var __userAge;
+    var __userGender;
     // user initialization
     function __initUser() {
         // TODO: set user id assign from host during hello method
         __userId = 5;
     }
 
-    // send current feedback state to host
+    // send hello new user to host
     function __userHelloSend(name,age,gender) {
         $.ajax({
             type:'POST',
@@ -119,6 +127,15 @@
         }).done(function (data) {
                 $.icrowd.userHelloRecv(data);
             });
+    }
+
+    // recv new user assignment from host
+    function __userHelloRecv(p) {
+        __userId = p.idx;
+        __userName = p.name;
+        __userAge = p.age;
+        __userGender = p.gender;
+        __viewHelloDone();
     }
 
     // feedback initialization
@@ -161,7 +178,7 @@
         // send grain of data to host
         __storeFeedback(f, i);
         // update the view
-        __updateView(f, i);
+        __viewUpdate(f, i);
     }
 
     // track if user is currently touching screen

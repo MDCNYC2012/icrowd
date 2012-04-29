@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [[icDataManager singleton] setUserTableDelegate:self];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -52,10 +52,21 @@
 /*
  */
 #pragma mark - icNetstatUserTableViewDelegate
-- (void)dataManagerDidReceiveNewData
+
+- (void)dataManagerDidReadAllUser
 {
+    omLogDev(@"An attempt is being made to ask the tableView to reload its data");
     [self.tableView reloadData];
 }
+
+- (void)dataManagerDidAddUser:(icUser *)user atIndex:(int)index
+{
+    omLogDev(@"An attempt is being made to insert a row");
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    NSArray* path = [NSArray arrayWithObject:indexPath];
+    [self.tableView insertRowsAtIndexPaths:path withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 /*
  */

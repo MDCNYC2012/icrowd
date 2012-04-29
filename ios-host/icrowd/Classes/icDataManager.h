@@ -31,7 +31,6 @@
 -(NSMutableArray *) readAll:(NSString *)entityName sortBy:(NSString *)sortBy;
 -(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g;
 -(NSMutableArray *) userReadAll;
--(void) userTableDelegateNotifyDataReady;
 
 #pragma mark core data stack
 -(BOOL) save;

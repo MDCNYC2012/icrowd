@@ -77,6 +77,10 @@ html,body {
     top: 20px;
 }
 
+.mainTipMiddle {
+    top: 48%;
+}
+
 .mainTipLeft {
     left: 20px;
 }

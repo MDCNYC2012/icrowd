@@ -85,7 +85,7 @@ static id __instance;
     int userCount = [self.userArray count];
     if (userCount > __userIndex)
         __userIndex = userCount;
-    [self userTableDelegateNotifyDataReady];
+    [self.userTableDelegate dataManagerDidReadAllUser];
     return self.userArray;
 }
 
@@ -99,13 +99,9 @@ static id __instance;
     // if save failure, fail
     if (![self save]) return nil;
     [self.userArray addObject:user];
-    [self userTableDelegateNotifyDataReady];
+    [self.userTableDelegate dataManagerDidReadAllUser];
+//    [self.userTableDelegate dataManagerDidAddUser:user atIndex:[self.userArray count]-1];
     return user;
-}
-
--(void) userTableDelegateNotifyDataReady
-{
-    [self.userTableDelegate dataManagerDidReceiveNewData];
 }
 
 #pragma mark - Core Data stack

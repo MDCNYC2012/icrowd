@@ -12,7 +12,8 @@
 
 #pragma mark - icNetstatUserTableViewDelegate
 @protocol icNetstatUserTableViewDelegate <NSObject>
-- (void)dataManagerDidReceiveNewData;
+-(void)dataManagerDidReadAllUser;
+-(void)dataManagerDidAddUser: (icUser *)user atIndex:(int)index;
 @end
 
 @interface icNetstatUserTableViewController : UITableViewController <icNetstatUserTableViewDelegate>
