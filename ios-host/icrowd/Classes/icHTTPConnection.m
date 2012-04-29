@@ -55,33 +55,22 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
      */
 	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/hello"])
 	{
-		omLogDev(@"POST HELLO NEW USER\n%@[%p]: postContentLength: %qu", THIS_FILE, self, requestContentLength);
-		
-		NSString *postStr = nil;
-		
+		NSString *postStr = nil;		
 		NSData *postData = [request body];
+        NSData *response = nil;
+        
 		if (postData)
-		{
 			postStr = [[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding];
-		}
 		
-		omLogDev(@"%@[%p]: postStr: %@", THIS_FILE, self, postStr);
-		
-		// Result will be of the form "answer=..."
-		
-		int answer = [[postStr substringFromIndex:7] intValue];
-		
-		NSData *response = nil;
-		if(answer == 10)
-		{
-			response = [@"<html><body>Correct<body></html>" dataUsingEncoding:NSUTF8StringEncoding];
-		}
-		else
-		{
-			response = [@"<html><body>Sorry - Try Again<body></html>" dataUsingEncoding:NSUTF8StringEncoding];
-		}
-		
-		return [[HTTPDataResponse alloc] initWithData:response];
+        int userIdx = 1;
+        NSString * userName = [[NSString alloc] initWithFormat:@"Nick"];
+        int userAge = 29;
+        int userGender = 2;
+        
+        response = [[[NSString alloc] initWithFormat:@"{user:{idx:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}",postStr,userIdx,userName,userAge,userGender] dataUsingEncoding:NSUTF8StringEncoding];
+        
+		omLogDev(@"HELLO new USER, reponse: %s", response);
+
 	}  	
     
     /*
@@ -89,32 +78,17 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
      */
 	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/grain"])
 	{
-		omLogDev(@"POST GRAIN\n%@[%p]: postContentLength: %qu", THIS_FILE, self, requestContentLength);
-		
-		NSString *postStr = nil;
-		
+		NSString *postStr = nil;		
 		NSData *postData = [request body];
+        NSData *response = nil;
+        
 		if (postData)
-		{
 			postStr = [[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding];
-		}
 		
-		omLogDev(@"%@[%p]: postStr: %@", THIS_FILE, self, postStr);
+		omLogDev(@"postStr: %@", postStr);
 		
-		// Result will be of the form "answer=..."
-		
-		int answer = [[postStr substringFromIndex:7] intValue];
-		
-		NSData *response = nil;
-		if(answer == 10)
-		{
-			response = [@"<html><body>Correct<body></html>" dataUsingEncoding:NSUTF8StringEncoding];
-		}
-		else
-		{
-			response = [@"<html><body>Sorry - Try Again<body></html>" dataUsingEncoding:NSUTF8StringEncoding];
-		}
-		
+        response = [[[NSString alloc] initWithFormat:@"postStr:%@",postStr] dataUsingEncoding:NSUTF8StringEncoding];
+        
 		return [[HTTPDataResponse alloc] initWithData:response];
 	}
     

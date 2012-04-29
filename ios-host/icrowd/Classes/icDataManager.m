@@ -19,6 +19,8 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize userArray = _userArray;
+
 
 /*
  */
@@ -35,15 +37,13 @@ static id __instance;
 
 /*
  */
-#pragma TARGET model
+#pragma USER model
 
-@synthesize userArray = _userArray;
-
--(NSMutableArray *) targetReadAll
+-(NSMutableArray *) readAll: (NSString *) entityName
 {
     
     // Define our table/entity to use
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Target" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName: entityName inManagedObjectContext:self.managedObjectContext];
     
     // Setup the fetch request
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -63,7 +63,7 @@ static id __instance;
         // This is a serious error and should advise the user to restart the application
     }     
     
-    self.targetArray = mutableFetchResults;
+    self.userArray = mutableFetchResults;
     
     return mutableFetchResults;
 }

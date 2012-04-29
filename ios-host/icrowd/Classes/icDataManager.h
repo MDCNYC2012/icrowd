@@ -25,7 +25,7 @@
 
 #pragma TARGET model
 @property (nonatomic, retain) NSMutableArray *userArray; 
--(NSMutableArray *) userReadAll;
+-(NSMutableArray *) userReadAll: (NSString *) entityName;
 -(icUser *) userCreateNew;
 
 #pragma mark core data stack
