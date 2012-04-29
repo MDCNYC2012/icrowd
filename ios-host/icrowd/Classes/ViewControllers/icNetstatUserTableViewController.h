@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface icNetstatUserTableViewController : UITableViewController
+@class icUser;
+
+#pragma mark - icNetstatUserTableViewDelegate
+@protocol icNetstatUserTableViewDelegate <NSObject>
+- (void)dataManagerDidReceiveNewData;
+@end
+
+@interface icNetstatUserTableViewController : UITableViewController <icNetstatUserTableViewDelegate>
+
+#pragma mark - Table view data source
+-(UITableViewCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user;
+-(UITableViewCell *) tableCellInit: (UITableView *)tableView withIdentifier: (NSString *)CellIdentifier;
 
 @end

@@ -20,7 +20,8 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize userArray = _userArray;
-
+@synthesize userTableDelegate = _userTableDelegate;
+static int __userIndex;
 
 /*
  */
@@ -37,9 +38,21 @@ static id __instance;
 
 /*
  */
+#pragma mark initializer
+
+-(icDataManager *) init
+{
+    self = [super init];
+    if (!self) return self;
+    [self userReadAll];
+    return self;
+}
+
+/*
+ */
 #pragma USER model
 
--(NSMutableArray *) readAll: (NSString *) entityName
+-(NSMutableArray *) readAll:(NSString *)entityName sortBy:(NSString *)sortBy
 {
     
     // Define our table/entity to use
@@ -50,7 +63,7 @@ static id __instance;
     [request setEntity:entity]; 
     
     // Define how we will sort the records
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortBy ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     [request setSortDescriptors:sortDescriptors];
     
@@ -63,18 +76,36 @@ static id __instance;
         // This is a serious error and should advise the user to restart the application
     }     
     
-    self.userArray = mutableFetchResults;
-    
     return mutableFetchResults;
 }
 
--(icUser *) userCreateNew;
+-(NSMutableArray *) userReadAll
+{
+    self.userArray = [self readAll:@"User" sortBy:@"idx"];
+    int userCount = [self.userArray count];
+    if (userCount > __userIndex)
+        __userIndex = userCount;
+    [self userTableDelegateNotifyDataReady];
+    return self.userArray;
+}
+
+-(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g
 {
     icUser * user = (icUser *)[NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
-    if ([self save])
-        return user;
-    else
-        return nil;
+    user.idx = [[NSNumber alloc]initWithInt:++__userIndex];
+    user.name = n;
+    user.age = a;
+    user.gender = g;
+    // if save failure, fail
+    if (![self save]) return nil;
+    [self.userArray addObject:user];
+    [self userTableDelegateNotifyDataReady];
+    return user;
+}
+
+-(void) userTableDelegateNotifyDataReady
+{
+    [self.userTableDelegate dataManagerDidReceiveNewData];
 }
 
 #pragma mark - Core Data stack
@@ -130,7 +161,7 @@ static id __instance;
     if (__managedObjectModel != nil)
         return __managedObjectModel;
     
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ontime" withExtension:@"mom"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"icrowd" withExtension:@"momd"];
     
     __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
@@ -153,7 +184,7 @@ static id __instance;
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ontime.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"icrowd.sqlite"];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];

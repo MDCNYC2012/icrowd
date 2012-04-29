@@ -1,9 +1,11 @@
 #import "icHTTPConnection.h"
+#import "icDataManager.h"
 #import "HTTPMessage.h"
 #import "HTTPDataResponse.h"
 #import "DDNumber.h"
 #import "HTTPLogging.h"
 #import "NSString+URLUtils.h"
+#import "icUser.h"
 
 // Log levels : off, error, warn, info, verbose
 // Other flags: trace
@@ -69,14 +71,14 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
         postParameters = [postStr URLQueryParameters];            
         
         NSString * userName = (NSString *) [postParameters objectForKey:@"n"];
-        int userAge = [(NSString *) [postParameters objectForKey:@"a"] intValue];
-        int userGender = (gender) [(NSString *) [postParameters objectForKey:@"g"] intValue];
+        NSNumber * userAge = [[NSNumber alloc] initWithInt: [[postParameters objectForKey:@"a"] intValue]];
+        NSNumber * userGender = [[NSNumber alloc] initWithInt: [[postParameters objectForKey:@"g"] intValue]];
         
-        int userIdx = 1;
+        icUser * user = [[icDataManager singleton] userCreateWithName:userName andAge:userAge andGender:userGender];
         
-        response = [[[NSString alloc] initWithFormat:@"{user:{idx:\"%i\",name:\"%@\",age:\"%i\",gender:\"%i\"}}",userIdx,userName,userAge,userGender] dataUsingEncoding:NSUTF8StringEncoding];
+        response = [[[NSString alloc] initWithFormat:@"{user:{idx:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}}",user.idx,user.name,user.age,user.gender] dataUsingEncoding:NSUTF8StringEncoding];
         
-		omLogDev(@"HELLO NEW user:{idx:\"%i\",name:\"%@\",age:\"%i\",gender:\"%i\"}}",userIdx,userName,userAge,userGender);
+		omLogDev(@"HELLO NEW user:{idx:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}",user.idx,user.name,user.age,user.gender);
 
 		return [[HTTPDataResponse alloc] initWithData:response];        
 	}  	

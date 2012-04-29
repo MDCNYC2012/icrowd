@@ -29,7 +29,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSLog(@"Noooo");    
+    
+    // init Data Manager
+    [self startDataManager];
     
     // init HTTP server
     [self startHttpServer];
@@ -40,30 +42,10 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     return YES;
 }
 
--(BOOL)startViewControllers
+-(BOOL)startDataManager
 {
-    // init window
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    // init navigation controller for "cloud" tab
-    UIViewController *viewOneController = [[icNetstatViewController alloc] initWithNibName:@"icNetstatViewController" bundle:nil];
-    UINavigationController * navOneController = [[UINavigationController alloc] init];
-    [navOneController.navigationBar setBarStyle:UIBarStyleBlack];
-    [navOneController pushViewController: viewOneController animated:NO];
-    
-    // init navigation controller for "dashboard" tab
-    UIViewController *viewTwoController = [[icReportDashboardViewController alloc] initWithNibName:@"icReportDashboardViewController" bundle:nil];    
-    UINavigationController * navTwoController = [[UINavigationController alloc] init];
-    [navTwoController.navigationBar setBarStyle:UIBarStyleBlack];
-    [navTwoController pushViewController: viewTwoController animated:NO];
-        
-    // init tab bar controller
-    self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:navOneController, navTwoController,nil];
-    self.window.rootViewController = self.tabBarController;
-    //    self.tabBarController.delegate = self.singleton;
-    
-    [self.window makeKeyAndVisible];
+    // naturally trigger the custom init method
+    [icDataManager singleton];
 }
 
 -(BOOL)startHttpServer
@@ -108,5 +90,30 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	}
 }
 
+-(BOOL)startViewControllers
+{
+    // init window
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // init navigation controller for "cloud" tab
+    UIViewController *viewOneController = [[icNetstatViewController alloc] initWithNibName:@"icNetstatViewController" bundle:nil];
+    UINavigationController * navOneController = [[UINavigationController alloc] init];
+    [navOneController.navigationBar setBarStyle:UIBarStyleBlack];
+    [navOneController pushViewController: viewOneController animated:NO];
+    
+    // init navigation controller for "dashboard" tab
+    UIViewController *viewTwoController = [[icReportDashboardViewController alloc] initWithNibName:@"icReportDashboardViewController" bundle:nil];    
+    UINavigationController * navTwoController = [[UINavigationController alloc] init];
+    [navTwoController.navigationBar setBarStyle:UIBarStyleBlack];
+    [navTwoController pushViewController: viewTwoController animated:NO];
+    
+    // init tab bar controller
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:navOneController, navTwoController,nil];
+    self.window.rootViewController = self.tabBarController;
+    //    self.tabBarController.delegate = self.singleton;
+    
+    [self.window makeKeyAndVisible];
+}
 
 @end

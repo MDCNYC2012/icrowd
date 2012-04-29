@@ -8,9 +8,11 @@
 
 #import "global.h"
 #import <Foundation/Foundation.h>
+#import "icNetstatUserTableViewController.h"
 
 #pragma mark classes
 @class icUser;
+
 
 #pragma mark interface
 @interface icDataManager : NSObject
@@ -19,14 +21,17 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, retain) id <icNetstatUserTableViewDelegate> userTableDelegate;
+@property (nonatomic, retain) NSMutableArray *userArray; 
 
 #pragma mark singleton
 +(icDataManager *) singleton;
 
 #pragma TARGET model
-@property (nonatomic, retain) NSMutableArray *userArray; 
--(NSMutableArray *) readAll: (NSString *) entityName;
--(icUser *) userCreateNew;
+-(NSMutableArray *) readAll:(NSString *)entityName sortBy:(NSString *)sortBy;
+-(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g;
+-(NSMutableArray *) userReadAll;
+-(void) userTableDelegateNotifyDataReady;
 
 #pragma mark core data stack
 -(BOOL) save;

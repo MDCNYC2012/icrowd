@@ -7,6 +7,8 @@
 //
 
 #import "icNetstatUserTableViewController.h"
+#import "icDataManager.h"
+#import "icUser.h"
 
 @interface icNetstatUserTableViewController ()
 
@@ -26,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,28 +49,53 @@
 	return YES;
 }
 
+/*
+ */
+#pragma mark - icNetstatUserTableViewDelegate
+- (void)dataManagerDidReceiveNewData
+{
+    [self.tableView reloadData];
+}
+
+/*
+ */
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[[icDataManager singleton] userArray] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    return [self tableCellUser:tableView withUser:[[[icDataManager singleton] userArray] objectAtIndex:indexPath.row]];
+}
+
+-(UITableViewCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user
+{
+    UITableViewCell *cell = [self tableCellInit:tableView withIdentifier:user.name];
+    NSString * brief = [[NSString alloc] initWithFormat:@"Age:%@ Gender:%@",user.age,user.gender];
+   [cell.textLabel setText: user.name]; 
+   [cell.detailTextLabel setText: brief];    
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    cell.isAccessibilityElement = YES;
+    return cell;
+}
+
+-(UITableViewCell *) tableCellInit: (UITableView *)tableView withIdentifier: (NSString *)CellIdentifier
+{
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; 
+    
+    if (cell == nil)
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier]; 
     
     return cell;
 }

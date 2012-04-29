@@ -1,1 +1,1 @@
-cp -fr js-client/Web/ ios-host/icrowd/Resources/Web/
+cp -fr js-client/Web/ ios-host/icrowd/Web/

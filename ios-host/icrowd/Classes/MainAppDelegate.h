@@ -14,8 +14,9 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
--(BOOL)startViewControllers;
+-(BOOL)startDataManager;
 -(BOOL)startHttpServer;
+-(BOOL)startViewControllers;
 
 #pragma mark core data stack
 -(icDataManager *) dataManager;
