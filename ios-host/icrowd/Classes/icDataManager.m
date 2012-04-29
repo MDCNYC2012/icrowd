@@ -104,6 +104,23 @@ static id __instance;
     return user;
 }
 
+#pragma mark DANGER ... flush database
+
+-(void)flushDatabase
+{
+    NSArray * stores = [self.persistentStoreCoordinator persistentStores];
+    for (int i=0; i<[stores count]; ++i)
+    {
+        NSPersistentStore *store = [stores objectAtIndex:i];
+    NSError *error;
+    NSURL *storeURL = store.URL;
+    [self.persistentStoreCoordinator removePersistentStore:store error:&error];
+        omLogDev(@"removeItemAtPath:%@",storeURL.path);
+    [[NSFileManager defaultManager] removeItemAtPath:storeURL.path error:&error];
+    }
+    [self persistentStoreCoordinatorInitNew];
+}
+
 #pragma mark - Core Data stack
 
 - (void)saveContext
@@ -176,10 +193,14 @@ static id __instance;
 // If the coordinator doesn't already exist, it is created and the application's store added to it.
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
-    if (__persistentStoreCoordinator != nil) {
+    if (__persistentStoreCoordinator != nil)
         return __persistentStoreCoordinator;
-    }
-    
+    [self persistentStoreCoordinatorInitNew];    
+    return __persistentStoreCoordinator;
+}
+
+-(NSPersistentStoreCoordinator *)persistentStoreCoordinatorInitNew
+{
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"icrowd.sqlite"];
     
     NSError *error = nil;
@@ -211,9 +232,8 @@ static id __instance;
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
-    }    
+    }
     
-    return __persistentStoreCoordinator;
 }
 
 #pragma mark - Application's Documents directory

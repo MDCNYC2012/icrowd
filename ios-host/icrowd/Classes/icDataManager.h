@@ -32,9 +32,13 @@
 -(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g;
 -(NSMutableArray *) userReadAll;
 
+#pragma mark DANGER ... flush database
+-(void)flushDatabase;
+
 #pragma mark core data stack
 -(BOOL) save;
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+-(void)saveContext;
+-(NSPersistentStoreCoordinator *)persistentStoreCoordinatorInitNew;
+-(NSURL *)applicationDocumentsDirectory;
 
 @end

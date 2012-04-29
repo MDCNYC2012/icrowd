@@ -11,4 +11,6 @@
 
 @interface icNetstatViewController : UIViewController
 
+-(void)flushWasPressed:(id)sender;
+
 @end

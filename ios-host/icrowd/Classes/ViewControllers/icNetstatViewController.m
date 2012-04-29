@@ -6,14 +6,32 @@
 //  Copyright (c) 2012 Outright Mental. All rights reserved.
 //
 
+// TODO: @sel flushWasPressed throw a safety "are you sure" dialog
+#pragma mark -
+
 #import "icNetstatViewController.h"
 #import "icNetstatUserTableViewController.h"
+#import "icDataManager.h"
 
 @interface icNetstatViewController ()
 
 @end
 
 @implementation icNetstatViewController
+
+/*
+ */
+#pragma mark navigation bar delegate
+-(void)flushWasPressed: (id) sender
+{
+    omLogDev(@"Flush was pressed.");
+    [[icDataManager singleton] flushDatabase];
+}
+
+
+/*
+ */
+#pragma mark nib / view protocol
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +46,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // navigation button: flush database
+    UIBarButtonItem *flushButton = [[UIBarButtonItem alloc] initWithTitle:@"Flush Database" style:UIBarButtonItemStylePlain target:self action:@selector(flushWasPressed:)];
+    self.navigationItem.leftBarButtonItem = flushButton;
+        
+    // set main view to user table view
     icNetstatUserTableViewController * viewController = [[icNetstatUserTableViewController alloc]init];
     [self addChildViewController:viewController];
     [self setView:viewController.tableView];
