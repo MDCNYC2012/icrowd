@@ -45,18 +45,12 @@ static id __instance;
 {
     self = [super init];
     if (!self) return self;
-    [self userReadAll];
     return self;
 }
 
 /*
  */
 #pragma USER model
-
--(NSMutableArray *) readAll:(NSString *)entityName sortBy:(NSString *)sortBy
-{
- 
-}
 
 -(NSMutableArray *) userReadAll
 {
@@ -75,17 +69,17 @@ static id __instance;
     
     // Fetch the records and handle an error
     NSError *error;
-    self.userArray = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy]; 
-    
+    NSMutableArray *outcome = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy]; 
     if (!self.userArray) {
         // Handle the error.
         // This is a serious error and should advise the user to restart the application
     }     
     
-    int userCount = [self.userArray count];
+    // store the largest count found for the next new idx
+    int userCount = [outcome count];
     if (userCount > __userIndex)
         __userIndex = userCount;
-    return self.userArray;
+    return outcome;
 }
 
 -(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g

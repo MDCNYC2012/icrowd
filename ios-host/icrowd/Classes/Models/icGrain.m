@@ -20,4 +20,11 @@
 @dynamic session;
 @dynamic user;
 
+-(BOOL)occurredWithinSeconds:(int)s
+{
+    NSDate * xDate = [NSDate dateWithTimeInterval:0 sinceDate:self.date];
+    omLogDev( @"%f < %i = %@", ABS([xDate timeIntervalSinceNow]), s, (ABS([xDate timeIntervalSinceNow]) < s) ?@"YES":@"NO");
+    return ABS([xDate timeIntervalSinceNow]) < s;
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "icNetstatUserTableViewController.h"
+#import "icNetstatUserTableCell.h"
 #import "icDataManager.h"
 #import "icUser.h"
 #import "icGrain.h"
@@ -52,6 +53,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [self visdataRelease];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -71,10 +73,29 @@
     if (!self.isViewLoaded || !self.view.window)
         return;
         
+    // rebuild the visible data for view objects to consume
+    [self visdataRebuild];
+    
     // ask the tableView to reload its data
     [self.tableView reloadData];
 }
 
+/*
+ */
+#pragma mark - Data Transform to Local Cache
+
+@synthesize visUsers = _visUsers;
+
+-(void)visdataRebuild
+{
+    self.visUsers = [[NSArray alloc]init];
+    self.visUsers = [[icDataManager singleton] userReadAll];    
+}
+
+-(void)visdataRelease
+{
+    self.visUsers = nil;
+}
 
 /*
  */
@@ -89,23 +110,24 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    int num = [[[icDataManager singleton] userArray] count];
+    int num = [self.visUsers count];
     return num ? num : 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (icNetstatUserTableCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self tableCellUser:tableView withUser:[[[icDataManager singleton] userArray] objectAtIndex:indexPath.row]];
+    return [self tableCellUser:tableView withUser:[self.visUsers objectAtIndex:indexPath.row]];
 }
 
--(UITableViewCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user
+-(icNetstatUserTableCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user
 {
-    UITableViewCell *cell = [self tableCellInit:tableView withIdentifier:@"UserCell"];
+    icNetstatUserTableCell *cell = [self tableCellInit:tableView withIdentifier:@"UserCell"];
     NSString *brief;
     
+    omLogDev(@"%@",[user.grainMostRecent occurredWithinSeconds:IOS_HOST_CLIENT_FEEDBACK_TIMEOUT]);
     // if we have a most recent grain, use it to set the color of the person's cell.
-    if ([user.grain count]>=1) {
-        icGrain * grain = [user.sortedGrains objectAtIndex:([user.sortedGrains count]-1)];
+    if (user.hasGrain && [user.grainMostRecent occurredWithinSeconds:IOS_HOST_CLIENT_FEEDBACK_TIMEOUT]) {
+        icGrain * grain = user.grainMostRecent;
         float green = [grain.feeling floatValue] + 1;
         if (1<green) green=1;
         float red = 1 - [grain.feeling floatValue];
@@ -114,6 +136,7 @@
         red *= [grain.intensity floatValue];
         brief = [[NSString alloc] initWithFormat:@"%i grains from %@ yr %@",[user.grain count],user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];
         cell.contentView.backgroundColor = [UIColor colorWithRed:red green:green blue:0.f alpha:1.f]; 
+        
     // white cell bg
     } else {        
         brief = [[NSString alloc] initWithFormat:@"%@ yr %@",user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];        
@@ -128,13 +151,14 @@
     return cell;
 }
 
--(UITableViewCell *) tableCellInit: (UITableView *)tableView withIdentifier: (NSString *)CellIdentifier
+-(icNetstatUserTableCell *) tableCellInit: (UITableView *)tableView withIdentifier: (NSString *)CellIdentifier
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    icNetstatUserTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier]; 
+        cell = [[icNetstatUserTableCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier]; 
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier]; 
     
     return cell;
 }

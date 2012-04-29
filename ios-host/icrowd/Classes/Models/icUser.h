@@ -18,12 +18,14 @@
 @property (nonatomic, retain) NSNumber * idx;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *grain;
-@property (nonatomic, retain) NSArray *sortedGrains;
+@property (nonatomic, retain) NSArray *grainSorted;
+@property (nonatomic, retain) icGrain *grainMostRecent;
 
 @end
 
 @interface icUser (CoreDataGeneratedAccessors)
 
+- (BOOL)hasGrain;
 - (void)addGrainObject:(icGrain *)value;
 - (void)removeGrainObject:(icGrain *)value;
 - (void)addGrain:(NSSet *)values;

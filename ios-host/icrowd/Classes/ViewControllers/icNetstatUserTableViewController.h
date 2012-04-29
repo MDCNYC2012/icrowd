@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @class icUser;
+@class icNetstatUserTableCell;
 
 #pragma mark - icNetstatUserTableViewDelegate
 @protocol icCloudNodesViewDelegate <NSObject>
@@ -18,8 +19,14 @@
 
 @interface icNetstatUserTableViewController : UITableViewController <icCloudNodesViewDelegate>
 
+#pragma mark - Data Transform to Local Cache
+@property (nonatomic,strong) NSArray * visUsers;
+-(void)visdataRebuild;
+-(void)visdataRelease;
+
 #pragma mark - Table view data source
--(UITableViewCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user;
--(UITableViewCell *) tableCellInit: (UITableView *)tableView withIdentifier: (NSString *)CellIdentifier;
+-(icNetstatUserTableCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user;
+-(icNetstatUserTableCell *) tableCellInit: (UITableView *)tableView withIdentifier: (NSString *)CellIdentifier;
+
 
 @end

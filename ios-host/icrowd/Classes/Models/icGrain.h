@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Outright Mental. All rights reserved.
 //
 
+#import "global.h"
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
@@ -19,5 +20,7 @@
 @property (nonatomic, retain) NSNumber * intensity;
 @property (nonatomic, retain) icSession *session;
 @property (nonatomic, retain) icUser *user;
+
+-(BOOL)occurredWithinSeconds:(int)s;
 
 @end
