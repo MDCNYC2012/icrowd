@@ -2,19 +2,4 @@
 <Bucket
    type = "1"
    version = "1.0">
-   <FileBreakpoints>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/Server/icHTTPConnection.h"
-         timestampString = "357384565.702272"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "7"
-         endingLineNumber = "7"
-         landmarkName = "@interface icHTTPConnection"
-         landmarkType = "2">
-      </FileBreakpoint>
-   </FileBreakpoints>
 </Bucket>

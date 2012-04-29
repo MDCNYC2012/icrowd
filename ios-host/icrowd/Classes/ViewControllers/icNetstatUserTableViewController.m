@@ -66,7 +66,11 @@
 
 - (void)mainDidUpdateInterval
 {
-//    omLogDev(@"An attempt is being made to ask the tableView to reload its data");
+    // if not visible, skip
+    if (!self.isViewLoaded || !self.view.window)
+        return;
+        
+    // ask the tableView to reload its data
     [self.tableView reloadData];
 }
 

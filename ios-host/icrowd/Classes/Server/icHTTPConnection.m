@@ -77,9 +77,9 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
         
         icUser * user = [[icDataManager singleton] userCreateWithName:userName andAge:userAge andGender:userGender];
         
-        response = [[[NSString alloc] initWithFormat:@"{\"user\":{\"id\":\"%@\",\"name\":\"%@\",\"age\":\"%@\",\"gender\":\"%@\"}}",user.idx,user.name,user.age,user.gender] dataUsingEncoding:NSUTF8StringEncoding];
+        response = [[[NSString alloc] initWithFormat:@"{\"user\":{\"idx\":\"%@\",\"name\":\"%@\",\"age\":\"%@\",\"gender\":\"%@\"}}",user.idx,user.name,user.age,user.gender] dataUsingEncoding:NSUTF8StringEncoding];
         
-		omLogDev(@"HELLO NEW user:{id:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}",user.idx,user.name,user.age,user.gender);
+		omLogDev(@"HELLO NEW user:{idx:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}",user.idx,user.name,user.age,user.gender);
 
 		return [[HTTPDataResponse alloc] initWithData:response];        
 	}  	

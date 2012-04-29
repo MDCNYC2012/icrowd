@@ -43,6 +43,11 @@
 #pragma mark icCloudStatusViewDelegate protocol
 -(void)mainDidUpdateInterval
 {
+    // if not visible, skip
+    if (!self.isViewLoaded || !self.view.window)
+        return;
+    
+    // set text of user count
     [self.textUserCountView setText:
      [[NSString alloc] initWithFormat:@"%i",
       [[[icDataManager singleton] userArray] count]

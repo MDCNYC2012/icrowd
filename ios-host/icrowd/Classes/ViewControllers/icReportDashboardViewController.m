@@ -8,6 +8,7 @@
 
 #import "icReportDashboardViewController.h"
 #import "icReportDashboardDataSource.h"
+#import "icDataManager.h"
 
 @interface icReportDashboardViewController ()
 
@@ -26,7 +27,17 @@
 
 -(void)mainDidUpdateInterval
 {
+    // if not visible, skip
+    if (!self.isViewLoaded || !self.view.window)
+        return;        
     
+    // reload all users
+    [[icDataManager singleton] userReadAll];    
+    // reload chart data
+    [chart reloadData];
+    // Trigger a redraw
+    [chart redrawChart];
+
 }
 
 /*
@@ -53,18 +64,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithRed:246.f/255.f green:246.f/255.f blue:246.f/255.f alpha:1.f];
+//    self.view.backgroundColor = [UIColor colorWithRed:246.f/255.f green:246.f/255.f blue:246.f/255.f alpha:1.f];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        /*
         // Shinobi Charts logo
         UIImageView *headerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
         [headerView setFrame:CGRectMake((self.view.bounds.size.width-446) /2, 0, 446, 92)];
         headerView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         [self.view addSubview:headerView];
         headerView = nil;
+         */
         
         // Create our chart
-        chart = [[ShinobiChart alloc] initWithFrame:CGRectMake(50, 150, self.view.bounds.size.width-100, self.view.bounds.size.height-200)];
+        chart = [[ShinobiChart alloc] initWithFrame:CGRectMake(20, 20, self.view.bounds.size.width-20, self.view.bounds.size.height-20)];
     } else {
         
         // Create our chart
@@ -152,10 +165,7 @@
 }
 
 - (IBAction)animateBars:(id)sender {
-    // Reload data to reset the animation
-    [chart reloadData];
-    // Trigger a redraw so animation will start immediately 
-    [chart redrawChart];
+    [self mainDidUpdateInterval];
 }
 
 @end

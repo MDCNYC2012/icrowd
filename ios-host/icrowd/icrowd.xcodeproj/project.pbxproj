@@ -210,11 +210,11 @@
 				01ED6C5F154D0D2000DBF6BD /* icNetstatUserTableViewController.h */,
 				01ED6C60154D0D2000DBF6BD /* icNetstatUserTableViewController.m */,
 				01ED6C61154D0D2000DBF6BD /* icNetstatUserTableViewController.xib */,
+				01FAB456154D87A300038D01 /* icReportDashboardDataSource.h */,
+				01FAB457154D87A300038D01 /* icReportDashboardDataSource.m */,
 				01CD331B154CB462000B5E7E /* icReportDashboardViewController.h */,
 				01CD331C154CB462000B5E7E /* icReportDashboardViewController.m */,
 				01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */,
-				01FAB456154D87A300038D01 /* icReportDashboardDataSource.h */,
-				01FAB457154D87A300038D01 /* icReportDashboardDataSource.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
