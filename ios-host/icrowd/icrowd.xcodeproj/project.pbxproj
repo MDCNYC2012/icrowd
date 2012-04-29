@@ -24,6 +24,8 @@
 		01ED6C3A154CCB9C00DBF6BD /* tabBarIcon-Cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C36154CCB9C00DBF6BD /* tabBarIcon-Cloud@2x.png */; };
 		01ED6C3C154CD64F00DBF6BD /* icrowdIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C3B154CD64F00DBF6BD /* icrowdIcon@2x.png */; };
 		01ED6C3E154CD65100DBF6BD /* icrowdIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C3D154CD65100DBF6BD /* icrowdIcon.png */; };
+		01ED6C48154CDA6F00DBF6BD /* icHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C47154CDA6E00DBF6BD /* icHTTPConnection.m */; };
+		01ED6C4B154CDB3E00DBF6BD /* icHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C4A154CDB3E00DBF6BD /* icHTTPServer.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -82,6 +84,10 @@
 		01ED6C36154CCB9C00DBF6BD /* tabBarIcon-Cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon-Cloud@2x.png"; sourceTree = "<group>"; };
 		01ED6C3B154CD64F00DBF6BD /* icrowdIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icrowdIcon@2x.png"; sourceTree = "<group>"; };
 		01ED6C3D154CD65100DBF6BD /* icrowdIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icrowdIcon.png; sourceTree = "<group>"; };
+		01ED6C46154CDA6E00DBF6BD /* icHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icHTTPConnection.h; sourceTree = "<group>"; };
+		01ED6C47154CDA6E00DBF6BD /* icHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icHTTPConnection.m; sourceTree = "<group>"; };
+		01ED6C49154CDB3E00DBF6BD /* icHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icHTTPServer.h; sourceTree = "<group>"; };
+		01ED6C4A154CDB3E00DBF6BD /* icHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icHTTPServer.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* icrowd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icrowd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -206,6 +212,10 @@
 				01CD3325154CB5AE000B5E7E /* icDataManager.m */,
 				01CD333E154CBD42000B5E7E /* MainAppDelegate.h */,
 				01CD333F154CBD42000B5E7E /* MainAppDelegate.m */,
+				01ED6C46154CDA6E00DBF6BD /* icHTTPConnection.h */,
+				01ED6C47154CDA6E00DBF6BD /* icHTTPConnection.m */,
+				01ED6C49154CDB3E00DBF6BD /* icHTTPServer.h */,
+				01ED6C4A154CDB3E00DBF6BD /* icHTTPServer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -462,6 +472,8 @@
 				01CD333A154CB90D000B5E7E /* icGrain.m in Sources */,
 				01CD3340154CBD42000B5E7E /* MainAppDelegate.m in Sources */,
 				01ED6C31154CC58A00DBF6BD /* icSession.m in Sources */,
+				01ED6C48154CDA6F00DBF6BD /* icHTTPConnection.m in Sources */,
+				01ED6C4B154CDB3E00DBF6BD /* icHTTPServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,8 @@
 #import "HTTPServer.h"
 #import "DDLog.h"
 #import "DDTTYLogger.h"
+#import "icHTTPConnection.h"
+#import "icHTTPServer.h"
 
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -72,16 +74,20 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	[DDLog addLogger:[DDTTYLogger sharedInstance]];
 	
 	// Create server using our custom MyHTTPServer class
-	httpServer = [[HTTPServer alloc] init];
+	httpServer = [[icHTTPServer alloc] init];
 	
 	// Tell the server to broadcast its presence via Bonjour.
 	// This allows browsers such as Safari to automatically discover our service.
 	[httpServer setType:@"_http._tcp."];
 	
+	// We're going to extend the base HTTPConnection class with our icHTTPConnection class.
+	// This allows us to do all kinds of customizations.
+	[httpServer setConnectionClass:[icHTTPConnection class]];
+
 	// Normally there's no need to run our server on any specific port.
 	// Technologies like Bonjour allow clients to dynamically discover the server's port at runtime.
 	// However, for easy testing you may want force a certain port so you can just hit the refresh button.
-	[httpServer setPort:12345];
+	[httpServer setPort:8080];
 	
 	// Serve files from our embedded Web folder
 	NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Web"];
