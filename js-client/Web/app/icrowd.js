@@ -36,6 +36,11 @@
             return __userId;
         },
 
+        // user send hello from form
+        userHelloSend:function (name,age,gender) {
+            __userHelloSend(name,age,gender);
+        },
+
         // user hello receive response
         userHelloRecv:function (p) {
             // TODO: parse payload and save user id
@@ -66,6 +71,13 @@
 
         // view initialization
     function __initView() {
+        $('#helloSubmit').click(function(e) {
+            $.icrowd.userHelloSend(
+                $('#userName').val(),
+                $('#userAge').val(),
+                $('#userGender').val()
+            )
+        });
     }
 
     // view update
@@ -95,11 +107,15 @@
     }
 
     // send current feedback state to host
-    function __userHelloSend(data) {
+    function __userHelloSend(name,age,gender) {
         $.ajax({
             type:'POST',
             url:__baseUrl() + 'hello',
-            data:data
+            data:{
+                n:name,
+                a:age,
+                g:gender
+            }
         }).done(function (data) {
                 $.icrowd.userHelloRecv(data);
             });
