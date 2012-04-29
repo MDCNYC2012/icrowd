@@ -17,5 +17,6 @@
 @dynamic intensity;
 @dynamic date;
 @dynamic user;
+@dynamic session;
 
 @end

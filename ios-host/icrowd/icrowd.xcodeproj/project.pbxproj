@@ -17,6 +17,7 @@
 		01CD3340154CBD42000B5E7E /* MainAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD333F154CBD42000B5E7E /* MainAppDelegate.m */; };
 		01ED6C2C154CC3B000DBF6BD /* icNetstatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C2B154CC3B000DBF6BD /* icNetstatViewController.xib */; };
 		01ED6C2E154CC42B00DBF6BD /* icReportDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */; };
+		01ED6C31154CC58A00DBF6BD /* icSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C30154CC58A00DBF6BD /* icSession.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -67,6 +68,8 @@
 		01CD333F154CBD42000B5E7E /* MainAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainAppDelegate.m; sourceTree = "<group>"; };
 		01ED6C2B154CC3B000DBF6BD /* icNetstatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = icNetstatViewController.xib; sourceTree = "<group>"; };
 		01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = icReportDashboardViewController.xib; sourceTree = "<group>"; };
+		01ED6C2F154CC58A00DBF6BD /* icSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icSession.h; sourceTree = "<group>"; };
+		01ED6C30154CC58A00DBF6BD /* icSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icSession.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* icrowd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icrowd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -165,6 +168,8 @@
 				01CD3333154CB8F0000B5E7E /* icUser.m */,
 				01CD3338154CB90D000B5E7E /* icGrain.h */,
 				01CD3339154CB90D000B5E7E /* icGrain.m */,
+				01ED6C2F154CC58A00DBF6BD /* icSession.h */,
+				01ED6C30154CC58A00DBF6BD /* icSession.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				01CD3334154CB8F0000B5E7E /* icUser.m in Sources */,
 				01CD333A154CB90D000B5E7E /* icGrain.m in Sources */,
 				01CD3340154CBD42000B5E7E /* MainAppDelegate.m in Sources */,
+				01ED6C31154CC58A00DBF6BD /* icSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,10 +450,12 @@
 		01CD32F1154CAF5E000B5E7E /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PREFIX_HEADER = icrowd_Prefix.pch;
 				INFOPLIST_FILE = "icrowd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = icrowd;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Adhoc;
@@ -455,10 +463,12 @@
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = icrowd_Prefix.pch;
 				INFOPLIST_FILE = "icrowd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = icrowd;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -466,10 +476,12 @@
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PREFIX_HEADER = icrowd_Prefix.pch;
 				INFOPLIST_FILE = "icrowd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = icrowd;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

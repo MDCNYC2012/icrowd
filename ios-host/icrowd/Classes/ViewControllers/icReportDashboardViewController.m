@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Dashboard", @"Dashboard");
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-Target"];
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-Dashboard"];
     }
     return self;
 }
@@ -39,7 +39,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
 }
 
 @end

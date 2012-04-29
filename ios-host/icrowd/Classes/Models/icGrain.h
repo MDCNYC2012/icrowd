@@ -7,6 +7,7 @@
 //
 
 #import "global.h"
+#import "icSession.h"
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
@@ -19,5 +20,6 @@
 @property (nonatomic, retain) NSNumber * intensity;
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) icUser *user;
+@property (nonatomic, retain) icSession *session;
 
 @end
