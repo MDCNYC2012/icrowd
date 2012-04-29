@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 Outright Mental. All rights reserved.
 //
 
+#import "constants.h"
+
 #ifndef ic_global_h
 #define ic_global_h
-
-#define DEBUG 1
 
 #ifdef DEBUG
 #define omLogDev(...) printf("%s [Line %d] %s\n",__PRETTY_FUNCTION__, __LINE__,[[NSString stringWithFormat:__VA_ARGS__] UTF8String])

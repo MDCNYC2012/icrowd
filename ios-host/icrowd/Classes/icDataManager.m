@@ -5,6 +5,8 @@
 //  Created by Nick Kaye on 4/22/12.
 //  Copyright (c) 2012 Outright Mental. All rights reserved.
 //
+// TODO: line 114 need to implement write-through CoreData for grain with user-relation
+#pragma mark -
 
 #import "icDataManager.h"
 #import "icUser.h"
@@ -21,6 +23,7 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize userArray = _userArray;
 @synthesize userTableDelegate = _userTableDelegate;
+@synthesize netstatViewDelegate = _netstatViewDelegate;
 static int __userIndex;
 
 /*
@@ -81,7 +84,7 @@ static id __instance;
 
 -(NSMutableArray *) userReadAll
 {
-    self.userArray = [self readAll:@"User" sortBy:@"idx"];
+    self.userArray = [self readAll:@"User" sortBy:@"id"];
     int userCount = [self.userArray count];
     if (userCount > __userIndex)
         __userIndex = userCount;
@@ -92,7 +95,7 @@ static id __instance;
 -(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g
 {
     icUser * user = (icUser *)[NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
-    user.idx = [[NSNumber alloc]initWithInt:++__userIndex];
+    user.id = [[NSNumber alloc]initWithInt:++__userIndex];
     user.name = n;
     user.age = a;
     user.gender = g;
@@ -100,7 +103,6 @@ static id __instance;
     if (![self save]) return nil;
     [self.userArray addObject:user];
     [self.userTableDelegate dataManagerDidReadAllUser];
-//    [self.userTableDelegate dataManagerDidAddUser:user atIndex:[self.userArray count]-1];
     return user;
 }
 
@@ -108,11 +110,30 @@ static id __instance;
  */
 #pragma mark GRAIN model
 
--(icGrain *) grainCreateWithUserIdx:(NSNumber *)uIdx andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i
+-(icGrain *) grainCreateForUserId:(NSNumber *)uId andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i
 {
+#pragma mark THE FOLLOWING CODE IS TERRIBLE. FIND THE CORRECT WAY TO DO THIS
+    // fetch the User we are going to create a grain for
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(id = %i)",[uId intValue]];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity: entity]; 
+    [request setPredicate: predicate];
+    
+    // Fetch the records and handle an error
+    NSError *error;
+    NSMutableArray *mutableFetchResults = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    if (!mutableFetchResults || ![mutableFetchResults count]>0)
+        return nil;
+        // Handle the error.
+        // This is a serious error and should advise the user to restart the application
+    
+    // get the user model from the fetch
+    icUser * user = [mutableFetchResults objectAtIndex:0];
+    
+    // create a grain for that user
     icGrain * grain = (icGrain *)[NSEntityDescription insertNewObjectForEntityForName:@"Grain" inManagedObjectContext:self.managedObjectContext];
-//    icUser * user = (icUser *)[NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
-//    grain.user =
+    grain.user = user;
     grain.feeling = f;
     grain.intensity = i;
     grain.date = [[NSDate alloc] init];
@@ -136,7 +157,7 @@ static id __instance;
     [self persistentStoreCoordinatorInitNew];
     [self managedObjectContextInitNew];
     [self.userArray removeAllObjects];
-    [self.userTableDelegate dataManagerDidDeleteAll];
+    [self.userTableDelegate dataManagerDidDeleteAll];    
 }
 
 #pragma mark - Core Data stack

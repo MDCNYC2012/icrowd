@@ -14,7 +14,9 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
+-(BOOL)startLogging;
 -(BOOL)startDataManager;
+-(BOOL)startConnectionManager;
 -(BOOL)startHttpServer;
 -(BOOL)startViewControllers;
 

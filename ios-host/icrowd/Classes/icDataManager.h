@@ -9,6 +9,7 @@
 #import "global.h"
 #import <Foundation/Foundation.h>
 #import "icNetstatUserTableViewController.h"
+#import "icNetstatViewController.h"
 
 #pragma mark classes
 @class icUser;
@@ -22,6 +23,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, retain) id <icNetstatUserTableViewDelegate> userTableDelegate;
+@property (nonatomic, retain) id <icNetstatViewDelegate> netstatViewDelegate;
 @property (nonatomic, retain) NSMutableArray *userArray; 
 
 #pragma mark singleton
@@ -33,7 +35,7 @@
 -(NSMutableArray *) userReadAll;
 
 #pragma mark GRAIN model
--(icGrain *) grainCreateWithUserIdx:(NSNumber *)uIdx andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i;
+-(icGrain *) grainCreateForUserId:(NSNumber *)uId andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i;
 
 #pragma mark DANGER ... flush database
 -(void)flushDatabase;

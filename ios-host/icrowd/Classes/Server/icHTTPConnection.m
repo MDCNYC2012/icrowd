@@ -77,9 +77,9 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
         
         icUser * user = [[icDataManager singleton] userCreateWithName:userName andAge:userAge andGender:userGender];
         
-        response = [[[NSString alloc] initWithFormat:@"{\"user\":{\"idx\":\"%@\",\"name\":\"%@\",\"age\":\"%@\",\"gender\":\"%@\"}}",user.idx,user.name,user.age,user.gender] dataUsingEncoding:NSUTF8StringEncoding];
+        response = [[[NSString alloc] initWithFormat:@"{\"user\":{\"id\":\"%@\",\"name\":\"%@\",\"age\":\"%@\",\"gender\":\"%@\"}}",user.id,user.name,user.age,user.gender] dataUsingEncoding:NSUTF8StringEncoding];
         
-		omLogDev(@"HELLO NEW user:{idx:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}",user.idx,user.name,user.age,user.gender);
+		omLogDev(@"HELLO NEW user:{id:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}",user.id,user.name,user.age,user.gender);
 
 		return [[HTTPDataResponse alloc] initWithData:response];        
 	}  	
@@ -100,15 +100,15 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 		
         postParameters = [postStr URLQueryParameters];            
         
-        NSNumber * grainUser = [[NSNumber alloc] initWithInt: [[postParameters objectForKey:@"u"] intValue]];
+        NSNumber * grainUserId = [[NSNumber alloc] initWithInt: [[postParameters objectForKey:@"u"] intValue]];
         NSNumber * grainFeeling = [[NSNumber alloc] initWithFloat: [[postParameters objectForKey:@"f"] floatValue]];
         NSNumber * grainIntensity = [[NSNumber alloc] initWithFloat: [[postParameters objectForKey:@"i"] floatValue]];
         
-        icGrain * grain = [[icDataManager singleton] grainCreateWithUserIdx:grainUser andFeeling:grainFeeling andIntensity:grainIntensity];
+        icGrain * grain = [[icDataManager singleton] grainCreateForUserId:grainUserId andFeeling:grainFeeling andIntensity:grainIntensity];
         
         response = [[[NSString alloc] initWithFormat:@"OK",requestContentLength] dataUsingEncoding:NSUTF8StringEncoding];
         
-		omLogDev(@"SAVED grain:{userId:\"%@\",feeling:\"%@\",intensity:\"%@\",date:\"%@\"}",grainUser,grain.feeling,grain.intensity,grain.date);
+		omLogDev(@"SAVED grain:{userId:\"%@\",feeling:\"%@\",intensity:\"%@\",date:\"%@\"}",grainUserId,grain.feeling,grain.intensity,grain.date);
         
 		return [[HTTPDataResponse alloc] initWithData:response];       
 	}

@@ -9,8 +9,22 @@
 #import "global.h"
 #import <UIKit/UIKit.h>
 
-@interface icNetstatViewController : UIViewController
+@class icDataManager;
 
+#pragma mark - icNetstatViewDelegate protocol
+@protocol icNetstatViewDelegate <NSObject>
+-(void)dataManagerDidUpdateUserCount;
+-(void)connectionManagerDidUpdateNetinfo;
+@end
+
+#pragma mark interface
+@interface icNetstatViewController : UIViewController <icNetstatViewDelegate>
+
+#pragma mark properties
+@property (strong, nonatomic) IBOutlet UITextView *textHostAddressView;
+@property (strong, nonatomic) IBOutlet UITextView *textUserCountView;
+
+#pragma mark button handlers
 -(void)flushWasPressed:(id)sender;
 
 @end

@@ -12,6 +12,7 @@
 #import "icNetstatViewController.h"
 #import "icNetstatUserTableViewController.h"
 #import "icDataManager.h"
+#import "icConnectionManager.h"
 
 @interface icNetstatViewController ()
 
@@ -21,11 +22,37 @@
 
 /*
  */
-#pragma mark navigation bar delegate
+#pragma mark properties
+
+@synthesize textHostAddressView;
+@synthesize textUserCountView;
+
+/*
+ */
+#pragma mark button handlers
+
 -(void)flushWasPressed: (id) sender
 {
     omLogDev(@"Flush was pressed.");
     [[icDataManager singleton] flushDatabase];
+}
+
+/*
+ */
+#pragma mark icNetstatViewDelegate protocol
+-(void)dataManagerDidUpdateUserCount
+{
+    [self.textUserCountView setText:
+     [[NSString alloc] initWithFormat:@"%i",
+      [[[icDataManager singleton] userArray] count]
+      ]];
+}
+
+/*
+ */
+#pragma mark icNetstatViewDelegate protocol
+-(void)connectionManagerDidUpdateNetinfo
+{
 }
 
 
@@ -38,28 +65,45 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Cloud Status", @"Cloud Status");
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-Cloud"]; 
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-CloudStatus"]; 
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self dataManagerDidUpdateUserCount];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    // delegate self as netstat view delegate for connection manager
+    [[icDataManager singleton] setNetstatViewDelegate:self];
+    
     // navigation button: flush database
     UIBarButtonItem *flushButton = [[UIBarButtonItem alloc] initWithTitle:@"Flush Database" style:UIBarButtonItemStylePlain target:self action:@selector(flushWasPressed:)];
     self.navigationItem.leftBarButtonItem = flushButton;
+    
+    // get ip address and set it up
+    NSString * hostAddress = [[NSString alloc] initWithFormat:@"http:// %@ : %i /",[[icConnectionManager singleton] getIPAddress],IOS_HOST_SERVER_PORT];
+    [self.textHostAddressView setText:hostAddress];
         
     // set main view to user table view
+    /*
     icNetstatUserTableViewController * viewController = [[icNetstatUserTableViewController alloc]init];
     [self addChildViewController:viewController];
     [self setView:viewController.tableView];
+     */
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
+    [self setTextHostAddressView:nil];
+    [self setTextUserCountView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -16,14 +16,16 @@
 
 @implementation icNetstatUserTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = NSLocalizedString(@"Cloud Nodes", @"Cloud Nodes");
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-CloudNodes"]; 
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {

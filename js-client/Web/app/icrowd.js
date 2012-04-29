@@ -98,7 +98,7 @@
 
     // view switch off hello form and show main control
     function __viewHelloDone() {
-        $('#helloForm').hide();
+        $('#helloForm').remove();
         __initFeedback();
     }
 
