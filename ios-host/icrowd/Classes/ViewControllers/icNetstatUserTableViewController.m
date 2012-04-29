@@ -9,6 +9,7 @@
 #import "icNetstatUserTableViewController.h"
 #import "icDataManager.h"
 #import "icUser.h"
+#import "icGrain.h"
 
 @interface icNetstatUserTableViewController ()
 
@@ -99,19 +100,37 @@
 
 -(UITableViewCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user
 {
-    UITableViewCell *cell = [self tableCellInit:tableView withIdentifier:user.name];
-    NSString * brief = [[NSString alloc] initWithFormat:@"Age:%@ Gender:%@",user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];
+    UITableViewCell *cell = [self tableCellInit:tableView withIdentifier:@"UserCell"];
    [cell.textLabel setText: user.name]; 
-   [cell.detailTextLabel setText: brief];    
 //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 //    cell.isAccessibilityElement = YES;
+    
+    // if we have a most recent grain, use it to set the color of the person's cell.
+    if ([user.grain count]>=1) {
+        icGrain * grain = [[user.grain allObjects] objectAtIndex:([user.grain count]-1)];
+        float green = [grain.feeling floatValue] + 1;
+        if (1>green) green=1;
+        float red = 1 - [grain.feeling floatValue];
+        if (1>red) red=1;
+        green *= [grain.intensity floatValue];
+        red *= [grain.intensity floatValue];
+        omLogDev(@"cell bgcolor red:%f green:%f",red,green);
+        
+        cell.contentView.backgroundColor = [UIColor colorWithRed:red green:green blue:0.f alpha:1.f]; 
+        NSString * brief = [[NSString alloc] initWithFormat:@"%i grains from %@ yr %@",[user.grain count],user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];
+        [cell.detailTextLabel setText: brief];
+    } else {
+        NSString * brief = [[NSString alloc] initWithFormat:@"%@ yr %@",user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];        
+        [cell.detailTextLabel setText: brief];
+    }
+    
     return cell;
 }
 
 -(UITableViewCell *) tableCellInit: (UITableView *)tableView withIdentifier: (NSString *)CellIdentifier
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; 
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier]; 
