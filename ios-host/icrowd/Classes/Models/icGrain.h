@@ -15,9 +15,9 @@
 
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSNumber * feeling;
-@property (nonatomic, retain) NSNumber * id;
+@property (nonatomic, retain) NSNumber * idx;
 @property (nonatomic, retain) NSNumber * intensity;
-@property (nonatomic, retain) icUser *user;
 @property (nonatomic, retain) icSession *session;
+@property (nonatomic, retain) icUser *user;
 
 @end

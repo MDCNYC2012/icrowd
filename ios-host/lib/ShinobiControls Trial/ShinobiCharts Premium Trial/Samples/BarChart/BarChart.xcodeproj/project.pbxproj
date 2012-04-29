@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		157AF8C514BDA38800214725 /* bw_portrait_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 157AF8C414BDA38800214725 /* bw_portrait_logo.png */; };
+		1588D93814C0481C00A9F20F /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1588D93714C0481C00A9F20F /* icon_retina.png */; };
+		1588D93A14C0482100A9F20F /* icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1588D93914C0482100A9F20F /* icon_small.png */; };
+		1588D93C14C0482D00A9F20F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1588D93B14C0482D00A9F20F /* Default.png */; };
+		7BC6832F1490B76E00813556 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC6832E1490B76E00813556 /* UIKit.framework */; };
+		7BC683311490B76E00813556 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC683301490B76E00813556 /* Foundation.framework */; };
+		7BC683331490B76E00813556 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC683321490B76E00813556 /* CoreGraphics.framework */; };
+		7BC683391490B76E00813556 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BC683371490B76E00813556 /* InfoPlist.strings */; };
+		7BC6833B1490B76E00813556 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6833A1490B76E00813556 /* main.m */; };
+		7BC6833F1490B76E00813556 /* BarChartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6833E1490B76E00813556 /* BarChartAppDelegate.m */; };
+		7BC683421490B76E00813556 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC683401490B76E00813556 /* MainWindow.xib */; };
+		7BC683451490B76E00813556 /* BarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC683441490B76E00813556 /* BarChartViewController.m */; };
+		7BC683481490B76E00813556 /* BarChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC683461490B76E00813556 /* BarChartViewController.xib */; };
+		7BC683511490B78700813556 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC683501490B78700813556 /* QuartzCore.framework */; };
+		7BC683531490B79300813556 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC683521490B79300813556 /* OpenGLES.framework */; };
+		7BC683561490B7B400813556 /* BarChartDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC683551490B7B400813556 /* BarChartDataSource.m */; };
+		86A06DDC14E1480800540E84 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A06DDB14E1480800540E84 /* Security.framework */; };
+		8C3CB87214BEEEB000011841 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB87114BEEEB000011841 /* icon.png */; };
+		8C3CB87514BEEEB200011841 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB87414BEEEB200011841 /* Default-Landscape~ipad.png */; };
+		8C3CB87714BEEEB400011841 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB87614BEEEB400011841 /* Default-Portrait~ipad.png */; };
+		8C3CB87914BEEEBD00011841 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB87814BEEEBD00011841 /* logo.png */; };
+		BC225AC7153DC3310090EDF7 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC225AC6153DC3310090EDF7 /* ShinobiCharts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		157AF8C414BDA38800214725 /* bw_portrait_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bw_portrait_logo.png; sourceTree = "<group>"; };
+		1588D93714C0481C00A9F20F /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_retina.png; path = ../icon_retina.png; sourceTree = "<group>"; };
+		1588D93914C0482100A9F20F /* icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_small.png; path = ../icon_small.png; sourceTree = "<group>"; };
+		1588D93B14C0482D00A9F20F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		7BC6832A1490B76E00813556 /* BarChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC6832E1490B76E00813556 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7BC683301490B76E00813556 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BC683321490B76E00813556 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7BC683361490B76E00813556 /* BarChart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BarChart-Info.plist"; sourceTree = "<group>"; };
+		7BC683381490B76E00813556 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BC6833A1490B76E00813556 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BC6833C1490B76E00813556 /* BarChart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BarChart-Prefix.pch"; sourceTree = "<group>"; };
+		7BC6833D1490B76E00813556 /* BarChartAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarChartAppDelegate.h; sourceTree = "<group>"; };
+		7BC6833E1490B76E00813556 /* BarChartAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarChartAppDelegate.m; sourceTree = "<group>"; };
+		7BC683411490B76E00813556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7BC683431490B76E00813556 /* BarChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarChartViewController.h; sourceTree = "<group>"; };
+		7BC683441490B76E00813556 /* BarChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarChartViewController.m; sourceTree = "<group>"; };
+		7BC683471490B76E00813556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BarChartViewController.xib; sourceTree = "<group>"; };
+		7BC683501490B78700813556 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7BC683521490B79300813556 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		7BC683541490B7B400813556 /* BarChartDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChartDataSource.h; sourceTree = "<group>"; };
+		7BC683551490B7B400813556 /* BarChartDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChartDataSource.m; sourceTree = "<group>"; };
+		86A06DDB14E1480800540E84 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8C3CB87114BEEEB000011841 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		8C3CB87414BEEEB200011841 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		8C3CB87614BEEEB400011841 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		8C3CB87814BEEEBD00011841 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../logo.png; sourceTree = "<group>"; };
+		BC225AC6153DC3310090EDF7 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BC683271490B76E00813556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86A06DDC14E1480800540E84 /* Security.framework in Frameworks */,
+				7BC683531490B79300813556 /* OpenGLES.framework in Frameworks */,
+				7BC683511490B78700813556 /* QuartzCore.framework in Frameworks */,
+				7BC6832F1490B76E00813556 /* UIKit.framework in Frameworks */,
+				7BC683311490B76E00813556 /* Foundation.framework in Frameworks */,
+				7BC683331490B76E00813556 /* CoreGraphics.framework in Frameworks */,
+				BC225AC7153DC3310090EDF7 /* ShinobiCharts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BC6831F1490B76E00813556 = {
+			isa = PBXGroup;
+			children = (
+				7BC683341490B76E00813556 /* BarChart */,
+				7BC6832D1490B76E00813556 /* Frameworks */,
+				7BC6832B1490B76E00813556 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BC6832B1490B76E00813556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BC6832A1490B76E00813556 /* BarChart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BC6832D1490B76E00813556 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC225AC6153DC3310090EDF7 /* ShinobiCharts.framework */,
+				86A06DDB14E1480800540E84 /* Security.framework */,
+				7BC683521490B79300813556 /* OpenGLES.framework */,
+				7BC683501490B78700813556 /* QuartzCore.framework */,
+				7BC6832E1490B76E00813556 /* UIKit.framework */,
+				7BC683301490B76E00813556 /* Foundation.framework */,
+				7BC683321490B76E00813556 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BC683341490B76E00813556 /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				7BC6833D1490B76E00813556 /* BarChartAppDelegate.h */,
+				7BC6833E1490B76E00813556 /* BarChartAppDelegate.m */,
+				7BC683401490B76E00813556 /* MainWindow.xib */,
+				7BC683431490B76E00813556 /* BarChartViewController.h */,
+				7BC683441490B76E00813556 /* BarChartViewController.m */,
+				7BC683541490B7B400813556 /* BarChartDataSource.h */,
+				7BC683551490B7B400813556 /* BarChartDataSource.m */,
+				7BC683461490B76E00813556 /* BarChartViewController.xib */,
+				157AF8C414BDA38800214725 /* bw_portrait_logo.png */,
+				8C3CB87A14BEEECE00011841 /* Images */,
+				7BC683351490B76E00813556 /* Supporting Files */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
+		7BC683351490B76E00813556 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BC683361490B76E00813556 /* BarChart-Info.plist */,
+				7BC683371490B76E00813556 /* InfoPlist.strings */,
+				7BC6833A1490B76E00813556 /* main.m */,
+				7BC6833C1490B76E00813556 /* BarChart-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C3CB87A14BEEECE00011841 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1588D93B14C0482D00A9F20F /* Default.png */,
+				1588D93914C0482100A9F20F /* icon_small.png */,
+				1588D93714C0481C00A9F20F /* icon_retina.png */,
+				8C3CB87614BEEEB400011841 /* Default-Portrait~ipad.png */,
+				8C3CB87414BEEEB200011841 /* Default-Landscape~ipad.png */,
+				8C3CB87114BEEEB000011841 /* icon.png */,
+				8C3CB87814BEEEBD00011841 /* logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BC683291490B76E00813556 /* BarChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BC6834B1490B76E00813556 /* Build configuration list for PBXNativeTarget "BarChart" */;
+			buildPhases = (
+				7BC683261490B76E00813556 /* Sources */,
+				7BC683271490B76E00813556 /* Frameworks */,
+				7BC683281490B76E00813556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarChart;
+			productName = BarChart;
+			productReference = 7BC6832A1490B76E00813556 /* BarChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BC683211490B76E00813556 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7BC683241490B76E00813556 /* Build configuration list for PBXProject "BarChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BC6831F1490B76E00813556;
+			productRefGroup = 7BC6832B1490B76E00813556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BC683291490B76E00813556 /* BarChart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BC683281490B76E00813556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC683391490B76E00813556 /* InfoPlist.strings in Resources */,
+				7BC683421490B76E00813556 /* MainWindow.xib in Resources */,
+				7BC683481490B76E00813556 /* BarChartViewController.xib in Resources */,
+				157AF8C514BDA38800214725 /* bw_portrait_logo.png in Resources */,
+				8C3CB87214BEEEB000011841 /* icon.png in Resources */,
+				8C3CB87514BEEEB200011841 /* Default-Landscape~ipad.png in Resources */,
+				8C3CB87714BEEEB400011841 /* Default-Portrait~ipad.png in Resources */,
+				8C3CB87914BEEEBD00011841 /* logo.png in Resources */,
+				1588D93814C0481C00A9F20F /* icon_retina.png in Resources */,
+				1588D93A14C0482100A9F20F /* icon_small.png in Resources */,
+				1588D93C14C0482D00A9F20F /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BC683261490B76E00813556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC6833B1490B76E00813556 /* main.m in Sources */,
+				7BC6833F1490B76E00813556 /* BarChartAppDelegate.m in Sources */,
+				7BC683451490B76E00813556 /* BarChartViewController.m in Sources */,
+				7BC683561490B7B400813556 /* BarChartDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BC683371490B76E00813556 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC683381490B76E00813556 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7BC683401490B76E00813556 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC683411490B76E00813556 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7BC683461490B76E00813556 /* BarChartViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC683471490B76E00813556 /* en */,
+			);
+			name = BarChartViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BC683491490B76E00813556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7BC6834A1490B76E00813556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BC6834C1490B76E00813556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BarChart/BarChart-Prefix.pch";
+				INFOPLIST_FILE = "BarChart/BarChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BC6834D1490B76E00813556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BarChart/BarChart-Prefix.pch";
+				INFOPLIST_FILE = "BarChart/BarChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BC683241490B76E00813556 /* Build configuration list for PBXProject "BarChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC683491490B76E00813556 /* Debug */,
+				7BC6834A1490B76E00813556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BC6834B1490B76E00813556 /* Build configuration list for PBXNativeTarget "BarChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC6834C1490B76E00813556 /* Debug */,
+				7BC6834D1490B76E00813556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BC683211490B76E00813556 /* Project object */;
+}

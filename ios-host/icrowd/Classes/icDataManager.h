@@ -22,7 +22,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic, retain) NSMutableArray *userArray; 
+@property (nonatomic) NSMutableArray *userArray; 
 
 #pragma mark singleton
 +(icDataManager *) singleton;
@@ -33,7 +33,7 @@
 -(NSMutableArray *) userReadAll;
 
 #pragma mark GRAIN model
--(icGrain *) grainCreateForUserId:(NSNumber *)uId andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i;
+-(icGrain *) grainCreateForUserId:(NSNumber *)uIdx andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i;
 
 #pragma mark DANGER ... flush database
 -(void)flushDatabase;

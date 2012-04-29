@@ -15,9 +15,9 @@
 
 @dynamic date;
 @dynamic feeling;
-@dynamic id;
+@dynamic idx;
 @dynamic intensity;
-@dynamic user;
 @dynamic session;
+@dynamic user;
 
 @end

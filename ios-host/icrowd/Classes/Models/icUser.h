@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * age;
 @property (nonatomic, retain) NSNumber * gender;
-@property (nonatomic, retain) NSNumber * id;
+@property (nonatomic, retain) NSNumber * idx;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *grain;
 @end

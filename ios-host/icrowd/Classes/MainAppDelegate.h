@@ -16,9 +16,9 @@
 #pragma mark properties
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *tabBarController;
-@property (nonatomic, retain) id <icCloudStatusViewDelegate> cloudStatusViewDelegate;
-@property (nonatomic, retain) id <icCloudNodesViewDelegate> cloudNodesViewDelegate;
-@property (nonatomic, retain) id <icDashboardViewDelegate> dashboardViewDelegate;
+@property (nonatomic) id <icCloudStatusViewDelegate> cloudStatusViewDelegate;
+@property (nonatomic) id <icCloudNodesViewDelegate> cloudNodesViewDelegate;
+@property (nonatomic) id <icDashboardViewDelegate> dashboardViewDelegate;
 
 #pragma mark start application
 -(BOOL)startLogging;

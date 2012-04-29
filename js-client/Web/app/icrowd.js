@@ -30,8 +30,8 @@
         },
 
         // user
-        userId:function () {
-            return __userId;
+        userIdx:function () {
+            return __userIdx;
         },
 
         // user send hello from form
@@ -102,7 +102,7 @@
         __initFeedback();
     }
 
-    var __userId;
+    var __userIdx;
     var __userName;
     var __userAge;
     var __userGender;
@@ -128,7 +128,7 @@
     // recv new user assignment from host
     function __userHelloRecv(p) {
         console.log("trying to hello recv",p);
-        __userId = p.user.id;
+        __userIdx = p.user.idx;
         __userName = p.user.name
         __userAge = p.user.age;
         __userGender = p.user.gender;
@@ -226,7 +226,7 @@
             type:'POST',
             url:__baseUrl() + 'grain',
             data:{
-                u:__userId,
+                u:__userIdx,
                 f:__feedbackCurrentFeeling,
                 i:__feedbackCurrentIntensity
             }

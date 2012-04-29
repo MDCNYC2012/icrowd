@@ -82,7 +82,7 @@ static id __instance;
 
 -(NSMutableArray *) userReadAll
 {
-    self.userArray = [self readAll:@"User" sortBy:@"id"];
+    self.userArray = [self readAll:@"User" sortBy:@"idx"];
     int userCount = [self.userArray count];
     if (userCount > __userIndex)
         __userIndex = userCount;
@@ -92,7 +92,7 @@ static id __instance;
 -(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g
 {
     icUser * user = (icUser *)[NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
-    user.id = [[NSNumber alloc]initWithInt:++__userIndex];
+    user.idx = [[NSNumber alloc]initWithInt:++__userIndex];
     user.name = n;
     user.age = a;
     user.gender = g;
@@ -106,12 +106,12 @@ static id __instance;
  */
 #pragma mark GRAIN model
 
--(icGrain *) grainCreateForUserId:(NSNumber *)uId andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i
+-(icGrain *) grainCreateForUserId:(NSNumber *)uIdx andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i
 {
 #pragma mark THE FOLLOWING CODE IS TERRIBLE. FIND THE CORRECT WAY TO DO THIS, WRITING STRAIGHT THROUGH IF POSSIBLE
     // fetch the User we are going to create a grain for
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id = %@",uId];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"idx = %@",uIdx];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity: entity]; 
     [request setPredicate: predicate];

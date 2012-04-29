@@ -27,14 +27,18 @@
 		01ED6C5B154CFDEC00DBF6BD /* NSURL+URLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C59154CFDEC00DBF6BD /* NSURL+URLUtils.m */; };
 		01ED6C62154D0D2000DBF6BD /* icNetstatUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C60154D0D2000DBF6BD /* icNetstatUserTableViewController.m */; };
 		01ED6C63154D0D2000DBF6BD /* icNetstatUserTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C61154D0D2000DBF6BD /* icNetstatUserTableViewController.xib */; };
-		01EF3F88154D51A800321A45 /* icGrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF3F87154D51A800321A45 /* icGrain.m */; };
-		01EF3F8C154D51A900321A45 /* icSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF3F8B154D51A900321A45 /* icSession.m */; };
-		01EF3F8F154D51A900321A45 /* icUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF3F8E154D51A900321A45 /* icUser.m */; };
 		01EF3F94154D5C0900321A45 /* tabBarIcon-CloudNodes.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EF3F90154D5C0900321A45 /* tabBarIcon-CloudNodes.png */; };
 		01EF3F95154D5C0900321A45 /* tabBarIcon-CloudNodes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EF3F91154D5C0900321A45 /* tabBarIcon-CloudNodes@2x.png */; };
 		01EF3F96154D5C0900321A45 /* tabBarIcon-CloudStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EF3F92154D5C0900321A45 /* tabBarIcon-CloudStatus.png */; };
 		01EF3F97154D5C0900321A45 /* tabBarIcon-CloudStatus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EF3F93154D5C0900321A45 /* tabBarIcon-CloudStatus@2x.png */; };
 		01EF3F9B154D625100321A45 /* icConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF3F9A154D625000321A45 /* icConnectionManager.m */; };
+		01FAB451154D865300038D01 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FAB450154D865300038D01 /* ShinobiCharts.framework */; };
+		01FAB458154D87A300038D01 /* icReportDashboardDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAB457154D87A300038D01 /* icReportDashboardDataSource.m */; };
+		01FAB45A154D88FD00038D01 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FAB459154D88FD00038D01 /* OpenGLES.framework */; };
+		01FAB45C154D8B2400038D01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FAB45B154D8B2400038D01 /* QuartzCore.framework */; };
+		01FAB45F154D8B5900038D01 /* icGrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAB45E154D8B5900038D01 /* icGrain.m */; };
+		01FAB462154D8B5A00038D01 /* icUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAB461154D8B5A00038D01 /* icUser.m */; };
+		01FAB465154D8B5A00038D01 /* icSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAB464154D8B5A00038D01 /* icSession.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -99,12 +103,6 @@
 		01ED6C5F154D0D2000DBF6BD /* icNetstatUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icNetstatUserTableViewController.h; sourceTree = "<group>"; };
 		01ED6C60154D0D2000DBF6BD /* icNetstatUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icNetstatUserTableViewController.m; sourceTree = "<group>"; };
 		01ED6C61154D0D2000DBF6BD /* icNetstatUserTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = icNetstatUserTableViewController.xib; sourceTree = "<group>"; };
-		01EF3F86154D51A800321A45 /* icGrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icGrain.h; sourceTree = "<group>"; };
-		01EF3F87154D51A800321A45 /* icGrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icGrain.m; sourceTree = "<group>"; };
-		01EF3F8A154D51A900321A45 /* icSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icSession.h; sourceTree = "<group>"; };
-		01EF3F8B154D51A900321A45 /* icSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icSession.m; sourceTree = "<group>"; };
-		01EF3F8D154D51A900321A45 /* icUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icUser.h; sourceTree = "<group>"; };
-		01EF3F8E154D51A900321A45 /* icUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icUser.m; sourceTree = "<group>"; };
 		01EF3F90154D5C0900321A45 /* tabBarIcon-CloudNodes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon-CloudNodes.png"; sourceTree = "<group>"; };
 		01EF3F91154D5C0900321A45 /* tabBarIcon-CloudNodes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon-CloudNodes@2x.png"; sourceTree = "<group>"; };
 		01EF3F92154D5C0900321A45 /* tabBarIcon-CloudStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon-CloudStatus.png"; sourceTree = "<group>"; };
@@ -112,6 +110,17 @@
 		01EF3F98154D5D7800321A45 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		01EF3F99154D625000321A45 /* icConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icConnectionManager.h; sourceTree = "<group>"; };
 		01EF3F9A154D625000321A45 /* icConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icConnectionManager.m; sourceTree = "<group>"; };
+		01FAB450154D865300038D01 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = Library/ShinobiCharts.framework; sourceTree = "<group>"; };
+		01FAB456154D87A300038D01 /* icReportDashboardDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icReportDashboardDataSource.h; sourceTree = "<group>"; };
+		01FAB457154D87A300038D01 /* icReportDashboardDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icReportDashboardDataSource.m; sourceTree = "<group>"; };
+		01FAB459154D88FD00038D01 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		01FAB45B154D8B2400038D01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		01FAB45D154D8B5900038D01 /* icGrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icGrain.h; sourceTree = "<group>"; };
+		01FAB45E154D8B5900038D01 /* icGrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icGrain.m; sourceTree = "<group>"; };
+		01FAB460154D8B5A00038D01 /* icUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icUser.h; sourceTree = "<group>"; };
+		01FAB461154D8B5A00038D01 /* icUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icUser.m; sourceTree = "<group>"; };
+		01FAB463154D8B5A00038D01 /* icSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icSession.h; sourceTree = "<group>"; };
+		01FAB464154D8B5A00038D01 /* icSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icSession.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* icrowd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icrowd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -175,12 +184,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FAB45C154D8B2400038D01 /* QuartzCore.framework in Frameworks */,
+				01FAB45A154D88FD00038D01 /* OpenGLES.framework in Frameworks */,
 				DCC3699E1538F08B004C5FA7 /* Security.framework in Frameworks */,
 				01CD333D154CBA91000B5E7E /* CoreData.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				DC5406E2129F5CC900195140 /* CFNetwork.framework in Frameworks */,
+				01FAB451154D865300038D01 /* ShinobiCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +213,8 @@
 				01CD331B154CB462000B5E7E /* icReportDashboardViewController.h */,
 				01CD331C154CB462000B5E7E /* icReportDashboardViewController.m */,
 				01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */,
+				01FAB456154D87A300038D01 /* icReportDashboardDataSource.h */,
+				01FAB457154D87A300038D01 /* icReportDashboardDataSource.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,12 +222,12 @@
 		01CD332B154CB81C000B5E7E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				01EF3F8D154D51A900321A45 /* icUser.h */,
-				01EF3F8E154D51A900321A45 /* icUser.m */,
-				01EF3F8A154D51A900321A45 /* icSession.h */,
-				01EF3F8B154D51A900321A45 /* icSession.m */,
-				01EF3F86154D51A800321A45 /* icGrain.h */,
-				01EF3F87154D51A800321A45 /* icGrain.m */,
+				01FAB463154D8B5A00038D01 /* icSession.h */,
+				01FAB464154D8B5A00038D01 /* icSession.m */,
+				01FAB460154D8B5A00038D01 /* icUser.h */,
+				01FAB461154D8B5A00038D01 /* icUser.m */,
+				01FAB45D154D8B5900038D01 /* icGrain.h */,
+				01FAB45E154D8B5900038D01 /* icGrain.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,6 +336,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01FAB45B154D8B2400038D01 /* QuartzCore.framework */,
+				01FAB459154D88FD00038D01 /* OpenGLES.framework */,
+				01FAB450154D865300038D01 /* ShinobiCharts.framework */,
 				01CD333B154CBA7B000B5E7E /* CoreData.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -532,10 +549,11 @@
 				01ED6C5A154CFDEC00DBF6BD /* NSString+URLUtils.m in Sources */,
 				01ED6C5B154CFDEC00DBF6BD /* NSURL+URLUtils.m in Sources */,
 				01ED6C62154D0D2000DBF6BD /* icNetstatUserTableViewController.m in Sources */,
-				01EF3F88154D51A800321A45 /* icGrain.m in Sources */,
-				01EF3F8C154D51A900321A45 /* icSession.m in Sources */,
-				01EF3F8F154D51A900321A45 /* icUser.m in Sources */,
 				01EF3F9B154D625100321A45 /* icConnectionManager.m in Sources */,
+				01FAB458154D87A300038D01 /* icReportDashboardDataSource.m in Sources */,
+				01FAB45F154D8B5900038D01 /* icGrain.m in Sources */,
+				01FAB462154D8B5A00038D01 /* icUser.m in Sources */,
+				01FAB465154D8B5A00038D01 /* icSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,9 +575,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library\"",
+				);
 				GCC_PREFIX_HEADER = Resources/icrowd_Prefix.pch;
 				INFOPLIST_FILE = "Resources/icrowd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library/CorePlot\"",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = icrowd;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -570,9 +597,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library\"",
+				);
 				GCC_PREFIX_HEADER = Resources/icrowd_Prefix.pch;
 				INFOPLIST_FILE = "Resources/icrowd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library/CorePlot\"",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = icrowd;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -583,9 +619,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library\"",
+				);
 				GCC_PREFIX_HEADER = Resources/icrowd_Prefix.pch;
 				INFOPLIST_FILE = "Resources/icrowd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library/CorePlot\"",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = icrowd;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;

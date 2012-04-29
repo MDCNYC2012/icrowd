@@ -14,7 +14,7 @@
 
 @dynamic age;
 @dynamic gender;
-@dynamic id;
+@dynamic idx;
 @dynamic name;
 @dynamic grain;
 
