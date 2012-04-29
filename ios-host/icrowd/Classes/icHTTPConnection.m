@@ -26,7 +26,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 		if ([path isEqualToString:@"/post.html"])
 		{
 			// Let's be extra cautious, and make sure the upload isn't 5 gigs
-			omLogDev(@"supports method %@ at path %@", method, path);
+			omLogDev(@"BAM. supports method %@ at path %@", method, path);
 			return requestContentLength < 50;
 		}
 	}
