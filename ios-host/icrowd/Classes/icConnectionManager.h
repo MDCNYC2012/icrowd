@@ -12,7 +12,6 @@
 @interface icConnectionManager : NSObject
 
 #pragma mark properties
-@property (nonatomic, retain) id <icNetstatViewDelegate> netstatViewDelegate;
 
 #pragma mark singleton
 +(icConnectionManager *) singleton;

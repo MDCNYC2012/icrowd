@@ -11,5 +11,6 @@
 
 #define DEBUG 1
 #define IOS_HOST_SERVER_PORT 8080
+#define IC_REPORT_UPDATE_INTERVAL_SECONDS 0.4
 
 #endif

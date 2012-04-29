@@ -22,8 +22,6 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize userArray = _userArray;
-@synthesize userTableDelegate = _userTableDelegate;
-@synthesize netstatViewDelegate = _netstatViewDelegate;
 static int __userIndex;
 
 /*
@@ -88,7 +86,6 @@ static id __instance;
     int userCount = [self.userArray count];
     if (userCount > __userIndex)
         __userIndex = userCount;
-    [self.userTableDelegate dataManagerDidReadAllUser];
     return self.userArray;
 }
 
@@ -102,7 +99,6 @@ static id __instance;
     // if save failure, fail
     if (![self save]) return nil;
     [self.userArray addObject:user];
-    [self.userTableDelegate dataManagerDidReadAllUser];
     return user;
 }
 
@@ -112,10 +108,10 @@ static id __instance;
 
 -(icGrain *) grainCreateForUserId:(NSNumber *)uId andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i
 {
-#pragma mark THE FOLLOWING CODE IS TERRIBLE. FIND THE CORRECT WAY TO DO THIS
+#pragma mark THE FOLLOWING CODE IS TERRIBLE. FIND THE CORRECT WAY TO DO THIS, WRITING STRAIGHT THROUGH IF POSSIBLE
     // fetch the User we are going to create a grain for
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(id = %i)",[uId intValue]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id = %@",uId];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity: entity]; 
     [request setPredicate: predicate];
@@ -157,7 +153,6 @@ static id __instance;
     [self persistentStoreCoordinatorInitNew];
     [self managedObjectContextInitNew];
     [self.userArray removeAllObjects];
-    [self.userTableDelegate dataManagerDidDeleteAll];    
 }
 
 #pragma mark - Core Data stack

@@ -128,7 +128,7 @@
     // recv new user assignment from host
     function __userHelloRecv(p) {
         console.log("trying to hello recv",p);
-        __userId = p.user.idx;
+        __userId = p.user.id;
         __userName = p.user.name
         __userAge = p.user.age;
         __userGender = p.user.gender;

@@ -16,7 +16,6 @@
  */
 #pragma mark properties
 
-@synthesize netstatViewDelegate = _netstatViewDelegate;
 
 /*
  */
@@ -33,7 +32,7 @@ static id __instance;
 
 - (NSString *)getIPAddress
 {
-    NSString *address = @"error";
+    NSString *address = @"localhost";
     struct ifaddrs *interfaces = NULL;
     struct ifaddrs *temp_addr = NULL;
     int success = 0;

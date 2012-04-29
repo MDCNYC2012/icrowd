@@ -3,27 +3,27 @@
     <entity name="Grain" representedClassName="icGrain" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="feeling" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="idx" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="intensity" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="session" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="grain" inverseEntity="Session" syncable="YES"/>
-        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="grain" inverseEntity="User" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="grain" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Session" representedClassName="icSession" syncable="YES">
         <attribute name="dateBegin" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="dateEnd" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="grain" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Grain" inverseName="session" inverseEntity="Grain" syncable="YES"/>
+        <relationship name="grain" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Grain" inverseName="session" inverseEntity="Grain" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="icUser" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="idx" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="grain" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Grain" inverseName="user" inverseEntity="Grain" syncable="YES"/>
+        <relationship name="grain" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Grain" inverseName="user" inverseEntity="Grain" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Grain" positionX="160" positionY="192" width="128" height="135"/>
-        <element name="User" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Session" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Grain" positionX="63" positionY="171" width="128" height="135"/>
+        <element name="Session" positionX="295" positionY="117" width="128" height="105"/>
+        <element name="User" positionX="295" positionY="297" width="128" height="120"/>
     </elements>
 </model>

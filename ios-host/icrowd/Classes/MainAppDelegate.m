@@ -17,8 +17,14 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @implementation MainAppDelegate
 
+/*
+ */
+#pragma mark properties
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+@synthesize cloudStatusViewDelegate = _cloudStatusViewDelegate;
+@synthesize cloudNodesViewDelegate = _cloudNodesViewDelegate;
+@synthesize dashboardViewDelegate = _dashboardViewDelegate;
 
 /*
  */
@@ -45,6 +51,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     // init view controllers
     [self startViewControllers];
+    
+    // init update interval
+    [self startUpdateInterval];
     
     return YES;
 }
@@ -80,22 +89,25 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // init navigation controller for "cloud status" tab
-    UIViewController *viewOneController = [[icNetstatViewController alloc] initWithNibName:@"icNetstatViewController" bundle:nil];
+    icNetstatViewController *viewOneController = [[icNetstatViewController alloc] initWithNibName:@"icNetstatViewController" bundle:nil];
     UINavigationController * navOneController = [[UINavigationController alloc] init];
     [navOneController.navigationBar setBarStyle:UIBarStyleBlack];
     [navOneController pushViewController: viewOneController animated:NO];
+    self.cloudStatusViewDelegate = viewOneController;
     
     // init navigation controller for "cloud nodes" tab
-    UIViewController *viewTwoController = [[icNetstatUserTableViewController alloc] initWithNibName:@"icNetstatUserTableViewController" bundle:nil];
+    icNetstatUserTableViewController *viewTwoController = [[icNetstatUserTableViewController alloc] initWithNibName:@"icNetstatUserTableViewController" bundle:nil];
     UINavigationController * navTwoController = [[UINavigationController alloc] init];
     [navTwoController.navigationBar setBarStyle:UIBarStyleBlack];
     [navTwoController pushViewController: viewTwoController animated:NO];
+    self.cloudNodesViewDelegate = viewTwoController;
     
     // init navigation controller for "dashboard" tab
-    UIViewController *viewThreeController = [[icReportDashboardViewController alloc] initWithNibName:@"icReportDashboardViewController" bundle:nil];    
+    icReportDashboardViewController *viewThreeController = [[icReportDashboardViewController alloc] initWithNibName:@"icReportDashboardViewController" bundle:nil];    
     UINavigationController * navThreeController = [[UINavigationController alloc] init];
     [navThreeController.navigationBar setBarStyle:UIBarStyleBlack];
     [navThreeController pushViewController: viewThreeController animated:NO];
+    self.dashboardViewDelegate = viewThreeController;
     
     // init tab bar controller
     self.tabBarController = [[UITabBarController alloc] init];
@@ -104,6 +116,28 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     //    self.tabBarController.delegate = self.singleton;
     
     [self.window makeKeyAndVisible];
+}
+
+/*
+ */
+#pragma mark update interval
+
+static NSTimer * __updateIntervalTimer;
+
+-(BOOL)startUpdateInterval
+{
+   __updateIntervalTimer = [NSTimer scheduledTimerWithTimeInterval: IC_REPORT_UPDATE_INTERVAL_SECONDS
+                                     target: self
+                                   selector: @selector(doUpdateInterval:)
+                                   userInfo: nil
+                                    repeats: YES];
+}
+
+-(void)doUpdateInterval:(id)sender
+{
+    [self.cloudStatusViewDelegate mainDidUpdateInterval];
+    [self.cloudNodesViewDelegate mainDidUpdateInterval];
+    [self.dashboardViewDelegate mainDidUpdateInterval];
 }
 
 @end

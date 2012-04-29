@@ -9,6 +9,11 @@
 #import "global.h"
 #import <UIKit/UIKit.h>
 
-@interface icReportDashboardViewController : UIViewController
+#pragma mark - icNetstatUserTableViewDelegate
+@protocol icDashboardViewDelegate <NSObject>
+-(void)mainDidUpdateInterval;
+@end
+
+@interface icReportDashboardViewController : UIViewController <icDashboardViewDelegate>
 
 @end

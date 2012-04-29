@@ -16,6 +16,10 @@
 
 @implementation icNetstatUserTableViewController
 
+/*
+ */
+#pragma mark nib/view protocol
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,11 +30,15 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self mainDidUpdateInterval];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[icDataManager singleton] setUserTableDelegate:self];
     [self.tableView setRowHeight:25];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -56,24 +64,12 @@
  */
 #pragma mark - icNetstatUserTableViewDelegate
 
-- (void)dataManagerDidReadAllUser
+- (void)mainDidUpdateInterval
 {
 //    omLogDev(@"An attempt is being made to ask the tableView to reload its data");
     [self.tableView reloadData];
 }
 
-- (void)dataManagerDidAddUser:(icUser *)user atIndex:(int)index
-{
-//    omLogDev(@"An attempt is being made to insert a row");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-    NSArray* path = [NSArray arrayWithObject:indexPath];
-    [self.tableView insertRowsAtIndexPaths:path withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
--(void)dataManagerDidDeleteAll
-{
-    [self.tableView reloadData];
-}
 
 /*
  */

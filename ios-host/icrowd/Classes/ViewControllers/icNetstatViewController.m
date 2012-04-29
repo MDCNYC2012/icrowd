@@ -13,6 +13,7 @@
 #import "icNetstatUserTableViewController.h"
 #import "icDataManager.h"
 #import "icConnectionManager.h"
+#import "MainAppDelegate.h"
 
 @interface icNetstatViewController ()
 
@@ -39,20 +40,13 @@
 
 /*
  */
-#pragma mark icNetstatViewDelegate protocol
--(void)dataManagerDidUpdateUserCount
+#pragma mark icCloudStatusViewDelegate protocol
+-(void)mainDidUpdateInterval
 {
     [self.textUserCountView setText:
      [[NSString alloc] initWithFormat:@"%i",
       [[[icDataManager singleton] userArray] count]
       ]];
-}
-
-/*
- */
-#pragma mark icNetstatViewDelegate protocol
--(void)connectionManagerDidUpdateNetinfo
-{
 }
 
 
@@ -73,16 +67,13 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self dataManagerDidUpdateUserCount];
+    [self mainDidUpdateInterval];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // delegate self as netstat view delegate for connection manager
-    [[icDataManager singleton] setNetstatViewDelegate:self];
-    
+        
     // navigation button: flush database
     UIBarButtonItem *flushButton = [[UIBarButtonItem alloc] initWithTitle:@"Flush Database" style:UIBarButtonItemStylePlain target:self action:@selector(flushWasPressed:)];
     self.navigationItem.leftBarButtonItem = flushButton;

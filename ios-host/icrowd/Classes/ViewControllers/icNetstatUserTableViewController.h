@@ -11,13 +11,11 @@
 @class icUser;
 
 #pragma mark - icNetstatUserTableViewDelegate
-@protocol icNetstatUserTableViewDelegate <NSObject>
--(void)dataManagerDidReadAllUser;
--(void)dataManagerDidAddUser: (icUser *)user atIndex:(int)index;
--(void)dataManagerDidDeleteAll;
+@protocol icCloudNodesViewDelegate <NSObject>
+-(void)mainDidUpdateInterval;
 @end
 
-@interface icNetstatUserTableViewController : UITableViewController <icNetstatUserTableViewDelegate>
+@interface icNetstatUserTableViewController : UITableViewController <icCloudNodesViewDelegate>
 
 #pragma mark - Table view data source
 -(UITableViewCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user;

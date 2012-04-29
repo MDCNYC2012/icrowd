@@ -106,11 +106,15 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
         
         icGrain * grain = [[icDataManager singleton] grainCreateForUserId:grainUserId andFeeling:grainFeeling andIntensity:grainIntensity];
         
-        response = [[[NSString alloc] initWithFormat:@"OK",requestContentLength] dataUsingEncoding:NSUTF8StringEncoding];
+        if (grain!=nil) {
+            response = [[[NSString alloc] initWithFormat:@"OK",requestContentLength] dataUsingEncoding:NSUTF8StringEncoding];
+            omLogDev(@"SAVED grain:{userId:\"%@\",feeling:\"%@\",intensity:\"%@\",date:\"%@\"}",grainUserId,grain.feeling,grain.intensity,grain.date);            
+        }else{
+            response = [[[NSString alloc] initWithFormat:@"FAIL",requestContentLength] dataUsingEncoding:NSUTF8StringEncoding];
+            omLogDev(@"FAILED to save grain:{userId:\"%@\",feeling:\"%@\",intensity:\"%@\"}",grainUserId,grainFeeling,grainIntensity);
+        }
         
-		omLogDev(@"SAVED grain:{userId:\"%@\",feeling:\"%@\",intensity:\"%@\",date:\"%@\"}",grainUserId,grain.feeling,grain.intensity,grain.date);
-        
-		return [[HTTPDataResponse alloc] initWithData:response];       
+		return [[HTTPDataResponse alloc] initWithData:response];
 	}
     
 #pragma mark HTTP request handler for a file path from the Web folder      

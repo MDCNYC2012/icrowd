@@ -128,7 +128,7 @@
     // recv new user assignment from host
     function __userHelloRecv(p) {
         console.log("trying to hello recv",p);
-        __userId = p.user.idx;
+        __userId = p.user.id;
         __userName = p.user.name
         __userAge = p.user.age;
         __userGender = p.user.gender;
@@ -160,9 +160,11 @@
             e.preventDefault();
             $.icrowd.touchDidStart(e.touches[0]);
         }, false);
+        // RUN AN INTERVAL
+        // to periodically send update to host
         setInterval(function () {
             $.icrowd.feedbackSendToHost();
-        }, 1000);
+        }, __transmissionIntervalMilliseconds);
     }
 
     // feedback update
@@ -200,6 +202,9 @@
         __feedbackCurrentFeeling = f;
         __feedbackCurrentIntensity = i;
     }
+
+    // interval of cycle, in milliseconds, to transmit data update to host
+    var __transmissionIntervalMilliseconds = 700;
 
     // track if broadcast is active
     var __transmissionActive = false;

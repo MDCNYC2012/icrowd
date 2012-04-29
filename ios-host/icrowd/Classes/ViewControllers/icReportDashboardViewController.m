@@ -14,6 +14,19 @@
 
 @implementation icReportDashboardViewController
 
+/*
+ */
+#pragma icDashboardViewDelegate methods
+
+-(void)mainDidUpdateInterval
+{
+    
+}
+
+/*
+ */
+#pragma mark nib/view protocol methods
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -22,6 +35,12 @@
         self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-Chart"];
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self mainDidUpdateInterval];
 }
 
 - (void)viewDidLoad

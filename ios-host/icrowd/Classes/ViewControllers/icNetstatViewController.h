@@ -11,14 +11,13 @@
 
 @class icDataManager;
 
-#pragma mark - icNetstatViewDelegate protocol
-@protocol icNetstatViewDelegate <NSObject>
--(void)dataManagerDidUpdateUserCount;
--(void)connectionManagerDidUpdateNetinfo;
+#pragma mark - icCloudStatusViewDelegate protocol
+@protocol icCloudStatusViewDelegate <NSObject>
+-(void)mainDidUpdateInterval;
 @end
 
 #pragma mark interface
-@interface icNetstatViewController : UIViewController <icNetstatViewDelegate>
+@interface icNetstatViewController : UIViewController <icCloudStatusViewDelegate>
 
 #pragma mark properties
 @property (strong, nonatomic) IBOutlet UITextView *textHostAddressView;

@@ -22,8 +22,6 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic, retain) id <icNetstatUserTableViewDelegate> userTableDelegate;
-@property (nonatomic, retain) id <icNetstatViewDelegate> netstatViewDelegate;
 @property (nonatomic, retain) NSMutableArray *userArray; 
 
 #pragma mark singleton
