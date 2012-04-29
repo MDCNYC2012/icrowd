@@ -7,6 +7,7 @@
 #import "icNetstatViewController.h"
 #import "icNetstatUserTableViewController.h"
 #import "icReportDashboardViewController.h"
+#import "icReportLinechartViewController.h"
 
 @interface MainAppDelegate : NSObject <UIApplicationDelegate>
 {
@@ -19,6 +20,7 @@
 @property (nonatomic) id <icCloudStatusViewDelegate> cloudStatusViewDelegate;
 @property (nonatomic) id <icCloudNodesViewDelegate> cloudNodesViewDelegate;
 @property (nonatomic) id <icDashboardViewDelegate> dashboardViewDelegate;
+@property (nonatomic) id <icLinechartViewDelegate> icLinechartViewDelegate;
 
 #pragma mark start application
 -(BOOL)startLogging;

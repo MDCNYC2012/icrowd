@@ -27,21 +27,24 @@
 //Returns the number of points for a specific series in the specified chart
 - (int)sChart:(ShinobiChart *)chart numberOfDataPointsForSeriesAtIndex:(int)seriesIndex {
     //In our example all series have the same number of points
-    return [[[icDataManager singleton] userArray] count];
+    int pointCount = [[[icDataManager singleton] userArray] count];
+    return pointCount ? pointCount : 0;
 }
 
 //Returns the series at the specified index for a given chart
 -(SChartSeries *)sChart:(ShinobiChart *)chart seriesAtIndex:(int)index {
     //In our example all series are bar series.
-    SChartBarSeries *barSeries = [[SChartBarSeries alloc] init];
-    
+
+        SChartBarSeries *barSeries = [[SChartBarSeries alloc] init];
+        barSeries.crosshairEnabled = YES; //Allows crosshair to track the series
+        barSeries.animated = NO;
+        barSeries.baseline = [NSNumber numberWithInt:0];
+        
     //Configure the series
 //    barSeries.title = [NSString stringWithFormat:@"Bar #%d", index+1];
     
-    barSeries.crosshairEnabled = YES; //Allows crosshair to track the series
     
     //The series will be animated from the baseline to their normal position when data is loaded/reloaded
-    barSeries.animated = NO;
     /*
     //Animation duration in seconds
     barSeries.animationDuration = 0.7f;
@@ -50,13 +53,13 @@
      */
     
     // Baseline for the bar series, bars will be filled down/up to this value
-    barSeries.baseline = [NSNumber numberWithFloat:barBaseline];
     
     return barSeries;
 }
 
 //Returns the number of series in the specified chart
 - (int)numberOfSeriesInSChart:(ShinobiChart *)chart {
+//    return ([[[icDataManager singleton] userArray] count]>=1)?1:0;
     return 1;
 }
 
@@ -68,13 +71,21 @@
     
     //The y axis is going to be a category axis, so set the y value
     //of the data point to a different string based on the data index
-    icUser * user = [[[icDataManager singleton] userArray] objectAtIndex:dataIndex];
-    datapoint.yValue = user.name;
-    omLogDev(@"user %@ has %i grains",user.idx,[user.grain count]);
+     if([[[icDataManager singleton] userArray] count]>=1) {
+         icUser * user = [[[icDataManager singleton] userArray] objectAtIndex:dataIndex];
+         datapoint.yValue = user.name;
+         datapoint.xValue = [NSNumber numberWithInt:[user.grain count]];
+//         omLogDev(@"user %@ has %i grains",user.idx,[user.grain count]);         
+     } else {
+         datapoint.yValue = @"N/A";
+         datapoint.xValue = [NSNumber numberWithInt:0];
+//         omLogDev(@"no user");
+     }
+    
+//    }
     
     //Set the x value to a random number between 0 and 10
     //    datapoint.xValue = [NSNumber numberWithDouble:arc4random() % 11];
-    datapoint.xValue = [NSNumber numberWithInt:[user.grain count]];
     
     return datapoint;
 }

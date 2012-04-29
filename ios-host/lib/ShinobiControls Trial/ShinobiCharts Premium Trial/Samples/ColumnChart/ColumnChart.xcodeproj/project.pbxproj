@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1588D92814C03CA100A9F20F /* icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1588D92714C03CA100A9F20F /* icon_small.png */; };
+		1588D92A14C03CA400A9F20F /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1588D92914C03CA400A9F20F /* icon_retina.png */; };
+		1588D92C14C03CC100A9F20F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1588D92B14C03CC100A9F20F /* Default.png */; };
+		15AE630814C051A50003B517 /* logo_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 15AE630714C051A50003B517 /* logo_black.png */; };
+		7BC682F31490B41000813556 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC682F21490B41000813556 /* UIKit.framework */; };
+		7BC682F51490B41000813556 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC682F41490B41000813556 /* Foundation.framework */; };
+		7BC682F71490B41000813556 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC682F61490B41000813556 /* CoreGraphics.framework */; };
+		7BC682FD1490B41000813556 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BC682FB1490B41000813556 /* InfoPlist.strings */; };
+		7BC682FF1490B41000813556 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC682FE1490B41000813556 /* main.m */; };
+		7BC683031490B41000813556 /* ColumnChartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC683021490B41000813556 /* ColumnChartAppDelegate.m */; };
+		7BC683061490B41000813556 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC683041490B41000813556 /* MainWindow.xib */; };
+		7BC683091490B41000813556 /* ColumnChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC683081490B41000813556 /* ColumnChartViewController.m */; };
+		7BC6830C1490B41000813556 /* ColumnChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC6830A1490B41000813556 /* ColumnChartViewController.xib */; };
+		7BC683131490B42F00813556 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC683121490B42F00813556 /* QuartzCore.framework */; };
+		7BC683151490B43500813556 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC683141490B43500813556 /* OpenGLES.framework */; };
+		7BC6831A1490B49000813556 /* ColumnChartDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC683191490B48F00813556 /* ColumnChartDataSource.m */; };
+		86A06DE314E1489B00540E84 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A06DE214E1489B00540E84 /* Security.framework */; };
+		8C28A63C153EC0E600038886 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C28A63B153EC0E600038886 /* ShinobiCharts.framework */; };
+		8C3CB88814BEF00700011841 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB88714BEF00700011841 /* Default-Portrait~ipad.png */; };
+		8C3CB88A14BEF00A00011841 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB88914BEF00A00011841 /* Default-Landscape~ipad.png */; };
+		8C3CB88C14BEF00C00011841 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB88B14BEF00C00011841 /* icon.png */; };
+		8C3CB94314BF44EE00011841 /* bw_portrait_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB94214BF44EE00011841 /* bw_portrait_logo.png */; };
+		8CCB73AB154043A5003153D3 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCB73AA154043A5003153D3 /* ShinobiCharts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1588D92714C03CA100A9F20F /* icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_small.png; path = ../icon_small.png; sourceTree = "<group>"; };
+		1588D92914C03CA400A9F20F /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_retina.png; path = ../icon_retina.png; sourceTree = "<group>"; };
+		1588D92B14C03CC100A9F20F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		15AE630714C051A50003B517 /* logo_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_black.png; sourceTree = "<group>"; };
+		7BC682EE1490B41000813556 /* ColumnChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColumnChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC682F21490B41000813556 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7BC682F41490B41000813556 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BC682F61490B41000813556 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7BC682FA1490B41000813556 /* ColumnChart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColumnChart-Info.plist"; sourceTree = "<group>"; };
+		7BC682FC1490B41000813556 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BC682FE1490B41000813556 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BC683001490B41000813556 /* ColumnChart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColumnChart-Prefix.pch"; sourceTree = "<group>"; };
+		7BC683011490B41000813556 /* ColumnChartAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColumnChartAppDelegate.h; sourceTree = "<group>"; };
+		7BC683021490B41000813556 /* ColumnChartAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColumnChartAppDelegate.m; sourceTree = "<group>"; };
+		7BC683051490B41000813556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7BC683071490B41000813556 /* ColumnChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColumnChartViewController.h; sourceTree = "<group>"; };
+		7BC683081490B41000813556 /* ColumnChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColumnChartViewController.m; sourceTree = "<group>"; };
+		7BC6830B1490B41000813556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ColumnChartViewController.xib; sourceTree = "<group>"; };
+		7BC683121490B42F00813556 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7BC683141490B43500813556 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		7BC683181490B48F00813556 /* ColumnChartDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnChartDataSource.h; sourceTree = "<group>"; };
+		7BC683191490B48F00813556 /* ColumnChartDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnChartDataSource.m; sourceTree = "<group>"; };
+		86A06DE214E1489B00540E84 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8C28A63B153EC0E600038886 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
+		8C3CB88714BEF00700011841 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		8C3CB88914BEF00A00011841 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		8C3CB88B14BEF00C00011841 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		8C3CB94214BF44EE00011841 /* bw_portrait_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bw_portrait_logo.png; sourceTree = "<group>"; };
+		8CCB73AA154043A5003153D3 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BC682EB1490B41000813556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86A06DE314E1489B00540E84 /* Security.framework in Frameworks */,
+				7BC683151490B43500813556 /* OpenGLES.framework in Frameworks */,
+				7BC683131490B42F00813556 /* QuartzCore.framework in Frameworks */,
+				7BC682F31490B41000813556 /* UIKit.framework in Frameworks */,
+				7BC682F51490B41000813556 /* Foundation.framework in Frameworks */,
+				7BC682F71490B41000813556 /* CoreGraphics.framework in Frameworks */,
+				8C28A63C153EC0E600038886 /* ShinobiCharts.framework in Frameworks */,
+				8CCB73AB154043A5003153D3 /* ShinobiCharts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BC682E31490B41000813556 = {
+			isa = PBXGroup;
+			children = (
+				7BC682F81490B41000813556 /* ColumnChart */,
+				7BC682F11490B41000813556 /* Frameworks */,
+				7BC682EF1490B41000813556 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BC682EF1490B41000813556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BC682EE1490B41000813556 /* ColumnChart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BC682F11490B41000813556 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CCB73AA154043A5003153D3 /* ShinobiCharts.framework */,
+				8C28A63B153EC0E600038886 /* ShinobiCharts.framework */,
+				86A06DE214E1489B00540E84 /* Security.framework */,
+				7BC683141490B43500813556 /* OpenGLES.framework */,
+				7BC683121490B42F00813556 /* QuartzCore.framework */,
+				7BC682F21490B41000813556 /* UIKit.framework */,
+				7BC682F41490B41000813556 /* Foundation.framework */,
+				7BC682F61490B41000813556 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BC682F81490B41000813556 /* ColumnChart */ = {
+			isa = PBXGroup;
+			children = (
+				7BC683011490B41000813556 /* ColumnChartAppDelegate.h */,
+				7BC683021490B41000813556 /* ColumnChartAppDelegate.m */,
+				7BC683071490B41000813556 /* ColumnChartViewController.h */,
+				7BC683081490B41000813556 /* ColumnChartViewController.m */,
+				7BC683181490B48F00813556 /* ColumnChartDataSource.h */,
+				7BC683191490B48F00813556 /* ColumnChartDataSource.m */,
+				7BC683041490B41000813556 /* MainWindow.xib */,
+				7BC6830A1490B41000813556 /* ColumnChartViewController.xib */,
+				8C3CB88614BEEFEB00011841 /* Images */,
+				7BC682F91490B41000813556 /* Supporting Files */,
+			);
+			path = ColumnChart;
+			sourceTree = "<group>";
+		};
+		7BC682F91490B41000813556 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BC682FA1490B41000813556 /* ColumnChart-Info.plist */,
+				7BC682FB1490B41000813556 /* InfoPlist.strings */,
+				7BC682FE1490B41000813556 /* main.m */,
+				7BC683001490B41000813556 /* ColumnChart-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C3CB88614BEEFEB00011841 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				15AE630714C051A50003B517 /* logo_black.png */,
+				1588D92B14C03CC100A9F20F /* Default.png */,
+				1588D92914C03CA400A9F20F /* icon_retina.png */,
+				1588D92714C03CA100A9F20F /* icon_small.png */,
+				8C3CB88B14BEF00C00011841 /* icon.png */,
+				8C3CB88914BEF00A00011841 /* Default-Landscape~ipad.png */,
+				8C3CB94214BF44EE00011841 /* bw_portrait_logo.png */,
+				8C3CB88714BEF00700011841 /* Default-Portrait~ipad.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BC682ED1490B41000813556 /* ColumnChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BC6830F1490B41000813556 /* Build configuration list for PBXNativeTarget "ColumnChart" */;
+			buildPhases = (
+				7BC682EA1490B41000813556 /* Sources */,
+				7BC682EB1490B41000813556 /* Frameworks */,
+				7BC682EC1490B41000813556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColumnChart;
+			productName = ColumnChart;
+			productReference = 7BC682EE1490B41000813556 /* ColumnChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BC682E51490B41000813556 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7BC682E81490B41000813556 /* Build configuration list for PBXProject "ColumnChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BC682E31490B41000813556;
+			productRefGroup = 7BC682EF1490B41000813556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BC682ED1490B41000813556 /* ColumnChart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BC682EC1490B41000813556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC682FD1490B41000813556 /* InfoPlist.strings in Resources */,
+				7BC683061490B41000813556 /* MainWindow.xib in Resources */,
+				7BC6830C1490B41000813556 /* ColumnChartViewController.xib in Resources */,
+				8C3CB88814BEF00700011841 /* Default-Portrait~ipad.png in Resources */,
+				8C3CB88A14BEF00A00011841 /* Default-Landscape~ipad.png in Resources */,
+				8C3CB88C14BEF00C00011841 /* icon.png in Resources */,
+				8C3CB94314BF44EE00011841 /* bw_portrait_logo.png in Resources */,
+				1588D92814C03CA100A9F20F /* icon_small.png in Resources */,
+				1588D92A14C03CA400A9F20F /* icon_retina.png in Resources */,
+				1588D92C14C03CC100A9F20F /* Default.png in Resources */,
+				15AE630814C051A50003B517 /* logo_black.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BC682EA1490B41000813556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC682FF1490B41000813556 /* main.m in Sources */,
+				7BC683031490B41000813556 /* ColumnChartAppDelegate.m in Sources */,
+				7BC683091490B41000813556 /* ColumnChartViewController.m in Sources */,
+				7BC6831A1490B49000813556 /* ColumnChartDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BC682FB1490B41000813556 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC682FC1490B41000813556 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7BC683041490B41000813556 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC683051490B41000813556 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7BC6830A1490B41000813556 /* ColumnChartViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC6830B1490B41000813556 /* en */,
+			);
+			name = ColumnChartViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BC6830D1490B41000813556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7BC6830E1490B41000813556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BC683101490B41000813556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColumnChart/ColumnChart-Prefix.pch";
+				INFOPLIST_FILE = "ColumnChart/ColumnChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BC683111490B41000813556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColumnChart/ColumnChart-Prefix.pch";
+				INFOPLIST_FILE = "ColumnChart/ColumnChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BC682E81490B41000813556 /* Build configuration list for PBXProject "ColumnChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC6830D1490B41000813556 /* Debug */,
+				7BC6830E1490B41000813556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BC6830F1490B41000813556 /* Build configuration list for PBXNativeTarget "ColumnChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC683101490B41000813556 /* Debug */,
+				7BC683111490B41000813556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BC682E51490B41000813556 /* Project object */;
+}

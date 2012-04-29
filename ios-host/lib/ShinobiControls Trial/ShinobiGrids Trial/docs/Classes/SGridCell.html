@@ -1,0 +1,531 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SGridCell Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ShinobiGrids </a></h1>
+				<a id="developerHome" href="http://www.shinobicontrols.com">www.shinobicontrols.com</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode" >SGridCell Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/fitSubviewsToView">&nbsp;&nbsp;&nbsp;&nbsp;fitSubviewsToView</option>
+	
+	<option value="//api/name/gridCoord">&nbsp;&nbsp;&nbsp;&nbsp;gridCoord</option>
+	
+	<option value="//api/name/reuseIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;reuseIdentifier</option>
+	
+	<option value="//api/name/selectedColor">&nbsp;&nbsp;&nbsp;&nbsp;selectedColor</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithReuseIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithReuseIdentifier:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Providing Cell Content">Providing Cell Content</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Cell Location">Cell Location</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fitSubviewsToView">fitSubviewsToView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/gridCoord">gridCoord</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reuseIdentifier">reuseIdentifier</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedColor">selectedColor</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithReuseIdentifier:">initWithReuseIdentifier:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SGridCell Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SGridCell Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSCopying</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SGridCell.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A SGridCell object is used to represent a cell within a <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> and can be located within the grid via its <a href="#//api/name/gridCoord">gridCoord</a> property. This class provides basic cell functionality such as cell selection and cell styling. This class is ideal if you want to provide custom content that the <a href="../Classes/SGridAutoCell.html">SGridAutoCell</a> (and subclasses) are not suited for &ndash; as instances of this class have no automatic content, they are effective containers for other UIView objects (or descendants) that you may wish to add as subviews to the cell. SGridCell&rsquo;s use the <a href="#//api/name/reuseIdentifier">reuseIdentifier</a> property for performance reasons much in the same manner as the Cocoa framework&rsquo;s <code>UIScrollView</code> and <code>UITableViewCell</code> classes. For this reason it is important to ensure you make effective use of the <a href="#//api/name/reuseIdentifier">reuseIdentifier</a> for each different type of cell content you wish to display in the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> &ndash; see the included project samples for examples of the reuseIdentifer in use.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithReuseIdentifier:">&ndash;&nbsp;initWithReuseIdentifier:</a></code>
+		<span class="tooltip"><p>Initializes a cell with a reuse identifier and returns it to the caller.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Providing Cell Content" name="task_Providing Cell Content"></a>
+						<h3 class="subsubtitle task-title">Providing Cell Content</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fitSubviewsToView">&nbsp;&nbsp;fitSubviewsToView</a></code>
+		<span class="tooltip"><p>Setting this property to <code>YES</code> results in any added subviews having dimensions automatically applied so that they are the same size as the cell. Default value is <code>YES</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reuseIdentifier">&nbsp;&nbsp;reuseIdentifier</a></code>
+		<span class="tooltip"><p>A string used to identify a cell that is reusable. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Cell Location" name="task_Cell Location"></a>
+						<h3 class="subsubtitle task-title">Cell Location</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/gridCoord">&nbsp;&nbsp;gridCoord</a></code>
+		<span class="tooltip"><p>This property represents the coordinates of the cell and uniquely identifies it within its parent <a href="#//api/name/grid">grid</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectedColor">&nbsp;&nbsp;selectedColor</a></code>
+		<span class="tooltip"><p>The color that the cell will change to when <a href="#//api/name/selected">selected</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/fitSubviewsToView" title="fitSubviewsToView"></a>
+	<h3 class="subsubtitle method-title">fitSubviewsToView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Setting this property to <code>YES</code> results in any added subviews having dimensions automatically applied so that they are the same size as the cell. Default value is <code>YES</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL fitSubviewsToView</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/gridCoord" title="gridCoord"></a>
+	<h3 class="subsubtitle method-title">gridCoord</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This property represents the coordinates of the cell and uniquely identifies it within its parent <a href="#//api/name/grid">grid</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) SGridCoord *gridCoord</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The notation {<code>colIndex</code>, <code>row</code>}, is sometimes used to refer to a gridCoord object within this documentation.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reuseIdentifier" title="reuseIdentifier"></a>
+	<h3 class="subsubtitle method-title">reuseIdentifier</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A string used to identify a cell that is reusable. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *reuseIdentifier</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The reuse identifier is associated with a SGridCell object that the ShinobiGrid&rsquo;s data source creates with the intent to reuse it as the basis (for performance reasons) for multiple cells of a <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object. It is assigned to the cell object in <a href="#//api/name/initWithReuseIdentifier:">initWithReuseIdentifier:</a> and cannot be changed thereafter. A <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object maintains a collection of the currently reusable cells, each with its own reuse identifier, and makes them available to the data source in the dequeueReusableCellWithIdentifier: method.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectedColor" title="selectedColor"></a>
+	<h3 class="subsubtitle method-title">selectedColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The color that the cell will change to when <a href="#//api/name/selected">selected</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *selectedColor</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Seting this property to <code>nil</code> will result in a selection color that is identical to the cell&rsquo;s final background color.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithReuseIdentifier:" title="initWithReuseIdentifier:"></a>
+	<h3 class="subsubtitle method-title">initWithReuseIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a cell with a reuse identifier and returns it to the caller.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithReuseIdentifier:(NSString *)<em>identifier</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important</em> This method must be used to initialize a cell &ndash; using <code>init</code> or <code>initWithFrame</code> is not permitted.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridCell.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Scott Logic Ltd. All rights reserved. (Last updated: 2012-04-24)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

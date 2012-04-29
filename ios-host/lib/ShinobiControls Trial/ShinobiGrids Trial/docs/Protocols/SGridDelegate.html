@@ -1,0 +1,964 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SGridDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ShinobiGrids </a></h1>
+				<a id="developerHome" href="http://www.shinobicontrols.com">www.shinobicontrols.com</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode" >SGridDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:</option>
+	
+	<option value="//api/name/shinobiGrid:didFinishEditingAutoCell:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:didFinishEditingAutoCell:</option>
+	
+	<option value="//api/name/shinobiGrid:row:hasBeenSwitchedWithRow:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:row:hasBeenSwitchedWithRow:</option>
+	
+	<option value="//api/name/shinobiGrid:styleForColAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:styleForColAtIndex:</option>
+	
+	<option value="//api/name/shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:</option>
+	
+	<option value="//api/name/shinobiGrid:styleForRowAtIndex:inSection:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:styleForRowAtIndex:inSection:</option>
+	
+	<option value="//api/name/shinobiGrid:styleForVerticalGridLineAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:styleForVerticalGridLineAtIndex:</option>
+	
+	<option value="//api/name/shinobiGrid:willCollapseSectionAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:willCollapseSectionAtIndex:</option>
+	
+	<option value="//api/name/shinobiGrid:willExpandSectionAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:willExpandSectionAtIndex:</option>
+	
+	<option value="//api/name/shinobiGrid:willSelectCellAtCoord:">&nbsp;&nbsp;&nbsp;&nbsp;- shinobiGrid:willSelectCellAtCoord:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Styling Rows and Columns">Styling Rows and Columns</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Styling Gridlines">Styling Gridlines</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Receiving Section Expand and Collapse Notifications">Receiving Section Expand and Collapse Notifications</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Receiving Cell Selection and Cell Editing Notifications">Receiving Cell Selection and Cell Editing Notifications</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:">shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:didFinishEditingAutoCell:">shinobiGrid:didFinishEditingAutoCell:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:row:hasBeenSwitchedWithRow:">shinobiGrid:row:hasBeenSwitchedWithRow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:styleForColAtIndex:">shinobiGrid:styleForColAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:">shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:styleForRowAtIndex:inSection:">shinobiGrid:styleForRowAtIndex:inSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:styleForVerticalGridLineAtIndex:">shinobiGrid:styleForVerticalGridLineAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:willCollapseSectionAtIndex:">shinobiGrid:willCollapseSectionAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:willExpandSectionAtIndex:">shinobiGrid:willExpandSectionAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shinobiGrid:willSelectCellAtCoord:">shinobiGrid:willSelectCellAtCoord:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SGridDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SGridDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">UIScrollViewDelegate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SGridDelegate.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The delegate of a <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object must adopt the <a href="SGridDelegate.html">SGridDelegate</a> protocol. The delegate concerns itself with the style of rows, columns and gridlines and can receive notifications that a cell is about to be selected (via a single tap) or that a cell has been edited (via a double-tap).</p>
+
+<p>The delegate should only be used for styling where you wish to provide a style for a particular row, column or gridline, or where each row/column/gridline is to have its own distinct style. If you wish to apply a uniform row/column/gridline style for the entire grid then the properites <code>defaultRowStyle</code>, <code>defaultColumnStyle</code> and <code>defaultGridLineStyle</code> of your <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object are designed for this purpose.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> In certain cases row styles and column styles can conflict (a cell can belong to a row and column that have been given different styles). In this case the style is applied based on the <code>BOOL</code> <code>rowStylesTakePriority</code> property of the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Styling Rows and Columns" name="task_Styling Rows and Columns"></a>
+						<h3 class="subsubtitle task-title">Styling Rows and Columns</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:styleForRowAtIndex:inSection:">&ndash;&nbsp;shinobiGrid:styleForRowAtIndex:inSection:</a></code>
+		<span class="tooltip"><p>Asks the delegate for the style to be used for a particular row within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:styleForColAtIndex:">&ndash;&nbsp;shinobiGrid:styleForColAtIndex:</a></code>
+		<span class="tooltip"><p>Asks the delegate for the style to be used for a particular column within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Styling Gridlines" name="task_Styling Gridlines"></a>
+						<h3 class="subsubtitle task-title">Styling Gridlines</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:">&ndash;&nbsp;shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:</a></code>
+		<span class="tooltip"><p>Asks the delegate for the style to be used for a particular horizontal gridline within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:styleForVerticalGridLineAtIndex:">&ndash;&nbsp;shinobiGrid:styleForVerticalGridLineAtIndex:</a></code>
+		<span class="tooltip"><p>Asks the delegate for the style to be used for a particular vertical gridline within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Receiving Section Expand and Collapse Notifications" name="task_Receiving Section Expand and Collapse Notifications"></a>
+						<h3 class="subsubtitle task-title">Receiving Section Expand and Collapse Notifications</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:willExpandSectionAtIndex:">&ndash;&nbsp;shinobiGrid:willExpandSectionAtIndex:</a></code>
+		<span class="tooltip"><p>Tells the delegate that a section within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object is about to be expanded.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:willCollapseSectionAtIndex:">&ndash;&nbsp;shinobiGrid:willCollapseSectionAtIndex:</a></code>
+		<span class="tooltip"><p>Tells the delegate that a section within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object is about to be collapsed.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Receiving Cell Selection and Cell Editing Notifications" name="task_Receiving Cell Selection and Cell Editing Notifications"></a>
+						<h3 class="subsubtitle task-title">Receiving Cell Selection and Cell Editing Notifications</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:willSelectCellAtCoord:">&ndash;&nbsp;shinobiGrid:willSelectCellAtCoord:</a></code>
+		<span class="tooltip"><p>Tells the delegate that a cell within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object is about to be selected.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:didFinishEditingAutoCell:">&ndash;&nbsp;shinobiGrid:didFinishEditingAutoCell:</a></code>
+		<span class="tooltip"><p>Informs the delegate that a cell within the ShibiGrid object has been edited.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:">&ndash;&nbsp;shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:</a></code>
+		<span class="tooltip"><p>Informs the delegate that two columns within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object have been switched.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shinobiGrid:row:hasBeenSwitchedWithRow:">&ndash;&nbsp;shinobiGrid:row:hasBeenSwitchedWithRow:</a></code>
+		<span class="tooltip"><p>Informs the delegate that two rows within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object have been switched.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:" title="shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:colAtIndex:hasBeenSwitchedWithColAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs the delegate that two columns within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object have been switched.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)shinobiGrid:(ShinobiGrid *)<em>grid</em> colAtIndex:(int)<em>colIndexSwitched</em> hasBeenSwitchedWithColAtIndex:(int)<em>colIndexSwitchedWith</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid that contains the columns that have been switched.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>colIndexSwitched</em></dt>
+			<dd><p>The first switched column.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>colIndexSwitchedWith</em></dt>
+			<dd><p>The second switched column.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method gives the delegate an opportunity to update the data source appropriately.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> When a user drags and drops a column this only reorders the currently visible cells. Therefore it is important to update your data source so that when scrolling/panning takes place, the cells that become visible appear in the correct order.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:didFinishEditingAutoCell:" title="shinobiGrid:didFinishEditingAutoCell:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:didFinishEditingAutoCell:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs the delegate that a cell within the ShibiGrid object has been edited.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)shinobiGrid:(ShinobiGrid *)<em>grid</em> didFinishEditingAutoCell:(const SGridAutoCell *)<em>cell</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid which contains the cell that has been edited.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cell</em></dt>
+			<dd><p>The cell within <code>grid</code> that has been edited.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method gives the delegate an opportunity to feed back any changes that the user makes to the grid to the data source. Note that this delegate method only works in conjunction with <a href="../Classes/SGridAutoCell.html">SGridAutoCell</a> (or its descendants).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:row:hasBeenSwitchedWithRow:" title="shinobiGrid:row:hasBeenSwitchedWithRow:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:row:hasBeenSwitchedWithRow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs the delegate that two rows within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object have been switched.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)shinobiGrid:(ShinobiGrid *)<em>grid</em> row:(SGridRow)<em>rowSwitched</em> hasBeenSwitchedWithRow:(SGridRow)<em>rowSwitchedWith</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid that contains the columns that have been switched.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rowSwitched</em></dt>
+			<dd><p>The first switched row.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rowSwitchedWith</em></dt>
+			<dd><p>The second switched row.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method gives the delegate an opportunity to update the data source appropriately.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> When a user drags and drops a row this only reorders the currently visible cells. Therefore it is important to update your data source so that when scrolling/panning takes place, the cells that become visible appear in the correct order.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:styleForColAtIndex:" title="shinobiGrid:styleForColAtIndex:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:styleForColAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for the style to be used for a particular column within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SGridColRowStyle *)shinobiGrid:(ShinobiGrid *)<em>grid</em> styleForColAtIndex:(int)<em>colIndex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid that is requesting the column style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>colIndex</em></dt>
+			<dd><p>The column within <code>grid</code> that is requesting the style.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/SGridColRowStyle.html">SGridColRowStyle</a> object representing the style that will be applied to column at <code>colIndex</code> within <code>grid</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Note that columns are zero-indexed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:" title="shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:styleForHorizontalGridLineAtIndex:inSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for the style to be used for a particular horizontal gridline within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SGridLineStyle *)shinobiGrid:(ShinobiGrid *)<em>grid</em> styleForHorizontalGridLineAtIndex:(int)<em>gridLineIndex</em> inSection:(int)<em>sectionIndex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid that is requesting the horizontal gridline style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gridLineIndex</em></dt>
+			<dd><p>The horizontal gridline for the section within <code>grid</code> that is requesting the style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectionIndex</em></dt>
+			<dd><p>The section that the horizontal gridline belongs to.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/SGridLineStyle.html">SGridLineStyle</a> object representing the style that will be applied to the gridline at <code>gridLineIndex</code> with <code>orientation</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gridlines are zero indexed &ndash; where the first horizontal grid line for a section appears underneath the first row of a section. Note that horizontal gridlines are zero-indexed within sections (that is to say that the first gridline in any section has a <code>gridLineIndex</code> of <code>0</code>). The last row of a section also has a gridline appear underneath it (unlike the last column of a grid). Returning <code>nil</code> for a particular gridline will result in the <code>defaultGridLineStyle</code> property of your <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object being applied.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:styleForRowAtIndex:inSection:" title="shinobiGrid:styleForRowAtIndex:inSection:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:styleForRowAtIndex:inSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for the style to be used for a particular row within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SGridColRowStyle *)shinobiGrid:(ShinobiGrid *)<em>grid</em> styleForRowAtIndex:(int)<em>rowIndex</em> inSection:(int)<em>sectionIndex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid that is requesting the style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rowIndex</em></dt>
+			<dd><p>The row within <code>grid</code> that is requesting the row style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectionIndex</em></dt>
+			<dd><p>The section that the row belongs to.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/SGridColRowStyle.html">SGridColRowStyle</a> object representing the style that will be applied to row at <code>rowIndex</code> of section at <code>sectionIndex</code> within <code>grid</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Note that rows and sections are zero-indexed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:styleForVerticalGridLineAtIndex:" title="shinobiGrid:styleForVerticalGridLineAtIndex:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:styleForVerticalGridLineAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for the style to be used for a particular vertical gridline within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SGridLineStyle *)shinobiGrid:(ShinobiGrid *)<em>grid</em> styleForVerticalGridLineAtIndex:(int)<em>gridLineIndex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid that is requesting the vertical gridline style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gridLineIndex</em></dt>
+			<dd><p>The vertical gridline within <code>grid</code> that is requesting the style.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/SGridLineStyle.html">SGridLineStyle</a> object representing the style that will be applied to the gridline at <code>gridLineIndex</code> with <code>orientation</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gridlines are zero indexed &ndash; where the first vertical grid line appears to the right of the first column of cells. Returning <code>nil</code> for a particular gridline will result in the <code>defaultGridLineStyle</code> property of your <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object being applied.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:willCollapseSectionAtIndex:" title="shinobiGrid:willCollapseSectionAtIndex:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:willCollapseSectionAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a section within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object is about to be collapsed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)shinobiGrid:(ShinobiGrid *)<em>grid</em> willCollapseSectionAtIndex:(NSUInteger)<em>sectionIndex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid which contains the section that is about to collapse.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>The index of the section that is about to collapse.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:willExpandSectionAtIndex:" title="shinobiGrid:willExpandSectionAtIndex:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:willExpandSectionAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a section within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object is about to be expanded.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)shinobiGrid:(ShinobiGrid *)<em>grid</em> willExpandSectionAtIndex:(NSUInteger)<em>sectionIndex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid which contains the section that is about to expand.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>The index of the section that is about to expand.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shinobiGrid:willSelectCellAtCoord:" title="shinobiGrid:willSelectCellAtCoord:"></a>
+	<h3 class="subsubtitle method-title">shinobiGrid:willSelectCellAtCoord:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a cell within the <a href="../Classes/ShinobiGrid.html">ShinobiGrid</a> object is about to be selected.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)shinobiGrid:(ShinobiGrid *)<em>grid</em> willSelectCellAtCoord:(const SGridCoord *)<em>gridCoord</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grid</em></dt>
+			<dd><p>The grid which contains the cell that is about to be selected.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gridCoord</em></dt>
+			<dd><p>The coordinate of the cell that is about to be selected.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method gives the delegate an opportunity to apply a custom selection style/animation to the cell or another part of the grid.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> The default selection style will be applied to a cell unless the <code>selectionStyle</code> property of the <a href="../Classes/SGridCell.html">SGridCell</a> object is set to <code>SGridSelectionStyleNone</code> when you are returning the cell in your implementation of the <a href="../Protocols/SGridDataSource.html">SGridDataSource</a> protocol.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGridDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Scott Logic Ltd. All rights reserved. (Last updated: 2012-04-24)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

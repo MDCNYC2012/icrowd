@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Outright Mental. All rights reserved.
 //
 
+#import "global.h"
 #import <UIKit/UIKit.h>
 
 @class icUser;

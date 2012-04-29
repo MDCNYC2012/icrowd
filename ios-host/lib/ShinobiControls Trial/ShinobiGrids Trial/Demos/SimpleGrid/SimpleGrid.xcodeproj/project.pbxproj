@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		159597D314F3E2DA0051C9C7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 159597D214F3E2DA0051C9C7 /* Default.png */; };
+		159597D614F3E2DF0051C9C7 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 159597D514F3E2DF0051C9C7 /* Default-Portrait~ipad.png */; };
+		159597D814F3E2E10051C9C7 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 159597D714F3E2E10051C9C7 /* Default-Landscape~ipad.png */; };
+		1595981A14F3EB980051C9C7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595981914F3EB980051C9C7 /* icon.png */; };
+		1595981D14F3EB9C0051C9C7 /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595981C14F3EB9C0051C9C7 /* icon_retina.png */; };
+		1595981F14F3EBB30051C9C7 /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BECD5E414E9239B002ECDE4 /* icon_retina.png */; };
+		1595982514F3F9D00051C9C7 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595982414F3F9D00051C9C7 /* gradient.png */; };
+		1595984914F647310051C9C7 /* ios-linen.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595984814F647310051C9C7 /* ios-linen.png */; };
+		15A34E0714ED1EBA0070AA92 /* logo_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 15A34E0614ED1EBA0070AA92 /* logo_black.png */; };
+		7BECD3DF14E121A2002ECDE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BECD3DE14E121A2002ECDE4 /* UIKit.framework */; };
+		7BECD3E114E121A2002ECDE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BECD3E014E121A2002ECDE4 /* Foundation.framework */; };
+		7BECD3E314E121A2002ECDE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BECD3E214E121A2002ECDE4 /* CoreGraphics.framework */; };
+		7BECD3E914E121A2002ECDE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BECD3E714E121A2002ECDE4 /* InfoPlist.strings */; };
+		7BECD3EB14E121A2002ECDE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BECD3EA14E121A2002ECDE4 /* main.m */; };
+		7BECD3EF14E121A2002ECDE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BECD3EE14E121A2002ECDE4 /* AppDelegate.m */; };
+		7BECD3F214E121A2002ECDE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BECD3F114E121A2002ECDE4 /* ViewController.m */; };
+		7BECD3F514E121A2002ECDE4 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BECD3F314E121A2002ECDE4 /* ViewController_iPhone.xib */; };
+		7BECD3F814E121A2002ECDE4 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BECD3F614E121A2002ECDE4 /* ViewController_iPad.xib */; };
+		7BECD5EB14E9239B002ECDE4 /* icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BECD5E514E9239B002ECDE4 /* icon_small.png */; };
+		7BECD5F214E92487002ECDE4 /* ShinobiGrids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BECD5F114E92487002ECDE4 /* ShinobiGrids.framework */; };
+		7BECD60414E9431C002ECDE4 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BECD60314E9431C002ECDE4 /* DataSource.m */; };
+		86A0DF201546DA3E00806CEC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A0DF1F1546DA3E00806CEC /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		159597D214F3E2DA0051C9C7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		159597D514F3E2DF0051C9C7 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		159597D714F3E2E10051C9C7 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		1595981914F3EB980051C9C7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		1595981C14F3EB9C0051C9C7 /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = "<group>"; };
+		1595982414F3F9D00051C9C7 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
+		1595984814F647310051C9C7 /* ios-linen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-linen.png"; sourceTree = "<group>"; };
+		15A34E0614ED1EBA0070AA92 /* logo_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_black.png; sourceTree = "<group>"; };
+		7BECD3DA14E121A2002ECDE4 /* SimpleGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BECD3DE14E121A2002ECDE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7BECD3E014E121A2002ECDE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BECD3E214E121A2002ECDE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7BECD3E614E121A2002ECDE4 /* SimpleGrid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleGrid-Info.plist"; sourceTree = "<group>"; };
+		7BECD3E814E121A2002ECDE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BECD3EA14E121A2002ECDE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BECD3EC14E121A2002ECDE4 /* SimpleGrid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleGrid-Prefix.pch"; sourceTree = "<group>"; };
+		7BECD3ED14E121A2002ECDE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7BECD3EE14E121A2002ECDE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7BECD3F014E121A2002ECDE4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7BECD3F114E121A2002ECDE4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7BECD3F414E121A2002ECDE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		7BECD3F714E121A2002ECDE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		7BECD5E314E9239B002ECDE4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7BECD5E414E9239B002ECDE4 /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = "<group>"; };
+		7BECD5E514E9239B002ECDE4 /* icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_small.png; sourceTree = "<group>"; };
+		7BECD5E614E9239B002ECDE4 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		7BECD5E714E9239B002ECDE4 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		7BECD5E814E9239B002ECDE4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		7BECD5F114E92487002ECDE4 /* ShinobiGrids.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiGrids.framework; sourceTree = "<group>"; };
+		7BECD60214E9431C002ECDE4 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		7BECD60314E9431C002ECDE4 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		86A0DF1F1546DA3E00806CEC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BECD3D714E121A2002ECDE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86A0DF201546DA3E00806CEC /* Security.framework in Frameworks */,
+				7BECD3DF14E121A2002ECDE4 /* UIKit.framework in Frameworks */,
+				7BECD3E114E121A2002ECDE4 /* Foundation.framework in Frameworks */,
+				7BECD3E314E121A2002ECDE4 /* CoreGraphics.framework in Frameworks */,
+				7BECD5F214E92487002ECDE4 /* ShinobiGrids.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BECD3CF14E121A2002ECDE4 = {
+			isa = PBXGroup;
+			children = (
+				1595981C14F3EB9C0051C9C7 /* icon_retina.png */,
+				1595981914F3EB980051C9C7 /* icon.png */,
+				159597D714F3E2E10051C9C7 /* Default-Landscape~ipad.png */,
+				159597D514F3E2DF0051C9C7 /* Default-Portrait~ipad.png */,
+				159597D214F3E2DA0051C9C7 /* Default.png */,
+				1595982414F3F9D00051C9C7 /* gradient.png */,
+				7BECD3E414E121A2002ECDE4 /* SimpleGrid */,
+				7BECD3DD14E121A2002ECDE4 /* Frameworks */,
+				7BECD3DB14E121A2002ECDE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BECD3DB14E121A2002ECDE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BECD3DA14E121A2002ECDE4 /* SimpleGrid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BECD3DD14E121A2002ECDE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86A0DF1F1546DA3E00806CEC /* Security.framework */,
+				7BECD5F114E92487002ECDE4 /* ShinobiGrids.framework */,
+				7BECD3DE14E121A2002ECDE4 /* UIKit.framework */,
+				7BECD3E014E121A2002ECDE4 /* Foundation.framework */,
+				7BECD3E214E121A2002ECDE4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BECD3E414E121A2002ECDE4 /* SimpleGrid */ = {
+			isa = PBXGroup;
+			children = (
+				7BECD59914E9032A002ECDE4 /* Images */,
+				7BECD3ED14E121A2002ECDE4 /* AppDelegate.h */,
+				7BECD3EE14E121A2002ECDE4 /* AppDelegate.m */,
+				1595984814F647310051C9C7 /* ios-linen.png */,
+				7BECD60214E9431C002ECDE4 /* DataSource.h */,
+				7BECD60314E9431C002ECDE4 /* DataSource.m */,
+				7BECD3F014E121A2002ECDE4 /* ViewController.h */,
+				7BECD3F114E121A2002ECDE4 /* ViewController.m */,
+				7BECD3F314E121A2002ECDE4 /* ViewController_iPhone.xib */,
+				7BECD3F614E121A2002ECDE4 /* ViewController_iPad.xib */,
+				7BECD3E514E121A2002ECDE4 /* Supporting Files */,
+			);
+			path = SimpleGrid;
+			sourceTree = "<group>";
+		};
+		7BECD3E514E121A2002ECDE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BECD3E614E121A2002ECDE4 /* SimpleGrid-Info.plist */,
+				7BECD3E714E121A2002ECDE4 /* InfoPlist.strings */,
+				7BECD3EA14E121A2002ECDE4 /* main.m */,
+				7BECD3EC14E121A2002ECDE4 /* SimpleGrid-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BECD59914E9032A002ECDE4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7BECD5E314E9239B002ECDE4 /* Default.png */,
+				7BECD5E414E9239B002ECDE4 /* icon_retina.png */,
+				7BECD5E514E9239B002ECDE4 /* icon_small.png */,
+				15A34E0614ED1EBA0070AA92 /* logo_black.png */,
+				7BECD5E614E9239B002ECDE4 /* Default-Landscape~ipad.png */,
+				7BECD5E714E9239B002ECDE4 /* Default-Portrait~ipad.png */,
+				7BECD5E814E9239B002ECDE4 /* icon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BECD3D914E121A2002ECDE4 /* SimpleGrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BECD3FB14E121A2002ECDE4 /* Build configuration list for PBXNativeTarget "SimpleGrid" */;
+			buildPhases = (
+				7BECD3D614E121A2002ECDE4 /* Sources */,
+				7BECD3D714E121A2002ECDE4 /* Frameworks */,
+				7BECD3D814E121A2002ECDE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleGrid;
+			productName = SimpleGrid;
+			productReference = 7BECD3DA14E121A2002ECDE4 /* SimpleGrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BECD3D114E121A2002ECDE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7BECD3D414E121A2002ECDE4 /* Build configuration list for PBXProject "SimpleGrid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BECD3CF14E121A2002ECDE4;
+			productRefGroup = 7BECD3DB14E121A2002ECDE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BECD3D914E121A2002ECDE4 /* SimpleGrid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BECD3D814E121A2002ECDE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BECD3E914E121A2002ECDE4 /* InfoPlist.strings in Resources */,
+				7BECD3F514E121A2002ECDE4 /* ViewController_iPhone.xib in Resources */,
+				7BECD3F814E121A2002ECDE4 /* ViewController_iPad.xib in Resources */,
+				7BECD5EB14E9239B002ECDE4 /* icon_small.png in Resources */,
+				15A34E0714ED1EBA0070AA92 /* logo_black.png in Resources */,
+				159597D314F3E2DA0051C9C7 /* Default.png in Resources */,
+				159597D614F3E2DF0051C9C7 /* Default-Portrait~ipad.png in Resources */,
+				159597D814F3E2E10051C9C7 /* Default-Landscape~ipad.png in Resources */,
+				1595981A14F3EB980051C9C7 /* icon.png in Resources */,
+				1595981D14F3EB9C0051C9C7 /* icon_retina.png in Resources */,
+				1595981F14F3EBB30051C9C7 /* icon_retina.png in Resources */,
+				1595982514F3F9D00051C9C7 /* gradient.png in Resources */,
+				1595984914F647310051C9C7 /* ios-linen.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BECD3D614E121A2002ECDE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BECD3EB14E121A2002ECDE4 /* main.m in Sources */,
+				7BECD3EF14E121A2002ECDE4 /* AppDelegate.m in Sources */,
+				7BECD3F214E121A2002ECDE4 /* ViewController.m in Sources */,
+				7BECD60414E9431C002ECDE4 /* DataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BECD3E714E121A2002ECDE4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BECD3E814E121A2002ECDE4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7BECD3F314E121A2002ECDE4 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BECD3F414E121A2002ECDE4 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		7BECD3F614E121A2002ECDE4 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BECD3F714E121A2002ECDE4 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BECD3F914E121A2002ECDE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BECD3FA14E121A2002ECDE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BECD3FC14E121A2002ECDE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleGrid/SimpleGrid-Prefix.pch";
+				INFOPLIST_FILE = "SimpleGrid/SimpleGrid-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BECD3FD14E121A2002ECDE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleGrid/SimpleGrid-Prefix.pch";
+				INFOPLIST_FILE = "SimpleGrid/SimpleGrid-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BECD3D414E121A2002ECDE4 /* Build configuration list for PBXProject "SimpleGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BECD3F914E121A2002ECDE4 /* Debug */,
+				7BECD3FA14E121A2002ECDE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BECD3FB14E121A2002ECDE4 /* Build configuration list for PBXNativeTarget "SimpleGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BECD3FC14E121A2002ECDE4 /* Debug */,
+				7BECD3FD14E121A2002ECDE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BECD3D114E121A2002ECDE4 /* Project object */;
+}

@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15BBD21014C036B40026105B /* icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BBD20F14C036B40026105B /* icon_small.png */; };
+		15BBD21214C038550026105B /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BBD21114C038550026105B /* icon_retina.png */; };
+		15BBD21414C038670026105B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BBD21314C038670026105B /* Default.png */; };
+		7B75365714923226002BEFF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B75365614923226002BEFF1 /* UIKit.framework */; };
+		7B75365914923226002BEFF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B75365814923226002BEFF1 /* Foundation.framework */; };
+		7B75365B14923226002BEFF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B75365A14923226002BEFF1 /* CoreGraphics.framework */; };
+		7B75366114923226002BEFF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B75365F14923226002BEFF1 /* InfoPlist.strings */; };
+		7B75366314923226002BEFF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B75366214923226002BEFF1 /* main.m */; };
+		7B75366714923226002BEFF1 /* LineChartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B75366614923226002BEFF1 /* LineChartAppDelegate.m */; };
+		7B75366A14923226002BEFF1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B75366814923226002BEFF1 /* MainWindow.xib */; };
+		7B75366D14923226002BEFF1 /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B75366C14923226002BEFF1 /* LineChartViewController.m */; };
+		7B75367014923226002BEFF1 /* LineChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B75366E14923226002BEFF1 /* LineChartViewController.xib */; };
+		7B75367C1492327F002BEFF1 /* LineChartDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B75367B1492327F002BEFF1 /* LineChartDataSource.m */; };
+		7B75367E14923293002BEFF1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B75367D14923293002BEFF1 /* OpenGLES.framework */; };
+		7B75368014923299002BEFF1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B75367F14923299002BEFF1 /* QuartzCore.framework */; };
+		86A06DF114E148EE00540E84 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A06DF014E148EE00540E84 /* Security.framework */; };
+		8C224BDD153C68F600064DD2 /* DJ.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C224BDC153C68F600064DD2 /* DJ.plist */; };
+		8C3CB86714BEEA7300011841 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB86614BEEA7300011841 /* icon.png */; };
+		8C3CB86914BEEA7800011841 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB86814BEEA7800011841 /* Default-Portrait~ipad.png */; };
+		8C3CB86B14BEEA7A00011841 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB86A14BEEA7A00011841 /* Default-Landscape~ipad.png */; };
+		8C3CB8C814BF218F00011841 /* logo_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CB8C714BF218F00011841 /* logo_black.png */; };
+		8CF9CDEF153C69D5008B2FC1 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF9CDEE153C69D5008B2FC1 /* ShinobiCharts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15BBD20F14C036B40026105B /* icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_small.png; path = ../icon_small.png; sourceTree = "<group>"; };
+		15BBD21114C038550026105B /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_retina.png; path = ../icon_retina.png; sourceTree = "<group>"; };
+		15BBD21314C038670026105B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		7B75365214923226002BEFF1 /* LineChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B75365614923226002BEFF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7B75365814923226002BEFF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B75365A14923226002BEFF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7B75365E14923226002BEFF1 /* LineChart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LineChart-Info.plist"; sourceTree = "<group>"; };
+		7B75366014923226002BEFF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B75366214923226002BEFF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B75366414923226002BEFF1 /* LineChart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LineChart-Prefix.pch"; sourceTree = "<group>"; };
+		7B75366514923226002BEFF1 /* LineChartAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartAppDelegate.h; sourceTree = "<group>"; };
+		7B75366614923226002BEFF1 /* LineChartAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartAppDelegate.m; sourceTree = "<group>"; };
+		7B75366914923226002BEFF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7B75366B14923226002BEFF1 /* LineChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartViewController.h; sourceTree = "<group>"; };
+		7B75366C14923226002BEFF1 /* LineChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartViewController.m; sourceTree = "<group>"; };
+		7B75366F14923226002BEFF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LineChartViewController.xib; sourceTree = "<group>"; };
+		7B75367A1492327F002BEFF1 /* LineChartDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartDataSource.h; sourceTree = "<group>"; };
+		7B75367B1492327F002BEFF1 /* LineChartDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartDataSource.m; sourceTree = "<group>"; };
+		7B75367D14923293002BEFF1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		7B75367F14923299002BEFF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		86A06DF014E148EE00540E84 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8C224BDC153C68F600064DD2 /* DJ.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DJ.plist; sourceTree = "<group>"; };
+		8C3CB86614BEEA7300011841 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		8C3CB86814BEEA7800011841 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		8C3CB86A14BEEA7A00011841 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		8C3CB8C714BF218F00011841 /* logo_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_black.png; sourceTree = "<group>"; };
+		8CF9CDEE153C69D5008B2FC1 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B75364F14923226002BEFF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86A06DF114E148EE00540E84 /* Security.framework in Frameworks */,
+				7B75368014923299002BEFF1 /* QuartzCore.framework in Frameworks */,
+				7B75367E14923293002BEFF1 /* OpenGLES.framework in Frameworks */,
+				7B75365714923226002BEFF1 /* UIKit.framework in Frameworks */,
+				7B75365914923226002BEFF1 /* Foundation.framework in Frameworks */,
+				7B75365B14923226002BEFF1 /* CoreGraphics.framework in Frameworks */,
+				8CF9CDEF153C69D5008B2FC1 /* ShinobiCharts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B75364714923226002BEFF1 = {
+			isa = PBXGroup;
+			children = (
+				7B75365C14923226002BEFF1 /* LineChart */,
+				7B75365514923226002BEFF1 /* Frameworks */,
+				7B75365314923226002BEFF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B75365314923226002BEFF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B75365214923226002BEFF1 /* LineChart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B75365514923226002BEFF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CF9CDEE153C69D5008B2FC1 /* ShinobiCharts.framework */,
+				86A06DF014E148EE00540E84 /* Security.framework */,
+				7B75367F14923299002BEFF1 /* QuartzCore.framework */,
+				7B75367D14923293002BEFF1 /* OpenGLES.framework */,
+				7B75365614923226002BEFF1 /* UIKit.framework */,
+				7B75365814923226002BEFF1 /* Foundation.framework */,
+				7B75365A14923226002BEFF1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B75365C14923226002BEFF1 /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				7B75366514923226002BEFF1 /* LineChartAppDelegate.h */,
+				7B75366614923226002BEFF1 /* LineChartAppDelegate.m */,
+				7B75366814923226002BEFF1 /* MainWindow.xib */,
+				7B75366B14923226002BEFF1 /* LineChartViewController.h */,
+				7B75366C14923226002BEFF1 /* LineChartViewController.m */,
+				7B75367A1492327F002BEFF1 /* LineChartDataSource.h */,
+				7B75367B1492327F002BEFF1 /* LineChartDataSource.m */,
+				7B75366E14923226002BEFF1 /* LineChartViewController.xib */,
+				8C3CB86C14BEEA7F00011841 /* Images */,
+				7B75365D14923226002BEFF1 /* Supporting Files */,
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
+		7B75365D14923226002BEFF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C224BDC153C68F600064DD2 /* DJ.plist */,
+				7B75365E14923226002BEFF1 /* LineChart-Info.plist */,
+				7B75365F14923226002BEFF1 /* InfoPlist.strings */,
+				7B75366214923226002BEFF1 /* main.m */,
+				7B75366414923226002BEFF1 /* LineChart-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C3CB86C14BEEA7F00011841 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				15BBD21314C038670026105B /* Default.png */,
+				15BBD21114C038550026105B /* icon_retina.png */,
+				15BBD20F14C036B40026105B /* icon_small.png */,
+				8C3CB8C714BF218F00011841 /* logo_black.png */,
+				8C3CB86A14BEEA7A00011841 /* Default-Landscape~ipad.png */,
+				8C3CB86814BEEA7800011841 /* Default-Portrait~ipad.png */,
+				8C3CB86614BEEA7300011841 /* icon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B75365114923226002BEFF1 /* LineChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B75367314923226002BEFF1 /* Build configuration list for PBXNativeTarget "LineChart" */;
+			buildPhases = (
+				7B75364E14923226002BEFF1 /* Sources */,
+				7B75364F14923226002BEFF1 /* Frameworks */,
+				7B75365014923226002BEFF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LineChart;
+			productName = LineChart;
+			productReference = 7B75365214923226002BEFF1 /* LineChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B75364914923226002BEFF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 7B75364C14923226002BEFF1 /* Build configuration list for PBXProject "LineChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B75364714923226002BEFF1;
+			productRefGroup = 7B75365314923226002BEFF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B75365114923226002BEFF1 /* LineChart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B75365014923226002BEFF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B75366114923226002BEFF1 /* InfoPlist.strings in Resources */,
+				7B75366A14923226002BEFF1 /* MainWindow.xib in Resources */,
+				7B75367014923226002BEFF1 /* LineChartViewController.xib in Resources */,
+				8C3CB86714BEEA7300011841 /* icon.png in Resources */,
+				8C3CB86914BEEA7800011841 /* Default-Portrait~ipad.png in Resources */,
+				8C3CB86B14BEEA7A00011841 /* Default-Landscape~ipad.png in Resources */,
+				8C3CB8C814BF218F00011841 /* logo_black.png in Resources */,
+				15BBD21014C036B40026105B /* icon_small.png in Resources */,
+				15BBD21214C038550026105B /* icon_retina.png in Resources */,
+				15BBD21414C038670026105B /* Default.png in Resources */,
+				8C224BDD153C68F600064DD2 /* DJ.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B75364E14923226002BEFF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B75366314923226002BEFF1 /* main.m in Sources */,
+				7B75366714923226002BEFF1 /* LineChartAppDelegate.m in Sources */,
+				7B75366D14923226002BEFF1 /* LineChartViewController.m in Sources */,
+				7B75367C1492327F002BEFF1 /* LineChartDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7B75365F14923226002BEFF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B75366014923226002BEFF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B75366814923226002BEFF1 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B75366914923226002BEFF1 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7B75366E14923226002BEFF1 /* LineChartViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B75366F14923226002BEFF1 /* en */,
+			);
+			name = LineChartViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B75367114923226002BEFF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7B75367214923226002BEFF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B75367414923226002BEFF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/..\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LineChart/LineChart-Prefix.pch";
+				INFOPLIST_FILE = "LineChart/LineChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7B75367514923226002BEFF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/..\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LineChart/LineChart-Prefix.pch";
+				INFOPLIST_FILE = "LineChart/LineChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B75364C14923226002BEFF1 /* Build configuration list for PBXProject "LineChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B75367114923226002BEFF1 /* Debug */,
+				7B75367214923226002BEFF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B75367314923226002BEFF1 /* Build configuration list for PBXNativeTarget "LineChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B75367414923226002BEFF1 /* Debug */,
+				7B75367514923226002BEFF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B75364914923226002BEFF1 /* Project object */;
+}

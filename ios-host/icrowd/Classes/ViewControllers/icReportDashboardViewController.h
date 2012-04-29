@@ -18,11 +18,12 @@
 @end
 
 @interface icReportDashboardViewController : UIViewController <icDashboardViewDelegate> {
-    ShinobiChart *chart;
     icReportDashboardDataSource *datasource;
+    BOOL __isChartSubviewAttached;
 }
 
 @property (nonatomic, retain) UIButton *animateButton;
+@property (nonatomic, retain) ShinobiChart *chart;
 
 - (IBAction)animateBars:(id)sender;
 

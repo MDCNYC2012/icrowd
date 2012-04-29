@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010F43B5154DA5E70083A95C /* icReportLinechartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010F43B0154DA5E70083A95C /* icReportLinechartViewController.xib */; };
+		010F43B6154DA5E70083A95C /* icReportLinechartDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 010F43B2154DA5E70083A95C /* icReportLinechartDataSource.m */; };
+		010F43B7154DA5E70083A95C /* icReportLinechartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010F43B4154DA5E70083A95C /* icReportLinechartViewController.m */; };
+		010F43B9154DA7F90083A95C /* DJ.plist in Resources */ = {isa = PBXBuildFile; fileRef = 010F43B8154DA7F90083A95C /* DJ.plist */; };
 		01CD3319154CB444000B5E7E /* icNetstatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD3317154CB444000B5E7E /* icNetstatViewController.m */; };
 		01CD331E154CB462000B5E7E /* icReportDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD331C154CB462000B5E7E /* icReportDashboardViewController.m */; };
 		01CD3326154CB5AE000B5E7E /* icDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD3325154CB5AE000B5E7E /* icDataManager.m */; };
@@ -72,6 +76,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010F43B0154DA5E70083A95C /* icReportLinechartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = icReportLinechartViewController.xib; sourceTree = "<group>"; };
+		010F43B1154DA5E70083A95C /* icReportLinechartDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icReportLinechartDataSource.h; sourceTree = "<group>"; };
+		010F43B2154DA5E70083A95C /* icReportLinechartDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icReportLinechartDataSource.m; sourceTree = "<group>"; };
+		010F43B3154DA5E70083A95C /* icReportLinechartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icReportLinechartViewController.h; sourceTree = "<group>"; };
+		010F43B4154DA5E70083A95C /* icReportLinechartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icReportLinechartViewController.m; sourceTree = "<group>"; };
+		010F43B8154DA7F90083A95C /* DJ.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DJ.plist; sourceTree = "<group>"; };
 		01CD3316154CB444000B5E7E /* icNetstatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icNetstatViewController.h; sourceTree = "<group>"; };
 		01CD3317154CB444000B5E7E /* icNetstatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icNetstatViewController.m; sourceTree = "<group>"; };
 		01CD331B154CB462000B5E7E /* icReportDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icReportDashboardViewController.h; sourceTree = "<group>"; };
@@ -215,6 +225,11 @@
 				01CD331B154CB462000B5E7E /* icReportDashboardViewController.h */,
 				01CD331C154CB462000B5E7E /* icReportDashboardViewController.m */,
 				01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */,
+				010F43B1154DA5E70083A95C /* icReportLinechartDataSource.h */,
+				010F43B2154DA5E70083A95C /* icReportLinechartDataSource.m */,
+				010F43B3154DA5E70083A95C /* icReportLinechartViewController.h */,
+				010F43B4154DA5E70083A95C /* icReportLinechartViewController.m */,
+				010F43B0154DA5E70083A95C /* icReportLinechartViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -326,6 +341,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				010F43B8154DA7F90083A95C /* DJ.plist */,
 				01ED6C5E154D032300DBF6BD /* icrowd_Prefix.pch */,
 				8D1107310486CEB800E47090 /* icrowd-Info.plist */,
 				01CD3328154CB6BC000B5E7E /* icrowd.xcdatamodeld */,
@@ -506,6 +522,8 @@
 				01EF3F95154D5C0900321A45 /* tabBarIcon-CloudNodes@2x.png in Resources */,
 				01EF3F96154D5C0900321A45 /* tabBarIcon-CloudStatus.png in Resources */,
 				01EF3F97154D5C0900321A45 /* tabBarIcon-CloudStatus@2x.png in Resources */,
+				010F43B5154DA5E70083A95C /* icReportLinechartViewController.xib in Resources */,
+				010F43B9154DA7F90083A95C /* DJ.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +572,8 @@
 				01FAB45F154D8B5900038D01 /* icGrain.m in Sources */,
 				01FAB462154D8B5A00038D01 /* icUser.m in Sources */,
 				01FAB465154D8B5A00038D01 /* icSession.m in Sources */,
+				010F43B6154DA5E70083A95C /* icReportLinechartDataSource.m in Sources */,
+				010F43B7154DA5E70083A95C /* icReportLinechartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

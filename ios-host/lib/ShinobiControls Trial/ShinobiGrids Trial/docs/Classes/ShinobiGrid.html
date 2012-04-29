@@ -1,0 +1,1688 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ShinobiGrid Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ShinobiGrids </a></h1>
+				<a id="developerHome" href="http://www.shinobicontrols.com">www.shinobicontrols.com</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode" >ShinobiGrid Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/canEditCellsViaDoubleTap">&nbsp;&nbsp;&nbsp;&nbsp;canEditCellsViaDoubleTap</option>
+	
+	<option value="//api/name/canReorderColsViaLongPress">&nbsp;&nbsp;&nbsp;&nbsp;canReorderColsViaLongPress</option>
+	
+	<option value="//api/name/canReorderRowsViaLongPress">&nbsp;&nbsp;&nbsp;&nbsp;canReorderRowsViaLongPress</option>
+	
+	<option value="//api/name/canResizeColumnsViaPinch">&nbsp;&nbsp;&nbsp;&nbsp;canResizeColumnsViaPinch</option>
+	
+	<option value="//api/name/canSelectViaSingleTap">&nbsp;&nbsp;&nbsp;&nbsp;canSelectViaSingleTap</option>
+	
+	<option value="//api/name/dataSource">&nbsp;&nbsp;&nbsp;&nbsp;dataSource</option>
+	
+	<option value="//api/name/defaultBorderStyle">&nbsp;&nbsp;&nbsp;&nbsp;defaultBorderStyle</option>
+	
+	<option value="//api/name/defaultColumnStyle">&nbsp;&nbsp;&nbsp;&nbsp;defaultColumnStyle</option>
+	
+	<option value="//api/name/defaultGridLineStyle">&nbsp;&nbsp;&nbsp;&nbsp;defaultGridLineStyle</option>
+	
+	<option value="//api/name/defaultRowStyle">&nbsp;&nbsp;&nbsp;&nbsp;defaultRowStyle</option>
+	
+	<option value="//api/name/defaultSectionHeaderStyle">&nbsp;&nbsp;&nbsp;&nbsp;defaultSectionHeaderStyle</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/licenseKey">&nbsp;&nbsp;&nbsp;&nbsp;licenseKey</option>
+	
+	<option value="//api/name/linesOnTop">&nbsp;&nbsp;&nbsp;&nbsp;linesOnTop</option>
+	
+	<option value="//api/name/rowStylesTakePriority">&nbsp;&nbsp;&nbsp;&nbsp;rowStylesTakePriority</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/getInfo">&nbsp;&nbsp;&nbsp;&nbsp;+ getInfo</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/dequeueReusableCellWithIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- dequeueReusableCellWithIdentifier:</option>
+	
+	<option value="//api/name/findRowAfterRow:">&nbsp;&nbsp;&nbsp;&nbsp;- findRowAfterRow:</option>
+	
+	<option value="//api/name/findRowBeforeRow:">&nbsp;&nbsp;&nbsp;&nbsp;- findRowBeforeRow:</option>
+	
+	<option value="//api/name/freezeColsToTheLeftOfAndIncludingIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- freezeColsToTheLeftOfAndIncludingIndex:</option>
+	
+	<option value="//api/name/freezeRowsAboveAndIncludingRow:">&nbsp;&nbsp;&nbsp;&nbsp;- freezeRowsAboveAndIncludingRow:</option>
+	
+	<option value="//api/name/getInfo">&nbsp;&nbsp;&nbsp;&nbsp;- getInfo</option>
+	
+	<option value="//api/name/reload">&nbsp;&nbsp;&nbsp;&nbsp;- reload</option>
+	
+	<option value="//api/name/visibleCellAtCol:andRow:">&nbsp;&nbsp;&nbsp;&nbsp;- visibleCellAtCol:andRow:</option>
+	
+	<option value="//api/name/visibleColumnIndexes">&nbsp;&nbsp;&nbsp;&nbsp;- visibleColumnIndexes</option>
+	
+	<option value="//api/name/visibleRows">&nbsp;&nbsp;&nbsp;&nbsp;- visibleRows</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Changing a ShinobiGrid&apos;s Default Styles">Changing a ShinobiGrid&apos;s Default Styles</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Configuring a ShinobiGrid">Configuring a ShinobiGrid</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Cells and Cell Visibility">Accessing Cells and Cell Visibility</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Dragging and Dropping Columns and Rows">Dragging and Dropping Columns and Rows</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing the Delegate and Data Source">Managing the Delegate and Data Source</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Grid Version">Grid Version</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canEditCellsViaDoubleTap">canEditCellsViaDoubleTap</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canReorderColsViaLongPress">canReorderColsViaLongPress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canReorderRowsViaLongPress">canReorderRowsViaLongPress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canResizeColumnsViaPinch">canResizeColumnsViaPinch</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canSelectViaSingleTap">canSelectViaSingleTap</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataSource">dataSource</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultBorderStyle">defaultBorderStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultColumnStyle">defaultColumnStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultGridLineStyle">defaultGridLineStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultRowStyle">defaultRowStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultSectionHeaderStyle">defaultSectionHeaderStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/licenseKey">licenseKey</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linesOnTop">linesOnTop</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rowStylesTakePriority">rowStylesTakePriority</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getInfo">getInfo</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dequeueReusableCellWithIdentifier:">dequeueReusableCellWithIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findRowAfterRow:">findRowAfterRow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findRowBeforeRow:">findRowBeforeRow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/freezeColsToTheLeftOfAndIncludingIndex:">freezeColsToTheLeftOfAndIncludingIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/freezeRowsAboveAndIncludingRow:">freezeRowsAboveAndIncludingRow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getInfo">getInfo</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reload">reload</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/visibleCellAtCol:andRow:">visibleCellAtCol:andRow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/visibleColumnIndexes">visibleColumnIndexes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/visibleRows">visibleRows</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ShinobiGrid Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ShinobiGrid Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIScrollView</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">UIScrollViewDelegate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SGrid.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The ShinobiGrid class is intended for easy construction of a grid structure that is presented in columns, rows and sections, composed of cells, separated by gridlines, that display content to the user. Columns, rows and sections are zero-indexed, where the first column in a grid is at index 0, the first row in a section is at index 0 and the first section in the grid is at index 0. Cells can be located within a grid from their grid coordinate.</p>
+
+<p>Sections group rows horizontally and have section headers that allow the user to tap and collapse a section. The grid will have one section by default, but this can be altered by implementing the appropriate <a href="../Protocols/SGridDelegate.html">SGridDelegate</a> method.</p>
+
+<p>A ShinobiGrid object can present content that is too large for its own frame by allowing for panning and scrolling. This behaviour is automatic where the content dimensions (total cell heights or widths) are greater than the grid&rsquo;s dimensions &ndash; no additional setup/calibration is required. The height of columns and width of rows will autocalculate by default &ndash; in order to stop this behaviour simply implement the appropriate style method from <a href="../Protocols/SGridDelegate.html">SGridDelegate</a> or apply the appropriate default style on the grid itself (such as <a href="#//api/name/defaultRowStyle">defaultRowStyle</a> etc.).</p>
+
+<p>A ShinobiGrid object must have an associated object that acts as the data source (which must conform to the <a href="../Protocols/SGridDataSource.html">SGridDataSource</a> protocol). The data source provides the necessary information to construct the grid, such as number of rows, sections and columns, and the content to be displayed within each cell. The data source concerns itself solely with the data model, and issues relating to the style of the grid are controlled through the <a href="#//api/name/delegate">delegate</a>.</p>
+
+<p>The <a href="#//api/name/delegate">delegate</a> of the ShinobiGrid object must conform to the <a href="../Protocols/SGridDelegate.html">SGridDelegate</a> protocol and can be used to provide styles for specific rows/columns/gridlines. Only provide a <a href="#//api/name/delegate">delegate</a> for your ShinobiGrid object if you wish to provide a style for a specific element of the grid. If you wish to style the grid in a uniform manner (every gridline will be styled identically etc) then the properties such as <a href="#//api/name/defaultRowStyle">defaultRowStyle</a>, defaultColumnStyles and <a href="#//api/name/defaultGridLineStyle">defaultGridLineStyle</a> are designed for this purpose. As such it is not necessary for a ShinobiGrid to have a <a href="#//api/name/delegate">delegate</a>.</p>
+
+<p>ShinobiGrid uses cell pooling to make your grid as memory efficient as possible. Cells that are not currently visible are returned to an internal cell pool for later use and cells that become visible due to users scrolling/panning are retrieved from this pool. This means that ShinobiGrid caches cells only for visible rows and columns, but caches styling objects for the entire grid. For ShinobiGrid to be able to pool cells correctly it needs to know what the cells will be used for &ndash; this is where the <a href="#//api/name/dequeueReusableCellWithIdentifier:">dequeueReusableCellWithIdentifier:</a> method is utilised. You should use a different <code>reuseIdentifier</code> for each distinct type of cell within your grid &ndash; for example if you have header cells and normal cells in your grid, you might use the identifiers <code>"HEADER"</code> and <code>"NORMAL"</code>. For code examples of using the identifiers see the ShinobiGrid sample apps.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> The allocation/instantiation of cells must be done via the <a href="#//api/name/dequeueReusableCellWithIdentifier:">dequeueReusableCellWithIdentifier:</a> method.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Changing a ShinobiGrid&apos;s Default Styles" name="task_Changing a ShinobiGrid&apos;s Default Styles"></a>
+						<h3 class="subsubtitle task-title">Changing a ShinobiGrid&apos;s Default Styles</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultGridLineStyle">&nbsp;&nbsp;defaultGridLineStyle</a></code>
+		<span class="tooltip"><p>This property is the default style that will be applied to all gridlines that belong this this ShinobiGrid object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultBorderStyle">&nbsp;&nbsp;defaultBorderStyle</a></code>
+		<span class="tooltip"><p>This property represents the style that will be applied to this grid&rsquo;s content border.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultSectionHeaderStyle">&nbsp;&nbsp;defaultSectionHeaderStyle</a></code>
+		<span class="tooltip"><p>This property represents the style that will be applied to all section headers in this grid.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultRowStyle">&nbsp;&nbsp;defaultRowStyle</a></code>
+		<span class="tooltip"><p>This property sets a default row style that will be used in all rows in all sections in this grid. Use this property to quickly set a base row style for the grid.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultColumnStyle">&nbsp;&nbsp;defaultColumnStyle</a></code>
+		<span class="tooltip"><p>This property sets a default column style that will be used in all columns in this grid. Use this property to quickly set a base column style for the grid.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Configuring a ShinobiGrid" name="task_Configuring a ShinobiGrid"></a>
+						<h3 class="subsubtitle task-title">Configuring a ShinobiGrid</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dequeueReusableCellWithIdentifier:">&ndash;&nbsp;dequeueReusableCellWithIdentifier:</a></code>
+		<span class="tooltip"><p>Returns a reusable ShinobiGrid cell object located by its identifier.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rowStylesTakePriority">&nbsp;&nbsp;rowStylesTakePriority</a></code>
+		<span class="tooltip"><p>This boolean value dictates the course of action to take if conflicting row and column styles are found. If set to <code>YES</code>, then the row style will take priority over the column style. If set to <code>NO</code> then the oppostie is true. The default value is <code>NO</code> (column styles take priority by default).</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/linesOnTop">&nbsp;&nbsp;linesOnTop</a></code>
+		<span class="tooltip"><p>Controls the manner in which the gridlines are displayed in this grid.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/freezeColsToTheLeftOfAndIncludingIndex:">&ndash;&nbsp;freezeColsToTheLeftOfAndIncludingIndex:</a></code>
+		<span class="tooltip"><p>This method freezes all columns to the left of (and including) the column at index <code>colIndex</code>. Note that if a cell belongs to both a frozen row and frozen column that it will not be scrollable in any direction.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/freezeRowsAboveAndIncludingRow:">&ndash;&nbsp;freezeRowsAboveAndIncludingRow:</a></code>
+		<span class="tooltip"><p>This method freezes all rows above (and including) the supplied row. Note that if a cell belongs to both a frozen row and frozen column that it will not be scrollable in any direction.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canResizeColumnsViaPinch">&nbsp;&nbsp;canResizeColumnsViaPinch</a></code>
+		<span class="tooltip"><p>Dictates whether this grid&rsquo;s columns can be resized or not.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canSelectViaSingleTap">&nbsp;&nbsp;canSelectViaSingleTap</a></code>
+		<span class="tooltip"><p>Dictates whether this grid can be single tapped or not.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canEditCellsViaDoubleTap">&nbsp;&nbsp;canEditCellsViaDoubleTap</a></code>
+		<span class="tooltip"><p>Dictates whether this grid can be edited or not.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Cells and Cell Visibility" name="task_Accessing Cells and Cell Visibility"></a>
+						<h3 class="subsubtitle task-title">Accessing Cells and Cell Visibility</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/visibleCellAtCol:andRow:">&ndash;&nbsp;visibleCellAtCol:andRow:</a></code>
+		<span class="tooltip"><p>Returns the cell that belongs to <code>colIndex</code> and <code>row</code>. Use this to retrieve a cell at a given coordinate.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/visibleColumnIndexes">&ndash;&nbsp;visibleColumnIndexes</a></code>
+		<span class="tooltip"><p>Returns an <code>NSArray</code> of <code>NSNumber</code> objects. Each <code>NSNumber</code> object represents a currently visible <code>colIndex</code>. Use this function to query which columns are currently visible in the grid.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/visibleRows">&ndash;&nbsp;visibleRows</a></code>
+		<span class="tooltip"><p>Returns an <code>NSArray</code> of <code>NSValue</code> objects. Each <code>NSValue</code> object represents a currently visible <code>row</code> &ndash; the <code>SGridRow</code> struct can be retrieved from an <code>NSValue</code> object by first providing a struct variable such as <code>SGridRow visibleRow</code>, and then using the <code>getValue:</code> method of the <code>NSValue</code> object like so &ndash; <code>[rowValueObject getValue:&amp;visibleRow]</code>. Use this function to query which rows are currently visible within the grid.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/findRowAfterRow:">&ndash;&nbsp;findRowAfterRow:</a></code>
+		<span class="tooltip"><p>This function will return the next row down.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/findRowBeforeRow:">&ndash;&nbsp;findRowBeforeRow:</a></code>
+		<span class="tooltip"><p>This function will return the next row up.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Dragging and Dropping Columns and Rows" name="task_Dragging and Dropping Columns and Rows"></a>
+						<h3 class="subsubtitle task-title">Dragging and Dropping Columns and Rows</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canReorderRowsViaLongPress">&nbsp;&nbsp;canReorderRowsViaLongPress</a></code>
+		<span class="tooltip"><p>A boolean that dictates whether the rows of this grid can be dragged and dropped by the user.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canReorderColsViaLongPress">&nbsp;&nbsp;canReorderColsViaLongPress</a></code>
+		<span class="tooltip"><p>A boolean that dictates whether the columns of this grid can be dragged and dropped by the user.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reload">&ndash;&nbsp;reload</a></code>
+		<span class="tooltip"><p>Reloads this ShinobiGrid object.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing the Delegate and Data Source" name="task_Managing the Delegate and Data Source"></a>
+						<h3 class="subsubtitle task-title">Managing the Delegate and Data Source</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataSource">&nbsp;&nbsp;dataSource</a></code>
+		<span class="tooltip"><p>The object that acts as the data source for the receving ShinobiGrid object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>The object that acts as the delegate of the receiving ShinobiGrid object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/licenseKey">&nbsp;&nbsp;licenseKey</a></code>
+		<span class="tooltip"><p>The License Key for this Grid</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Grid Version" name="task_Grid Version"></a>
+						<h3 class="subsubtitle task-title">Grid Version</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getInfo">+&nbsp;getInfo</a></code>
+		<span class="tooltip"><p>An NSString describing the grid&rsquo;s version.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getInfo">&ndash;&nbsp;getInfo</a></code>
+		<span class="tooltip"><p>An NSString describing the grid&rsquo;s version.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/canEditCellsViaDoubleTap" title="canEditCellsViaDoubleTap"></a>
+	<h3 class="subsubtitle method-title">canEditCellsViaDoubleTap</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Dictates whether this grid can be edited or not.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL canEditCellsViaDoubleTap</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If canEditCellsViaDoubleTap is <code>YES</code>, then a user can double tap a cell to edit its contents. Default value is <code>NO</code>.</p>
+
+<p>See the <code>shinobiGrid:didFinishEditingCell:</code> method of the <a href="../Protocols/SGridDelegate.html">SGridDelegate</a> protocol for a means of intercepting user&rsquo;s changes to cell content.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> Having this value set to <code>YES</code> means that the grid has an internal double tap gesture recogniser that is enabled. Setting this property to <code>NO</code> disables this gesture recogniser.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/canReorderColsViaLongPress" title="canReorderColsViaLongPress"></a>
+	<h3 class="subsubtitle method-title">canReorderColsViaLongPress</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A boolean that dictates whether the columns of this grid can be dragged and dropped by the user.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL canReorderColsViaLongPress</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If set to YES then the user can touch and hold a cell to initiate the drag and drop of a column &ndash; the cell being touched and held will display a pulse animation to indicate it is ready for dragging.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> ShinobiGrid has an internal long press gesture recogniser which is enabled if either this property or the <a href="#//api/name/canReorderRowsViaLongPress">canReorderRowsViaLongPress</a> property is set to YES. Setting both these properties to NO disables this gesture recogniser.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/canReorderRowsViaLongPress" title="canReorderRowsViaLongPress"></a>
+	<h3 class="subsubtitle method-title">canReorderRowsViaLongPress</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A boolean that dictates whether the rows of this grid can be dragged and dropped by the user.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL canReorderRowsViaLongPress</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If set to YES then the user can touch and hold a cell to initiate the drag and drop of a row &ndash; the cell being touched and held will display a pulse animation to indicate it is ready for dragging.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> ShinobiGrid has an internal long press gesture recogniser which is enabled if either this property or the <a href="#//api/name/canReorderColsViaLongPress">canReorderColsViaLongPress</a> property is set to YES. Setting both these properties to NO disables this gesture recogniser.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/canResizeColumnsViaPinch" title="canResizeColumnsViaPinch"></a>
+	<h3 class="subsubtitle method-title">canResizeColumnsViaPinch</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Dictates whether this grid&rsquo;s columns can be resized or not.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL canResizeColumnsViaPinch</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If canResizeColumnsViaPinch is <code>YES</code>, then a user can pinch two columns to resize them. Default value is <code>NO</code>.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> Having this value set to <code>YES</code> means that the grid has an internal pinch gesture recogniser that is enabled. Setting this property to <code>NO</code> disables this gesture recogniser.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/canSelectViaSingleTap" title="canSelectViaSingleTap"></a>
+	<h3 class="subsubtitle method-title">canSelectViaSingleTap</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Dictates whether this grid can be single tapped or not.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL canSelectViaSingleTap</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If canSelectViaSingleTap is <code>YES</code>, then a user can single tap grid cells and section headers. Tapping a cell triggers the shinobiGrid:willSelectCellAtCoord: <a href="#//api/name/delegate">delegate</a> call. Tapping a section header collapses the section. Default value for this property is <code>YES</code>.</p><div class="warning"><p><strong>Warning:</strong> <em>Important</em> Having this value set to <code>YES</code> means that the grid has an internal single tap gesture recogniser that is enabled. Setting this property to <code>NO</code> disables this gesture recogniser.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataSource" title="dataSource"></a>
+	<h3 class="subsubtitle method-title">dataSource</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The object that acts as the data source for the receving ShinobiGrid object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;&gt; dataSource</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The data source must adopt the <a href="../Protocols/SGridDataSource.html">SGridDataSource</a> protocol. The data source is not retained.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultBorderStyle" title="defaultBorderStyle"></a>
+	<h3 class="subsubtitle method-title">defaultBorderStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This property represents the style that will be applied to this grid&rsquo;s content border.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) SGridBorderStyle *defaultBorderStyle</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The border belongs the the content of the grid and not the grid itself. If you wish to apply a border to the grid then this can be accomplished as with a regular UIView through the use of the <code>layer</code> property (as ShinobiGrid is a descendant of UIView).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultColumnStyle" title="defaultColumnStyle"></a>
+	<h3 class="subsubtitle method-title">defaultColumnStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This property sets a default column style that will be used in all columns in this grid. Use this property to quickly set a base column style for the grid.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) SGridColRowStyle *defaultColumnStyle</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This property will be overriden by any style that is more specific, such as styles assigned in the <a href="#//api/name/delegate">delegate</a> methods or styles assigned when returning a cell in the datasource method.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultGridLineStyle" title="defaultGridLineStyle"></a>
+	<h3 class="subsubtitle method-title">defaultGridLineStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This property is the default style that will be applied to all gridlines that belong this this ShinobiGrid object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) SGridLineStyle *defaultGridLineStyle</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Any style applied to a gridline via the <a href="#//api/name/delegate">delegate</a> object will take priority over this property.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultRowStyle" title="defaultRowStyle"></a>
+	<h3 class="subsubtitle method-title">defaultRowStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This property sets a default row style that will be used in all rows in all sections in this grid. Use this property to quickly set a base row style for the grid.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) SGridColRowStyle *defaultRowStyle</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This property will be overriden by any style that is more specific, such as styles assigned in the <a href="#//api/name/delegate">delegate</a> methods or styles assigned when returning a cell in the datasource method.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultSectionHeaderStyle" title="defaultSectionHeaderStyle"></a>
+	<h3 class="subsubtitle method-title">defaultSectionHeaderStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This property represents the style that will be applied to all section headers in this grid.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) SGridSectionHeaderStyle *defaultSectionHeaderStyle</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>To specify individual styles for each (or a particular) section header then see the <code>shinobiGrid:headerStyleForSectionAtIndex:</code> method of <a href="../Protocols/SGridDelegate.html">SGridDelegate</a>. Note that a style specified with the <a href="#//api/name/delegate">delegate</a> method will take priority over this property.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The object that acts as the delegate of the receiving ShinobiGrid object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;&gt; delegate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The delegate must adopt the <a href="../Protocols/SGridDelegate.html">SGridDelegate</a> protocol. The delegate is not retained.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/licenseKey" title="licenseKey"></a>
+	<h3 class="subsubtitle method-title">licenseKey</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The License Key for this Grid</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSString *licenseKey</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A valid license key must be set before the grid will render</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/linesOnTop" title="linesOnTop"></a>
+	<h3 class="subsubtitle method-title">linesOnTop</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Controls the manner in which the gridlines are displayed in this grid.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SGridLinesOnTop linesOnTop</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If this property is set to <code>SGridLinesVerticalOnTop</code> then the vertical gridlines will be drawn over the top of the horizontal gridlines. The opposite is true if this property is set to <code>SGridLinesHorizontalOnTop</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rowStylesTakePriority" title="rowStylesTakePriority"></a>
+	<h3 class="subsubtitle method-title">rowStylesTakePriority</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This boolean value dictates the course of action to take if conflicting row and column styles are found. If set to <code>YES</code>, then the row style will take priority over the column style. If set to <code>NO</code> then the oppostie is true. The default value is <code>NO</code> (column styles take priority by default).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL rowStylesTakePriority</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If you set the row at index 0 to have a <code>backgroundColor</code> of red, and the column at index 0 to have a <code>backgroundColor</code> of blue, then the cell at <code>gridCoord</code> {0,0} is being told to have a <code>backgroundColor</code> of red and blue. Setting this property to YES in this instance would mean that the row style (red background) will be appled.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/getInfo" title="getInfo"></a>
+	<h3 class="subsubtitle method-title">getInfo</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An NSString describing the grid&rsquo;s version.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSString *)getInfo</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSString describing the grid&rsquo;s version.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dequeueReusableCellWithIdentifier:" title="dequeueReusableCellWithIdentifier:"></a>
+	<h3 class="subsubtitle method-title">dequeueReusableCellWithIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a reusable ShinobiGrid cell object located by its identifier.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)dequeueReusableCellWithIdentifier:(NSString *)<em>identifier</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/findRowAfterRow:" title="findRowAfterRow:"></a>
+	<h3 class="subsubtitle method-title">findRowAfterRow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This function will return the next row down.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SGridRow)findRowAfterRow:(SGridRow)<em>rowToStepDownFrom</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rowToStepDownFrom</em></dt>
+			<dd><p>The row that will be stepped down from in order to find the next row.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The row resulting from incrementing <code>rowToStepDownFrom</code> by one place.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important</em> This function is purely a utility function and has no bounds checking in relation to the grid. If you ask it to return the next row down from the very last row in the grid, it will return what would be the next row down regardless of the fact that the returned row does not exist in the grid.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/findRowBeforeRow:" title="findRowBeforeRow:"></a>
+	<h3 class="subsubtitle method-title">findRowBeforeRow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This function will return the next row up.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SGridRow)findRowBeforeRow:(SGridRow)<em>rowToStepUpFrom</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rowToStepUpFrom</em></dt>
+			<dd><p>The row that will be stepped up from in order to find the previous row.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The row resulting from decrementing <code>rowToStepUpFrom</code> by one place.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important</em> This function is purely a utility function and has no bounds checking in relation to the grid. If you ask it to return the next row up from the very first row in the grid, it will return what would be the next row up regardless of the fact that the returned row does not exist in the grid.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/freezeColsToTheLeftOfAndIncludingIndex:" title="freezeColsToTheLeftOfAndIncludingIndex:"></a>
+	<h3 class="subsubtitle method-title">freezeColsToTheLeftOfAndIncludingIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This method freezes all columns to the left of (and including) the column at index <code>colIndex</code>. Note that if a cell belongs to both a frozen row and frozen column that it will not be scrollable in any direction.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)freezeColsToTheLeftOfAndIncludingIndex:(int)<em>colIndex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>colIndex</em></dt>
+			<dd><p>The index of the column that should be frozen, along with all columns that have a column index less than <code>colIndex</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/freezeRowsAboveAndIncludingRow:" title="freezeRowsAboveAndIncludingRow:"></a>
+	<h3 class="subsubtitle method-title">freezeRowsAboveAndIncludingRow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This method freezes all rows above (and including) the supplied row. Note that if a cell belongs to both a frozen row and frozen column that it will not be scrollable in any direction.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)freezeRowsAboveAndIncludingRow:(SGridRow)<em>row</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>row</em></dt>
+			<dd><p>The row that should be frozen, along with all rows that appear above it in the grid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getInfo" title="getInfo"></a>
+	<h3 class="subsubtitle method-title">getInfo</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An NSString describing the grid&rsquo;s version.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)getInfo</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSString describing the grid&rsquo;s version.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reload" title="reload"></a>
+	<h3 class="subsubtitle method-title">reload</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reloads this ShinobiGrid object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)reload</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this method to reload all the data that is used to construct the grid.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/visibleCellAtCol:andRow:" title="visibleCellAtCol:andRow:"></a>
+	<h3 class="subsubtitle method-title">visibleCellAtCol:andRow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the cell that belongs to <code>colIndex</code> and <code>row</code>. Use this to retrieve a cell at a given coordinate.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SGridCell *)visibleCellAtCol:(int)<em>colIndex</em> andRow:(SGridRow)<em>row</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>colIndex</em></dt>
+			<dd><p>The index of the column that the cell should belong to.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>row</em></dt>
+			<dd><p>The row that the cell should belong to.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An object representing the cell at grid coordinate {<code>colIndex</code>, <code>row</code>}.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important</em> Note that this method will only retrieve cells that are currently visible in the grid. If an attempt is made to retrieve a cell that is outside the bounds of the grid, nil will be returned.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/visibleColumnIndexes" title="visibleColumnIndexes"></a>
+	<h3 class="subsubtitle method-title">visibleColumnIndexes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <code>NSArray</code> of <code>NSNumber</code> objects. Each <code>NSNumber</code> object represents a currently visible <code>colIndex</code>. Use this function to query which columns are currently visible in the grid.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)visibleColumnIndexes</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/visibleRows" title="visibleRows"></a>
+	<h3 class="subsubtitle method-title">visibleRows</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <code>NSArray</code> of <code>NSValue</code> objects. Each <code>NSValue</code> object represents a currently visible <code>row</code> &ndash; the <code>SGridRow</code> struct can be retrieved from an <code>NSValue</code> object by first providing a struct variable such as <code>SGridRow visibleRow</code>, and then using the <code>getValue:</code> method of the <code>NSValue</code> object like so &ndash; <code>[rowValueObject getValue:&amp;visibleRow]</code>. Use this function to query which rows are currently visible within the grid.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)visibleRows</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SGrid.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Scott Logic Ltd. All rights reserved. (Last updated: 2012-04-24)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

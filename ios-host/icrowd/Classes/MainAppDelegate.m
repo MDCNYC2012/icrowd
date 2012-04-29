@@ -7,6 +7,7 @@
 #import "icDataManager.h"
 #import "icNetstatViewController.h"
 #import "icReportDashboardViewController.h"
+#import "icReportLinechartViewController.h"
 #import "icHTTPConnection.h"
 #import "icHTTPServer.h"
 #import "icConnectionManager.h"
@@ -22,9 +23,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #pragma mark properties
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+
 @synthesize cloudStatusViewDelegate = _cloudStatusViewDelegate;
 @synthesize cloudNodesViewDelegate = _cloudNodesViewDelegate;
 @synthesize dashboardViewDelegate = _dashboardViewDelegate;
+@synthesize icLinechartViewDelegate = _icLinechartViewDelegate;
 
 /*
  */
@@ -109,9 +112,17 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [navThreeController pushViewController: viewThreeController animated:NO];
     self.dashboardViewDelegate = viewThreeController;
     
+    // init navigation controller for "linechart" tab
+    icReportLinechartViewController *viewFourController = [[icReportLinechartViewController alloc] initWithNibName:@"icReportLinechartViewController" bundle:nil];    
+    UINavigationController * navFourController = [[UINavigationController alloc] init];
+    [navFourController.navigationBar setBarStyle:UIBarStyleBlack];
+    [navFourController pushViewController: viewFourController animated:NO];
+    self.icLinechartViewDelegate = viewFourController;
+    
+    
     // init tab bar controller
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:navOneController, navTwoController,navThreeController,nil];
+    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:navOneController, navTwoController,/* navThreeController */,navFourController,nil];
     self.window.rootViewController = self.tabBarController;
     //    self.tabBarController.delegate = self.singleton;
     
