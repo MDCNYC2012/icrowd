@@ -22,6 +22,8 @@
 		01ED6C38154CCB9C00DBF6BD /* tabBarIcon-Chart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C34154CCB9C00DBF6BD /* tabBarIcon-Chart@2x.png */; };
 		01ED6C39154CCB9C00DBF6BD /* tabBarIcon-Cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C35154CCB9C00DBF6BD /* tabBarIcon-Cloud.png */; };
 		01ED6C3A154CCB9C00DBF6BD /* tabBarIcon-Cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C36154CCB9C00DBF6BD /* tabBarIcon-Cloud@2x.png */; };
+		01ED6C3C154CD64F00DBF6BD /* icrowdIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C3B154CD64F00DBF6BD /* icrowdIcon@2x.png */; };
+		01ED6C3E154CD65100DBF6BD /* icrowdIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C3D154CD65100DBF6BD /* icrowdIcon.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -78,6 +80,8 @@
 		01ED6C34154CCB9C00DBF6BD /* tabBarIcon-Chart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon-Chart@2x.png"; sourceTree = "<group>"; };
 		01ED6C35154CCB9C00DBF6BD /* tabBarIcon-Cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon-Cloud.png"; sourceTree = "<group>"; };
 		01ED6C36154CCB9C00DBF6BD /* tabBarIcon-Cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon-Cloud@2x.png"; sourceTree = "<group>"; };
+		01ED6C3B154CD64F00DBF6BD /* icrowdIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icrowdIcon@2x.png"; sourceTree = "<group>"; };
+		01ED6C3D154CD65100DBF6BD /* icrowdIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icrowdIcon.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* icrowd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icrowd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -217,6 +221,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				01ED6C3D154CD65100DBF6BD /* icrowdIcon.png */,
+				01ED6C3B154CD64F00DBF6BD /* icrowdIcon@2x.png */,
 				01ED6C32154CCB9C00DBF6BD /* Assets */,
 				DCC369A01538F0B1004C5FA7 /* Logging */,
 				DC5406DD129F5CA300195140 /* TCP */,
@@ -413,6 +419,8 @@
 				01ED6C38154CCB9C00DBF6BD /* tabBarIcon-Chart@2x.png in Resources */,
 				01ED6C39154CCB9C00DBF6BD /* tabBarIcon-Cloud.png in Resources */,
 				01ED6C3A154CCB9C00DBF6BD /* tabBarIcon-Cloud@2x.png in Resources */,
+				01ED6C3C154CD64F00DBF6BD /* icrowdIcon@2x.png in Resources */,
+				01ED6C3E154CD65100DBF6BD /* icrowdIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
