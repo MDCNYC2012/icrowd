@@ -9,13 +9,103 @@
 <body>
 <form id="helloForm">
     <p>Hello.  Please describe yourself anonymously for this demo..</p>
-<!-- field names
+<header id="header" class="info">
+<h2>iCrowd Event Participation</h2>
+<div>To participate in an event using iCrowd, please complete the following form, enter the event ID number, and click on 'Join Event' to begin!</div>
+</header>
 
-age
-gender
+<ul>
 
-    -->
-    </form>
+
+
+
+<li id="fo1li16" class="notranslate      ">
+<label class="desc" id="title16" for="Field16">
+Name:
+</label>
+<span>
+<input id="Field16" name="Field16" type="text" class="field text fn" value="" size="8" tabindex="1" onkeyup="handleInput(this);" onchange="handleInput(this);" />
+<label for="Field16">First</label>
+</span>
+<span>
+<input id="Field17" name="Field17" type="text" class="field text ln" value="" size="14" tabindex="2" onkeyup="handleInput(this);" onchange="handleInput(this);" />
+<label for="Field17">Last</label>
+</span>
+<p class="instruct" id="instruct16"><small>Please tell us your name (but only if you want to!)</small></p>
+</li>
+
+
+
+<li id="fo1li8" class="notranslate      ">
+<label class="desc " id="title8" for="Age">
+Age:
+<span id="req_8" class="req">*</span>
+</label>
+<div>
+<input id="Age" name="Field8" type="text" class="field text nospin small"  value="" maxlength="3" tabindex="3" onkeyup="handleInput(this); validateRange(8, 'digit');" onchange="handleInput(this);" required />
+<label for="Age">Must be between <var id="rangeMinMsg8">1</var> and <var id="rangeMaxMsg8">3</var> digits.&nbsp;&nbsp;&nbsp; <em class="currently">Currently Used: <var id="rangeUsedMsg8">0</var> digits.</em></label>
+</div>
+</li>
+
+
+<li id="fo1li7" class="notranslate      ">
+<fieldset>
+<![if !IE | (gte IE 8)]>
+<legend id="title7" class="desc">
+Gender:
+<span id="req_7" class="req">*</span>
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title7" class="desc">
+Gender:
+<span id="req_7" class="req">*</span>
+</label>
+<![endif]-->
+<div>
+<input id="radioDefault_7" name="Gender" type="hidden" value="" />
+<span>
+<input id="Gender_0" name="Gender" type="radio" class="field radio" value="Male" tabindex="4" onchange="handleInput(this);" onmouseup="handleInput(this);" checked="checked"  
+required />
+<label class="choice" for="Gender_0" >
+Male</label>
+</span>
+<span>
+<input id="Gender_1" name="Gender" type="radio" class="field radio" value="Female" tabindex="5" onchange="handleInput(this);" onmouseup="handleInput(this);" required />
+<label class="choice" for="Gender_1" >
+Female</label>
+</span>
+</div>
+</fieldset>
+</li>
+
+
+<li id="fo1li19" class="notranslate      ">
+<label class="desc " id="title19" for="Field19">
+iCrowd Event ID #:
+<span id="req_19" class="req">*</span>
+</label>
+<div>
+<input id="Field19" name="Field19" type="text" class="field text nospin small"  value="" maxlength="4" tabindex="6" onkeyup="handleInput(this); validateRange(19, 'digit');" onchange="handleInput(this);" required />
+<label for="Field19">Must be between <var id="rangeMinMsg19">4</var> and <var id="rangeMaxMsg19">4</var> digits.&nbsp;&nbsp;&nbsp; <em class="currently">Currently Used: <var id="rangeUsedMsg19">0</var> digits.</em></label>
+</div>
+<p class="instruct " id="instruct19"><small>Please enter your 4 digit conference number.</small></p>
+</li>
+
+ 
+
+
+<li class="buttons ">
+<div>
+<input type="hidden" name="currentPage" id="currentPage" value="LAr2k3sv8kaTsKThAYkxz8vQbloNu0qsKtOsxEpVbT4=" />
+
+                    <input id="saveForm" name="saveForm" class="btTxt submit" 
+    type="submit" value="Submit"
+ onmousedown="doSubmitEvents();" />
+
+
+</ul>
+</form>
 <script language="JavaScript">
     $(document).ready(function()
     {
