@@ -14,6 +14,7 @@
 @protocol icNetstatUserTableViewDelegate <NSObject>
 -(void)dataManagerDidReadAllUser;
 -(void)dataManagerDidAddUser: (icUser *)user atIndex:(int)index;
+-(void)dataManagerDidDeleteAll;
 @end
 
 @interface icNetstatUserTableViewController : UITableViewController <icNetstatUserTableViewDelegate>

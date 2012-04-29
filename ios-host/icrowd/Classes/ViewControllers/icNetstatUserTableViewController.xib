@@ -33,7 +33,7 @@
 			<object class="IBUITableView" id="993928743">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
-				<string key="NSFrame">{{0, 64}, {1024, 655}}</string>
+				<string key="NSFrame">{{0, 64}, {768, 655}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
@@ -55,6 +55,22 @@
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="IBUIInterfaceOrientation">3</int>
 					<int key="interfaceOrientation">3</int>
+				</object>
+				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
+					<string key="IBUISimulatedSizeMetricsClass">IBUIModalPageSheetSimulatedSizeMetrics</string>
+					<object class="NSMutableDictionary" key="IBUINormalizedOrientationToSizeMap">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<array key="dict.sortedKeys">
+							<integer value="1"/>
+							<integer value="3"/>
+						</array>
+						<array key="dict.values">
+							<string>{768, 1024}</string>
+							<string>{768, 768}</string>
+						</array>
+					</object>
+					<string key="IBUITargetRuntime">IBIPadFramework</string>
+					<string key="IBUIDisplayName">Page Sheet</string>
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 				<bool key="IBUIBouncesZoom">NO</bool>

@@ -29,6 +29,7 @@
 {
     [super viewDidLoad];
     [[icDataManager singleton] setUserTableDelegate:self];
+    [self.tableView setRowHeight:25];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -67,6 +68,10 @@
     [self.tableView insertRowsAtIndexPaths:path withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+-(void)dataManagerDidDeleteAll
+{
+    [self.tableView reloadData];
+}
 
 /*
  */
@@ -81,7 +86,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [[[icDataManager singleton] userArray] count];
+    int num = [[[icDataManager singleton] userArray] count];
+    return num ? num : 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,7 +98,7 @@
 -(UITableViewCell *) tableCellUser: (UITableView *)tableView withUser: (icUser *) user
 {
     UITableViewCell *cell = [self tableCellInit:tableView withIdentifier:user.name];
-    NSString * brief = [[NSString alloc] initWithFormat:@"Age:%@ Gender:%@",user.age,user.gender];
+    NSString * brief = [[NSString alloc] initWithFormat:@"Age:%@ Gender:%@",user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];
    [cell.textLabel setText: user.name]; 
    [cell.detailTextLabel setText: brief];    
 //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

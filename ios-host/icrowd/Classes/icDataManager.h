@@ -38,7 +38,9 @@
 #pragma mark core data stack
 -(BOOL) save;
 -(void)saveContext;
--(NSPersistentStoreCoordinator *)persistentStoreCoordinatorInitNew;
+-(void)managedObjectModelInitNew;
+-(void)persistentStoreCoordinatorInitNew;
+-(void)managedObjectContextInitNew;
 -(NSURL *)applicationDocumentsDirectory;
 
 @end

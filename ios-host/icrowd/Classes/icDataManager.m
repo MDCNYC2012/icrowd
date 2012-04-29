@@ -109,16 +109,17 @@ static id __instance;
 -(void)flushDatabase
 {
     NSArray * stores = [self.persistentStoreCoordinator persistentStores];
-    for (int i=0; i<[stores count]; ++i)
-    {
-        NSPersistentStore *store = [stores objectAtIndex:i];
+    NSPersistentStore *store = [stores objectAtIndex:0];
     NSError *error;
     NSURL *storeURL = store.URL;
     [self.persistentStoreCoordinator removePersistentStore:store error:&error];
-        omLogDev(@"removeItemAtPath:%@",storeURL.path);
+    omLogDev(@"removeItemAtPath:%@",storeURL.path);
     [[NSFileManager defaultManager] removeItemAtPath:storeURL.path error:&error];
-    }
+    [self managedObjectModelInitNew];
     [self persistentStoreCoordinatorInitNew];
+    [self managedObjectContextInitNew];
+    [self.userArray removeAllObjects];
+    [self.userTableDelegate dataManagerDidDeleteAll];
 }
 
 #pragma mark - Core Data stack
@@ -151,42 +152,31 @@ static id __instance;
     return true;
 }
 
-// Returns the managed object context for the application.
-// If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
-- (NSManagedObjectContext *)managedObjectContext
-{
-    if (__managedObjectContext != nil) {
-        return __managedObjectContext;
-    }
-    
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        __managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
-    return __managedObjectContext;
-}
-
 // Returns the managed object model for the application.
 // If the model doesn't already exist, it is created from the application's model.
 - (NSManagedObjectModel *)managedObjectModel
 {
     if (__managedObjectModel != nil)
         return __managedObjectModel;
-    
+    [self managedObjectModelInitNew];
+    return __managedObjectModel;
+}
+
+-(void)managedObjectModelInitNew
+{
+
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"icrowd" withExtension:@"momd"];
-    
+
     __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    
+
     /*
-    omLogDev(@"Managed Object Model: %@",__managedObjectModel);
+     omLogDev(@"Managed Object Model: %@",__managedObjectModel);
      NSString *logAll = @"Managed Object Model Entities:\n";
      for ( icUser *target in __managedObjectModel.entities)
      logAll = [logAll stringByAppendingFormat: @"%@\n", target];
      omLogDev(logAll);
      */
-    
-    return __managedObjectModel;
+
 }
 
 // Returns the persistent store coordinator for the application.
@@ -199,7 +189,7 @@ static id __instance;
     return __persistentStoreCoordinator;
 }
 
--(NSPersistentStoreCoordinator *)persistentStoreCoordinatorInitNew
+-(void)persistentStoreCoordinatorInitNew
 {
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"icrowd.sqlite"];
     
@@ -234,6 +224,26 @@ static id __instance;
         abort();
     }
     
+}
+
+// Returns the managed object context for the application.
+// If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
+- (NSManagedObjectContext *)managedObjectContext
+{
+    if (__managedObjectContext != nil) {
+        return __managedObjectContext;
+    }    
+    [self managedObjectContextInitNew];
+    return __managedObjectContext;
+}
+
+-(void)managedObjectContextInitNew
+{
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    if (coordinator != nil) {
+        __managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
+    }    
 }
 
 #pragma mark - Application's Documents directory

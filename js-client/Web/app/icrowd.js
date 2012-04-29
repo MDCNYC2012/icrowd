@@ -11,8 +11,6 @@
         // initialize
         init:function () {
             __initView();
-//            __initFeedback();
-            __initUser();
         },
 
         // handle mouse motion
@@ -61,7 +59,7 @@
 
         // trigger send feedback to host
         feedbackSendToHost:function () {
-            __feedbackSendToHost();
+            __transmissionSendToHost();
         }
 
     };
@@ -110,8 +108,6 @@
     var __userGender;
     // user initialization
     function __initUser() {
-        // TODO: set user id assign from host during hello method
-        __userId = 5;
     }
 
     // send hello new user to host
@@ -177,6 +173,8 @@
 //            console.log('x=' + x + ', y=' + y + ' in window w=' + $(window).width() + ', h=' + $(window).height()  + ' will update view to f=' + f + ', i=' + i);
         // send grain of data to host
         __storeFeedback(f, i);
+        // turn on transmission if it isn't already
+        __transmissionStart();
         // update the view
         __viewUpdate(f, i);
     }
@@ -184,11 +182,12 @@
     // track if user is currently touching screen
     var __feedbackIsTouching = false;
 
-    function __feedbackTouch(f) {
+    function __feedbackTouch() {
         __feedbackIsTouching = true;
+        __transmissionStart();
     }
 
-    function __feedbackExit(f) {
+    function __feedbackExit() {
         __feedbackIsTouching = false;
     }
 
@@ -201,8 +200,22 @@
         __feedbackCurrentIntensity = i;
     }
 
-    // send current feedback state to host
-    function __feedbackSendToHost() {
+    // track if broadcast is active
+    var __transmissionActive = false;
+
+    function __transmissionStart() {
+        __transmissionActive = true;
+    }
+
+    function __transmissionStop() {
+        __transmissionActive = false;
+    }
+
+    // if the signal is active, send current feedback state to host
+    function __transmissionSendToHost() {
+        // if broadcast inactive, skip
+        if (!__transmissionActive) return;
+        __transmissionStop();
         $.ajax({
             type:'POST',
             url:__baseUrl() + 'grain',

@@ -64,7 +64,7 @@ html,body {
 }
 
 .mainTip {
-    display:inline-block;
+    display:block;
     position: absolute;
     z-index:1100;
     color:#000;
@@ -79,6 +79,10 @@ html,body {
 
 .mainTipMiddle {
     top: 48%;
+}
+
+.mainTipBottom {
+    bottom: 20px;
 }
 
 .mainTipLeft {
@@ -98,6 +102,17 @@ html,body {
     left:0;
     top:0;
     z-index: 1000;
+}
+
+#mainTouchArea {
+    display:block;
+    background:transparent none;
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    z-index: 1200;
 }
 
 /** hello form **/
