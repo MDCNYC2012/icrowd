@@ -72,6 +72,8 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
         int userAge = [(NSString *) [postParameters objectForKey:@"a"] intValue];
         int userGender = (gender) [(NSString *) [postParameters objectForKey:@"g"] intValue];
         
+        int userIdx = 1;
+        
         response = [[[NSString alloc] initWithFormat:@"{user:{idx:\"%i\",name:\"%@\",age:\"%i\",gender:\"%i\"}}",userIdx,userName,userAge,userGender] dataUsingEncoding:NSUTF8StringEncoding];
         
         int userIdx = 1;
