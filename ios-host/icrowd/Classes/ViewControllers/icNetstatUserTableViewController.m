@@ -56,13 +56,13 @@
 
 - (void)dataManagerDidReadAllUser
 {
-    omLogDev(@"An attempt is being made to ask the tableView to reload its data");
+//    omLogDev(@"An attempt is being made to ask the tableView to reload its data");
     [self.tableView reloadData];
 }
 
 - (void)dataManagerDidAddUser:(icUser *)user atIndex:(int)index
 {
-    omLogDev(@"An attempt is being made to insert a row");
+//    omLogDev(@"An attempt is being made to insert a row");
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     NSArray* path = [NSArray arrayWithObject:indexPath];
     [self.tableView insertRowsAtIndexPaths:path withRowAnimation:UITableViewRowAnimationAutomatic];

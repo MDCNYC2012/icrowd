@@ -121,16 +121,17 @@
                 g:gender
             }
         }).done(function (data) {
-                $.icrowd.userHelloRecv(data);
+                $.icrowd.userHelloRecv($.parseJSON(data));
             });
     }
 
     // recv new user assignment from host
     function __userHelloRecv(p) {
-        __userId = p.idx;
-        __userName = p.name;
-        __userAge = p.age;
-        __userGender = p.gender;
+        console.log("trying to hello recv",p);
+        __userId = p.user.idx;
+        __userName = p.user.name
+        __userAge = p.user.age;
+        __userGender = p.user.gender;
         __viewHelloDone();
     }
 

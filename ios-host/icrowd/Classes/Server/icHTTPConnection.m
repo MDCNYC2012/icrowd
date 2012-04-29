@@ -6,6 +6,7 @@
 #import "HTTPLogging.h"
 #import "NSString+URLUtils.h"
 #import "icUser.h"
+#import "icGrain.h"
 
 // Log levels : off, error, warn, info, verbose
 // Other flags: trace
@@ -26,13 +27,13 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 		if ([path isEqualToString:@"/hello"])
 		{
 			// Let's be extra cautious, and make sure the upload isn't 5 gigs
-            omLogDev(@"will accept payload of size %i",requestContentLength);
+//            omLogDev(@"will accept payload of size %i",requestContentLength);
 			return requestContentLength < 50;
 		}
 		if ([path isEqualToString:@"/grain"])
 		{
 			// Let's be extra cautious, and make sure the upload isn't 5 gigs
-            omLogDev(@"will accept payload of size %i",requestContentLength);
+//            omLogDev(@"will accept payload of size %i",requestContentLength);
 			return requestContentLength < 50;
 		}
 	}	
@@ -46,7 +47,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 	if([method isEqualToString:@"POST"])
 		return YES;
 
-    omLogDev(@"expects request body from method %@ at path %@", method, path);
+//    omLogDev(@"expects request body from method %@ at path %@", method, path);
 	
 	return [super expectsRequestBodyFromMethod:method atPath:path];
 }
@@ -76,7 +77,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
         
         icUser * user = [[icDataManager singleton] userCreateWithName:userName andAge:userAge andGender:userGender];
         
-        response = [[[NSString alloc] initWithFormat:@"{user:{idx:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}}",user.idx,user.name,user.age,user.gender] dataUsingEncoding:NSUTF8StringEncoding];
+        response = [[[NSString alloc] initWithFormat:@"{\"user\":{\"idx\":\"%@\",\"name\":\"%@\",\"age\":\"%@\",\"gender\":\"%@\"}}",user.idx,user.name,user.age,user.gender] dataUsingEncoding:NSUTF8StringEncoding];
         
 		omLogDev(@"HELLO NEW user:{idx:\"%@\",name:\"%@\",age:\"%@\",gender:\"%@\"}",user.idx,user.name,user.age,user.gender);
 
@@ -89,21 +90,33 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
      */
 	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/grain"])
 	{
-		NSString *postStr = nil;		
 		NSData *postData = [request body];
+		NSString *postStr = nil;
+        NSDictionary *postParameters;
         NSData *response = nil;
         
 		if (postData)
 			postStr = [[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding];
 		
-		omLogDev(@"postStr: %@", postStr);
-		
-        response = [[[NSString alloc] initWithFormat:@"postStr:%@",postStr] dataUsingEncoding:NSUTF8StringEncoding];
+        postParameters = [postStr URLQueryParameters];            
         
-		return [[HTTPDataResponse alloc] initWithData:response];
+        NSNumber * grainUser = [[NSNumber alloc] initWithInt: [[postParameters objectForKey:@"u"] intValue]];
+        NSNumber * grainFeeling = [[NSNumber alloc] initWithFloat: [[postParameters objectForKey:@"f"] floatValue]];
+        NSNumber * grainIntensity = [[NSNumber alloc] initWithFloat: [[postParameters objectForKey:@"i"] floatValue]];
+        
+        icGrain * grain = [[icDataManager singleton] grainCreateWithUserIdx:grainUser andFeeling:grainFeeling andIntensity:grainIntensity];
+        
+        response = [[[NSString alloc] initWithFormat:@"OK",requestContentLength] dataUsingEncoding:NSUTF8StringEncoding];
+        
+		omLogDev(@"SAVED grain:{userId:\"%@\",feeling:\"%@\",intensity:\"%@\",date:\"%@\"}",grainUser,grain.feeling,grain.intensity,grain.date);
+        
+		return [[HTTPDataResponse alloc] initWithData:response];       
 	}
     
-	
+#pragma mark HTTP request handler for a file path from the Web folder      
+	/**
+     *  request a file path from the Web folder
+     */
 	return [super httpResponseForMethod:method URI:path];
 }
 

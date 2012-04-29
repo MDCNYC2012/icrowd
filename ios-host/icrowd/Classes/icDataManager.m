@@ -104,6 +104,23 @@ static id __instance;
     return user;
 }
 
+/*
+ */
+#pragma mark GRAIN model
+
+-(icGrain *) grainCreateWithUserIdx:(NSNumber *)uIdx andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i
+{
+    icGrain * grain = (icGrain *)[NSEntityDescription insertNewObjectForEntityForName:@"Grain" inManagedObjectContext:self.managedObjectContext];
+//    icUser * user = (icUser *)[NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+//    grain.user =
+    grain.feeling = f;
+    grain.intensity = i;
+    grain.date = [[NSDate alloc] init];
+    // if save failure, fail
+    if (![self save]) return nil;
+    return grain;
+}
+
 #pragma mark DANGER ... flush database
 
 -(void)flushDatabase

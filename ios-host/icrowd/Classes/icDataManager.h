@@ -12,7 +12,7 @@
 
 #pragma mark classes
 @class icUser;
-
+@class icGrain;
 
 #pragma mark interface
 @interface icDataManager : NSObject
@@ -31,6 +31,9 @@
 -(NSMutableArray *) readAll:(NSString *)entityName sortBy:(NSString *)sortBy;
 -(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g;
 -(NSMutableArray *) userReadAll;
+
+#pragma mark GRAIN model
+-(icGrain *) grainCreateWithUserIdx:(NSNumber *)uIdx andFeeling:(NSNumber *)f andIntensity:(NSNumber *)i;
 
 #pragma mark DANGER ... flush database
 -(void)flushDatabase;
