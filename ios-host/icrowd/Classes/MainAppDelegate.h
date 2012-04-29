@@ -20,7 +20,7 @@
 @property (nonatomic) id <icCloudStatusViewDelegate> cloudStatusViewDelegate;
 @property (nonatomic) id <icCloudNodesViewDelegate> cloudNodesViewDelegate;
 @property (nonatomic) id <icDashboardViewDelegate> dashboardViewDelegate;
-@property (nonatomic) id <icLinechartViewDelegate> icLinechartViewDelegate;
+@property (nonatomic) id <icLinechartViewDelegate> linechartViewDelegate;
 
 #pragma mark start application
 -(BOOL)startLogging;

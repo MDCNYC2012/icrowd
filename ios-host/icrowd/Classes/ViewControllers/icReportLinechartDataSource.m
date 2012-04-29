@@ -6,64 +6,24 @@
 //
 
 #import "icReportLinechartDataSource.h"
+#import "icDataManager.h"
+#import "icGrain.h"
+#import "icUser.h"
 
 @implementation icReportLinechartDataSource
 
 @synthesize series1Data, series1Dates;
 
-- (NSDate *)dateFromString:(NSString *)str
-{
-    static BOOL monthLookupTableInitialised = NO;
-    static NSMutableArray *monthIdx;
-    static NSArray *monthNames;
-    static NSDictionary *months;
-    
-    if (!monthLookupTableInitialised) {
-        monthIdx = [[NSMutableArray alloc] init ];
-        for (int i = 1; i <= 12; ++i) {
-            [monthIdx addObject:[NSNumber numberWithInt:i]];
-        }
-        
-        monthNames = [[NSArray alloc] initWithObjects:@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec", nil];
-        months = [[NSDictionary alloc] initWithObjects:monthIdx forKeys:monthNames];
-        monthLookupTableInitialised = YES;
-    }
-    
-    NSRange dayRange = NSMakeRange(0,2);
-    NSString *dayString = [str substringWithRange:dayRange];
-    NSUInteger day = [dayString intValue];
-    
-    NSRange monthRange = NSMakeRange(3, 3);
-    NSString *monthString = [str substringWithRange:monthRange];
-    NSUInteger month = [[months objectForKey:monthString] unsignedIntValue];
-    
-    NSRange yearRange = NSMakeRange(7, 4);
-    NSString *yearString = [str substringWithRange:yearRange];
-    NSUInteger year = [yearString intValue];
-    
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setDay:day];
-    [components setMonth:month];
-    [components setYear:year];
-    
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDate *date = [gregorian dateFromComponents:components];
-    
-//    [components release];
-//    [gregorian release];
-    
-    return date;
-}
-
-
 - (id)init
 {
     self = [super init];
     if (self) {
+        
         // Initialize the calendar
         cal = [NSCalendar currentCalendar];
         stepLineMode = NO;
         
+        /*
         NSArray *rawData;
         
         NSString *path = [[NSBundle mainBundle] pathForResource:@"DJ" ofType:@"plist"];
@@ -82,6 +42,7 @@
             // read in data series
             [series1Data addObject:[rawData objectAtIndex:(i + 1)]];
         }
+         */
     }
     
     return self;
@@ -96,12 +57,18 @@
 
 // Returns the number of points for a specific series in the specified chart
 - (int)sChart:(ShinobiChart *)chart numberOfDataPointsForSeriesAtIndex:(int)seriesIndex {
-    //In our example, all series have the same number of points
-    return 3000;
+    // In our example, all series have the same number of points
+    icUser * user = [[[icDataManager singleton] userArray] objectAtIndex:seriesIndex];
+    // return count of grains for that user
+    int grainCount = [user.grain count];
+    return (grainCount>=1) ? grainCount : 0;
 }
 
 // Returns the series at the specified index for a given chart
 -(SChartSeries *)sChart:(ShinobiChart *)chart seriesAtIndex:(int)index {
+    
+    // get user (1:1) per series
+    icUser * user = [[[icDataManager singleton] userArray] objectAtIndex:index];
     
     // Our series are either of type SChartLineSeries or SChartStepLineSeries depending on stepLineMode.
     SChartLineSeries *lineSeries = stepLineMode? 
@@ -110,11 +77,32 @@
     
     lineSeries.style.lineWidth = [NSNumber numberWithInt: 2];
     
+    // FEMALE
+    if ([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]) {
+        
+        lineSeries.style.lineColor = [UIColor colorWithRed:120.f/255.f green:0.f/255.f blue:100.f alpha:1.f];
+        lineSeries.style.areaColor = [UIColor colorWithRed:120.f/255.f green:0.f/255.f blue:100.f alpha:1.f]; 
+        
+        lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:120.f/255.f green:0.f/255.f blue:100.f alpha:1.f];
+        lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:120.f/255.f green:0.f/255.f blue:100.f alpha:1.f];        
+
+        // MALE
+    } else {
+        lineSeries.style.lineColor = [UIColor colorWithRed:0.f/255.f green:41.f/255.f blue:150.f alpha:1.f];
+        lineSeries.style.areaColor = [UIColor colorWithRed:0.f/255.f green:41.f/255.f blue:150.f/255.f alpha:1.f];
+        
+        lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:0.f/255.f green:41.f/255.f blue:150.f alpha:1.f];
+        lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:0.f/255.f green:41.f/255.f blue:150.f/255.f alpha:1.f];       
+        
+    }
+    
+    /*
     lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
     lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
     
     lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
     lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+     */
     
     lineSeries.baseline = [NSNumber numberWithInt:0];
     lineSeries.style.showFill = YES;
@@ -126,20 +114,27 @@
 
 // Returns the number of series in the specified chart
 - (int)numberOfSeriesInSChart:(ShinobiChart *)chart {
-    return 1;
+    int seriesCount = [[[icDataManager singleton] userArray] count];
+    return seriesCount ? seriesCount : 0;
 }
 
 // Returns the data point at the specified index for the given series/chart.
 - (id<SChartData>)sChart:(ShinobiChart *)chart dataPointAtIndex:(int)dataIndex forSeriesAtIndex:(int)seriesIndex {
     
+    // get user (1:1) per series
+    icUser * user = [[[icDataManager singleton] userArray] objectAtIndex:seriesIndex];
+    
+    // get grain for data index of this user's grains
+    icGrain * grain = [[[user.grain objectEnumerator] allObjects] objectAtIndex:dataIndex];
+    
     // Construct a data point to return
     SChartDataPoint *datapoint = [[SChartDataPoint alloc] init];
     
     // For this example, we simply move one day forward for each dataIndex
-    datapoint.xValue = [series1Dates objectAtIndex:dataIndex];
+    datapoint.xValue = grain.date;
     
     // Construct an NSNumber for the yValue of the data point
-    datapoint.yValue = [NSNumber numberWithFloat:[[series1Data objectAtIndex:dataIndex] floatValue] - 10000.f];
+    datapoint.yValue = [NSNumber numberWithFloat:([grain.feeling floatValue] * [grain.intensity floatValue])];
     
     return datapoint;
 }

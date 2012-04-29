@@ -68,6 +68,11 @@
 
         // view initialization
     function __initView() {
+        /*
+        $('#mainColorBlock').width($(window).width()).height($(window).height());
+        $('#mainTouchArea').width($(window).width()).height($(window).height());
+        $('#helloForm').width($(window).width()).height($(window).height());
+        */
         $('#helloSubmit').click(function(e) {
             $.icrowd.userHelloSend(
                 $('#userName').val(),

@@ -55,34 +55,33 @@ static id __instance;
 
 -(NSMutableArray *) readAll:(NSString *)entityName sortBy:(NSString *)sortBy
 {
+ 
+}
+
+-(NSMutableArray *) userReadAll
+{
     
     // Define our table/entity to use
-    NSEntityDescription *entity = [NSEntityDescription entityForName: entityName inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName: @"User" inManagedObjectContext:self.managedObjectContext];
     
     // Setup the fetch request
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity]; 
     
     // Define how we will sort the records
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortBy ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"idx" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     [request setSortDescriptors:sortDescriptors];
     
     // Fetch the records and handle an error
     NSError *error;
-    NSMutableArray *mutableFetchResults = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy]; 
+    self.userArray = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy]; 
     
-    if (!mutableFetchResults) {
+    if (!self.userArray) {
         // Handle the error.
         // This is a serious error and should advise the user to restart the application
     }     
     
-    return mutableFetchResults;
-}
-
--(NSMutableArray *) userReadAll
-{
-    self.userArray = [self readAll:@"User" sortBy:@"idx"];
     int userCount = [self.userArray count];
     if (userCount > __userIndex)
         __userIndex = userCount;

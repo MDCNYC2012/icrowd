@@ -22,13 +22,12 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic) NSMutableArray *userArray; 
+@property (nonatomic, strong) NSMutableArray *userArray; 
 
 #pragma mark singleton
 +(icDataManager *) singleton;
 
 #pragma TARGET model
--(NSMutableArray *) readAll:(NSString *)entityName sortBy:(NSString *)sortBy;
 -(icUser *) userCreateWithName:(NSString *)n andAge:(NSNumber *)a andGender:(NSNumber *)g;
 -(NSMutableArray *) userReadAll;
 

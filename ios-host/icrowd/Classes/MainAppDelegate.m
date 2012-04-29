@@ -27,7 +27,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 @synthesize cloudStatusViewDelegate = _cloudStatusViewDelegate;
 @synthesize cloudNodesViewDelegate = _cloudNodesViewDelegate;
 @synthesize dashboardViewDelegate = _dashboardViewDelegate;
-@synthesize icLinechartViewDelegate = _icLinechartViewDelegate;
+@synthesize linechartViewDelegate = _linechartViewDelegate;
 
 /*
  */
@@ -117,12 +117,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     UINavigationController * navFourController = [[UINavigationController alloc] init];
     [navFourController.navigationBar setBarStyle:UIBarStyleBlack];
     [navFourController pushViewController: viewFourController animated:NO];
-    self.icLinechartViewDelegate = viewFourController;
+    self.linechartViewDelegate = viewFourController;
     
     
     // init tab bar controller
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:navOneController, navTwoController,/* navThreeController */,navFourController,nil];
+    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:navOneController, navTwoController,/* navThreeController, */navFourController,nil];
     self.window.rootViewController = self.tabBarController;
     //    self.tabBarController.delegate = self.singleton;
     
@@ -149,6 +149,7 @@ static NSTimer * __updateIntervalTimer;
     [self.cloudStatusViewDelegate mainDidUpdateInterval];
     [self.cloudNodesViewDelegate mainDidUpdateInterval];
     [self.dashboardViewDelegate mainDidUpdateInterval];
+    [self.linechartViewDelegate mainDidUpdateInterval];
 }
 
 @end

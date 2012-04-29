@@ -189,8 +189,10 @@
     [self.chart layoutSubviews];
     
     // Restore axes' ranges
+    if (xMin<xMax) {
     [self.chart.xAxis setRangeWithMinimum:[NSNumber numberWithDouble: xMin] andMaximum:[NSNumber numberWithDouble: xMax] withAnimation:NO];
     [self.chart.yAxis setRangeWithMinimum:[NSNumber numberWithDouble: yMin] andMaximum:[NSNumber numberWithDouble: yMax] withAnimation:NO];
+    }
     
     // Redraw chart
     [self.chart redrawChartAndGL: YES];
