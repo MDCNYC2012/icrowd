@@ -33,6 +33,19 @@
         // report if feedback is touching
         feedbackIsTouching:function () {
             return __feedbackIsTouching;
+        },
+
+        // report current feedback
+        feedback:function() {
+            return {
+                feeling:__feedbackCurrentFeeling,
+                intensity:__feedbackCurrentIntensity
+            }
+        },
+
+        // trigger send feedback to host
+        feedbackSendToHost:function(){
+            __feedbackSendToHost();
         }
 
     };
@@ -41,7 +54,7 @@
 
         // view initialization
     function __initView() {
-
+        console.log(__baseUrl());
     }
 
     // view update
@@ -97,6 +110,7 @@
         // update feedback with f,i
 //            console.log('x=' + x + ', y=' + y + ' in window w=' + $(window).width() + ', h=' + $(window).height()  + ' will update view to f=' + f + ', i=' + i);
         // TODO: send grain of data to host
+        __storeFeedback(f,i);
         __updateView(f, i);
     }
 
@@ -108,6 +122,30 @@
 
     function __feedbackExit(f) {
         __feedbackIsTouching = false;
+    }
+
+    // track current feedback state
+    __feedbackCurrentFeeling = 0;
+    __feedbackCurrentIntensity = 0;
+    function __storeFeedback(f,i) {
+        __feedbackCurrentFeeling = f;
+        __feedbackCurrentIntensity = i;
+    }
+
+    // send current feedback state to host
+    function __feedbackSendToHost() {
+        $.post({
+            type: 'POST',
+            url: __baseUrl + 'post.html',
+            data: data,
+            success: success,
+            dataType: dataType
+        });
+    }
+
+    // http
+    function __baseUrl() {
+        return 'http://' + document.location.hostname + '/';
     }
 
     // utilities
