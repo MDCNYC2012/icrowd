@@ -17,27 +17,27 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 
 - (BOOL)supportsMethod:(NSString *)method atPath:(NSString *)path
 {
-	HTTPLogTrace();
-	
-	// Add support for POST
-	
+	// Add support for POST	
 	if ([method isEqualToString:@"POST"])
 	{
-		if ([path isEqualToString:@"/post.html"])
+		if ([path isEqualToString:@"/hello"])
 		{
 			// Let's be extra cautious, and make sure the upload isn't 5 gigs
-			omLogDev(@"BAM. supports method %@ at path %@", method, path);
+            omLogDev(@"will accept payload of size %i",requestContentLength);
 			return requestContentLength < 50;
 		}
-	}
-	
+		if ([path isEqualToString:@"/grain"])
+		{
+			// Let's be extra cautious, and make sure the upload isn't 5 gigs
+            omLogDev(@"will accept payload of size %i",requestContentLength);
+			return requestContentLength < 50;
+		}
+	}	
 	return [super supportsMethod:method atPath:path];
 }
 
 - (BOOL)expectsRequestBodyFromMethod:(NSString *)method atPath:(NSString *)path
-{
-	HTTPLogTrace();
-	
+{	
 	// Inform HTTP server that we expect a body to accompany a POST request
 	
 	if([method isEqualToString:@"POST"])
@@ -50,11 +50,46 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 
 - (NSObject<HTTPResponse> *)httpResponseForMethod:(NSString *)method URI:(NSString *)path
 {
-	HTTPLogTrace();
-	
-	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/post.html"])
+    /**
+     *  HELLO new USER
+     */
+	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/hello"])
 	{
-		omLogDev(@"%@[%p]: postContentLength: %qu", THIS_FILE, self, requestContentLength);
+		omLogDev(@"POST HELLO NEW USER\n%@[%p]: postContentLength: %qu", THIS_FILE, self, requestContentLength);
+		
+		NSString *postStr = nil;
+		
+		NSData *postData = [request body];
+		if (postData)
+		{
+			postStr = [[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding];
+		}
+		
+		omLogDev(@"%@[%p]: postStr: %@", THIS_FILE, self, postStr);
+		
+		// Result will be of the form "answer=..."
+		
+		int answer = [[postStr substringFromIndex:7] intValue];
+		
+		NSData *response = nil;
+		if(answer == 10)
+		{
+			response = [@"<html><body>Correct<body></html>" dataUsingEncoding:NSUTF8StringEncoding];
+		}
+		else
+		{
+			response = [@"<html><body>Sorry - Try Again<body></html>" dataUsingEncoding:NSUTF8StringEncoding];
+		}
+		
+		return [[HTTPDataResponse alloc] initWithData:response];
+	}  	
+    
+    /*
+     *  POST a GRAIN
+     */
+	if ([method isEqualToString:@"POST"] && [path isEqualToString:@"/grain"])
+	{
+		omLogDev(@"POST GRAIN\n%@[%p]: postContentLength: %qu", THIS_FILE, self, requestContentLength);
 		
 		NSString *postStr = nil;
 		
@@ -82,6 +117,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 		
 		return [[HTTPDataResponse alloc] initWithData:response];
 	}
+    
 	
 	return [super httpResponseForMethod:method URI:path];
 }

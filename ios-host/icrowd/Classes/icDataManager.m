@@ -37,7 +37,7 @@ static id __instance;
  */
 #pragma TARGET model
 
-@synthesize targetArray = _targetArray;
+@synthesize userArray = _userArray;
 
 -(NSMutableArray *) targetReadAll
 {
@@ -68,16 +68,13 @@ static id __instance;
     return mutableFetchResults;
 }
 
--(omTarget *) targetInitNew;
+-(icUser *) userCreateNew;
 {
-    omTarget * target = (omTarget *)[NSEntityDescription insertNewObjectForEntityForName:@"Target" inManagedObjectContext:self.managedObjectContext];
-    return target;
-}
-
--(BOOL) targetSave: (omTarget *) target
-{
-    omLogDev(@"Saving %@",target);
-    return [self save];
+    icUser * user = (icUser *)[NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+    if ([self save])
+        return user;
+    else
+        return nil;
 }
 
 #pragma mark - Core Data stack
@@ -140,7 +137,7 @@ static id __instance;
     /*
     omLogDev(@"Managed Object Model: %@",__managedObjectModel);
      NSString *logAll = @"Managed Object Model Entities:\n";
-     for ( omTarget *target in __managedObjectModel.entities)
+     for ( icUser *target in __managedObjectModel.entities)
      logAll = [logAll stringByAppendingFormat: @"%@\n", target];
      omLogDev(logAll);
      */

@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 #pragma mark classes
-@class omTarget;
+@class icUser;
 
 #pragma mark interface
 @interface icDataManager : NSObject
@@ -24,10 +24,9 @@
 +(icDataManager *) singleton;
 
 #pragma TARGET model
-@property (nonatomic, retain) NSMutableArray *targetArray; 
--(NSMutableArray *) targetReadAll;
--(omTarget *) targetInitNew;
--(BOOL) targetSave: (omTarget *) target;
+@property (nonatomic, retain) NSMutableArray *userArray; 
+-(NSMutableArray *) userReadAll;
+-(icUser *) userCreateNew;
 
 #pragma mark core data stack
 -(BOOL) save;
