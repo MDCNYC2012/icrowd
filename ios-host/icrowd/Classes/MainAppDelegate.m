@@ -122,7 +122,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     
     // init tab bar controller
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:navOneController, navTwoController, navThreeController, /* navFourController, */ nil];
+    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:
+                                             navOneController,
+                                             navTwoController, 
+                                             // navThreeController,
+                                             // navFourController,
+                                             nil];
     self.window.rootViewController = self.tabBarController;
     //    self.tabBarController.delegate = self.singleton;
     

@@ -40,7 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView setRowHeight:25];
+    [self.tableView setRowHeight:30];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -105,16 +105,15 @@
     
     // if we have a most recent grain, use it to set the color of the person's cell.
     if ([user.grain count]>=1) {
-        icGrain * grain = [[user.grain allObjects] objectAtIndex:([user.grain count]-1)];
+        icGrain * grain = [user.sortedGrains objectAtIndex:([user.sortedGrains count]-1)];
         float green = [grain.feeling floatValue] + 1;
-        if (1>green) green=1;
+        if (1<green) green=1;
         float red = 1 - [grain.feeling floatValue];
-        if (1>red) red=1;
+        if (1<red) red=1;
         green *= [grain.intensity floatValue];
         red *= [grain.intensity floatValue];
         brief = [[NSString alloc] initWithFormat:@"%i grains from %@ yr %@",[user.grain count],user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];
         cell.contentView.backgroundColor = [UIColor colorWithRed:red green:green blue:0.f alpha:1.f]; 
-        
     // white cell bg
     } else {        
         brief = [[NSString alloc] initWithFormat:@"%@ yr %@",user.age,([user.gender isEqualToNumber:[[NSNumber alloc] initWithInt:1]]?@"Female":@"Male")];        

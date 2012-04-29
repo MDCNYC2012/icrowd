@@ -80,7 +80,7 @@
     [super viewDidLoad];
         
     // navigation button: flush database
-    UIBarButtonItem *flushButton = [[UIBarButtonItem alloc] initWithTitle:@"Flush Database" style:UIBarButtonItemStylePlain target:self action:@selector(flushWasPressed:)];
+    UIBarButtonItem *flushButton = [[UIBarButtonItem alloc] initWithTitle:@"Flush Cloud" style:UIBarButtonItemStylePlain target:self action:@selector(flushWasPressed:)];
     self.navigationItem.leftBarButtonItem = flushButton;
     
     // get ip address and set it up

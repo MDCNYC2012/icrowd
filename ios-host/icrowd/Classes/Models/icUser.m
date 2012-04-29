@@ -17,5 +17,12 @@
 @dynamic idx;
 @dynamic name;
 @dynamic grain;
+@synthesize sortedGrains=_sortedGrains;
+
+-(NSArray *)sortedGrains
+{
+    NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    return [self.grain sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+}
 
 @end

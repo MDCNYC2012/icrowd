@@ -18,6 +18,8 @@
 @property (nonatomic, retain) NSNumber * idx;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *grain;
+@property (nonatomic, retain) NSArray *sortedGrains;
+
 @end
 
 @interface icUser (CoreDataGeneratedAccessors)
