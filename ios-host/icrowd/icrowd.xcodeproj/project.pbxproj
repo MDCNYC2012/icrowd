@@ -28,6 +28,8 @@
 		01ED6C4B154CDB3E00DBF6BD /* icHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C4A154CDB3E00DBF6BD /* icHTTPServer.m */; };
 		01ED6C5A154CFDEC00DBF6BD /* NSString+URLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C57154CFDEC00DBF6BD /* NSString+URLUtils.m */; };
 		01ED6C5B154CFDEC00DBF6BD /* NSURL+URLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C59154CFDEC00DBF6BD /* NSURL+URLUtils.m */; };
+		01ED6C62154D0D2000DBF6BD /* icNetstatUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED6C60154D0D2000DBF6BD /* icNetstatUserTableViewController.m */; };
+		01ED6C63154D0D2000DBF6BD /* icNetstatUserTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C61154D0D2000DBF6BD /* icNetstatUserTableViewController.xib */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -95,6 +97,9 @@
 		01ED6C58154CFDEC00DBF6BD /* NSURL+URLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+URLUtils.h"; sourceTree = "<group>"; };
 		01ED6C59154CFDEC00DBF6BD /* NSURL+URLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+URLUtils.m"; sourceTree = "<group>"; };
 		01ED6C5E154D032300DBF6BD /* icrowd_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icrowd_Prefix.pch; path = Resources/icrowd_Prefix.pch; sourceTree = "<group>"; };
+		01ED6C5F154D0D2000DBF6BD /* icNetstatUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icNetstatUserTableViewController.h; sourceTree = "<group>"; };
+		01ED6C60154D0D2000DBF6BD /* icNetstatUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icNetstatUserTableViewController.m; sourceTree = "<group>"; };
+		01ED6C61154D0D2000DBF6BD /* icNetstatUserTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = icNetstatUserTableViewController.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* icrowd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icrowd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -178,6 +183,9 @@
 				01CD3316154CB444000B5E7E /* icNetstatViewController.h */,
 				01CD3317154CB444000B5E7E /* icNetstatViewController.m */,
 				01ED6C2B154CC3B000DBF6BD /* icNetstatViewController.xib */,
+				01ED6C5F154D0D2000DBF6BD /* icNetstatUserTableViewController.h */,
+				01ED6C60154D0D2000DBF6BD /* icNetstatUserTableViewController.m */,
+				01ED6C61154D0D2000DBF6BD /* icNetstatUserTableViewController.xib */,
 				01CD331B154CB462000B5E7E /* icReportDashboardViewController.h */,
 				01CD331C154CB462000B5E7E /* icReportDashboardViewController.m */,
 				01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */,
@@ -457,6 +465,7 @@
 				01ED6C3A154CCB9C00DBF6BD /* tabBarIcon-Cloud@2x.png in Resources */,
 				01ED6C3C154CD64F00DBF6BD /* icrowdIcon@2x.png in Resources */,
 				01ED6C3E154CD65100DBF6BD /* icrowdIcon.png in Resources */,
+				01ED6C63154D0D2000DBF6BD /* icNetstatUserTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +511,7 @@
 				01ED6C4B154CDB3E00DBF6BD /* icHTTPServer.m in Sources */,
 				01ED6C5A154CFDEC00DBF6BD /* NSString+URLUtils.m in Sources */,
 				01ED6C5B154CFDEC00DBF6BD /* NSURL+URLUtils.m in Sources */,
+				01ED6C62154D0D2000DBF6BD /* icNetstatUserTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

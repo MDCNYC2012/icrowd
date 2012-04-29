@@ -7,6 +7,7 @@
 //
 
 #import "icNetstatViewController.h"
+#import "icNetstatUserTableViewController.h"
 
 @interface icNetstatViewController ()
 
@@ -27,6 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    icNetstatUserTableViewController * viewController = [[icNetstatUserTableViewController alloc]init];
+    [self addChildViewController:viewController];
+    [self setView:viewController.tableView];
     // Do any additional setup after loading the view from its nib.
 }
 
