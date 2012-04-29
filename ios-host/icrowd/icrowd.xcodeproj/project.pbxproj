@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* iPhoneHTTPServerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iPhoneHTTPServerAppDelegate.m */; };
+		01CD3319154CB444000B5E7E /* icNetstatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD3317154CB444000B5E7E /* icNetstatViewController.m */; };
+		01CD331E154CB462000B5E7E /* icReportDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD331C154CB462000B5E7E /* icReportDashboardViewController.m */; };
+		01CD3326154CB5AE000B5E7E /* icDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD3325154CB5AE000B5E7E /* icDataManager.m */; };
+		01CD332A154CB6BC000B5E7E /* icrowd.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01CD3328154CB6BC000B5E7E /* icrowd.xcdatamodeld */; };
+		01CD3334154CB8F0000B5E7E /* icUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD3333154CB8F0000B5E7E /* icUser.m */; };
+		01CD333A154CB90D000B5E7E /* icGrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD3339154CB90D000B5E7E /* icGrain.m */; };
+		01CD333D154CBA91000B5E7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD333B154CBA7B000B5E7E /* CoreData.framework */; };
+		01CD3340154CBD42000B5E7E /* MainAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD333F154CBD42000B5E7E /* MainAppDelegate.m */; };
+		01ED6C2C154CC3B000DBF6BD /* icNetstatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C2B154CC3B000DBF6BD /* icNetstatViewController.xib */; };
+		01ED6C2E154CC42B00DBF6BD /* icReportDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		2899E5220DE3E06400AC0155 /* iPhoneHTTPServerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* iPhoneHTTPServerViewController.xib */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		28D7ACF80DDB3853001CB0EB /* iPhoneHTTPServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iPhoneHTTPServerViewController.m */; };
+		28D7ACF80DDB3853001CB0EB /* icViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* icViewController.m */; };
 		DC372EFE139DC2E600A8407D /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC372EE2139DC2E600A8407D /* DDData.m */; };
 		DC372EFF139DC2E600A8407D /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DC372EE4139DC2E600A8407D /* DDNumber.m */; };
 		DC372F00139DC2E600A8407D /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = DC372EE6139DC2E600A8407D /* DDRange.m */; };
@@ -43,16 +50,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01CD3316154CB444000B5E7E /* icNetstatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icNetstatViewController.h; sourceTree = "<group>"; };
+		01CD3317154CB444000B5E7E /* icNetstatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icNetstatViewController.m; sourceTree = "<group>"; };
+		01CD331B154CB462000B5E7E /* icReportDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icReportDashboardViewController.h; sourceTree = "<group>"; };
+		01CD331C154CB462000B5E7E /* icReportDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icReportDashboardViewController.m; sourceTree = "<group>"; };
+		01CD3324154CB5AE000B5E7E /* icDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icDataManager.h; sourceTree = "<group>"; };
+		01CD3325154CB5AE000B5E7E /* icDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icDataManager.m; sourceTree = "<group>"; };
+		01CD3327154CB681000B5E7E /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		01CD3329154CB6BC000B5E7E /* icrowd.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = icrowd.xcdatamodel; sourceTree = "<group>"; };
+		01CD3332154CB8F0000B5E7E /* icUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icUser.h; sourceTree = "<group>"; };
+		01CD3333154CB8F0000B5E7E /* icUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icUser.m; sourceTree = "<group>"; };
+		01CD3338154CB90D000B5E7E /* icGrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icGrain.h; sourceTree = "<group>"; };
+		01CD3339154CB90D000B5E7E /* icGrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icGrain.m; sourceTree = "<group>"; };
+		01CD333B154CBA7B000B5E7E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		01CD333E154CBD42000B5E7E /* MainAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainAppDelegate.h; sourceTree = "<group>"; };
+		01CD333F154CBD42000B5E7E /* MainAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainAppDelegate.m; sourceTree = "<group>"; };
+		01ED6C2B154CC3B000DBF6BD /* icNetstatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = icNetstatViewController.xib; sourceTree = "<group>"; };
+		01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = icReportDashboardViewController.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* iPhoneHTTPServerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneHTTPServerAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* iPhoneHTTPServerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneHTTPServerAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* icrowd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icrowd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* iPhoneHTTPServerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iPhoneHTTPServerViewController.xib; sourceTree = "<group>"; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28D7ACF60DDB3853001CB0EB /* iPhoneHTTPServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneHTTPServerViewController.h; sourceTree = "<group>"; };
-		28D7ACF70DDB3853001CB0EB /* iPhoneHTTPServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneHTTPServerViewController.m; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* icViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* icViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* icrowd_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icrowd_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* icrowd-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "icrowd-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -112,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC3699E1538F08B004C5FA7 /* Security.framework in Frameworks */,
+				01CD333D154CBA91000B5E7E /* CoreData.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -122,13 +143,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01CD3313154CB3C7000B5E7E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28D7ACF60DDB3853001CB0EB /* icViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* icViewController.m */,
+				01CD3316154CB444000B5E7E /* icNetstatViewController.h */,
+				01CD3317154CB444000B5E7E /* icNetstatViewController.m */,
+				01ED6C2B154CC3B000DBF6BD /* icNetstatViewController.xib */,
+				01CD331B154CB462000B5E7E /* icReportDashboardViewController.h */,
+				01CD331C154CB462000B5E7E /* icReportDashboardViewController.m */,
+				01ED6C2D154CC42B00DBF6BD /* icReportDashboardViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		01CD332B154CB81C000B5E7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01CD3332154CB8F0000B5E7E /* icUser.h */,
+				01CD3333154CB8F0000B5E7E /* icUser.m */,
+				01CD3338154CB90D000B5E7E /* icGrain.h */,
+				01CD3339154CB90D000B5E7E /* icGrain.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* iPhoneHTTPServerAppDelegate.h */,
-				1D3623250D0F684500981E51 /* iPhoneHTTPServerAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* iPhoneHTTPServerViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* iPhoneHTTPServerViewController.m */,
+				01CD332B154CB81C000B5E7E /* Models */,
+				01CD3313154CB3C7000B5E7E /* ViewControllers */,
+				01CD3324154CB5AE000B5E7E /* icDataManager.h */,
+				01CD3325154CB5AE000B5E7E /* icDataManager.m */,
+				01CD333E154CBD42000B5E7E /* MainAppDelegate.h */,
+				01CD333F154CBD42000B5E7E /* MainAppDelegate.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -148,7 +197,7 @@
 				DC5406DD129F5CA300195140 /* TCP */,
 				DC5406E7129F5CD100195140 /* HTTP */,
 				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97315FDCFA39411CA2CEA /* Supporting Files */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -156,22 +205,22 @@
 			name = CustomTemplate;
 			sourceTree = "<group>";
 		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+		29B97315FDCFA39411CA2CEA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				01CD3327154CB681000B5E7E /* global.h */,
 				32CA4F630368D1EE00C91783 /* icrowd_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
-			name = "Other Sources";
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2899E5210DE3E06400AC0155 /* iPhoneHTTPServerViewController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* icrowd-Info.plist */,
 				DC54077E129F638200195140 /* Web */,
+				01CD3328154CB6BC000B5E7E /* icrowd.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -179,6 +228,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01CD333B154CBA7B000B5E7E /* CoreData.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
@@ -330,10 +380,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				2899E5220DE3E06400AC0155 /* iPhoneHTTPServerViewController.xib in Resources */,
 				DC540781129F638200195140 /* Web in Resources */,
 				DCC369BA1538F0B1004C5FA7 /* README.txt in Resources */,
+				01ED6C2C154CC3B000DBF6BD /* icNetstatViewController.xib in Resources */,
+				01ED6C2E154CC42B00DBF6BD /* icReportDashboardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,8 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* iPhoneHTTPServerAppDelegate.m in Sources */,
-				28D7ACF80DDB3853001CB0EB /* iPhoneHTTPServerViewController.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* icViewController.m in Sources */,
 				DC5406E0129F5CB700195140 /* GCDAsyncSocket.m in Sources */,
 				DC372EFE139DC2E600A8407D /* DDData.m in Sources */,
 				DC372EFF139DC2E600A8407D /* DDNumber.m in Sources */,
@@ -368,6 +417,13 @@
 				DCC369B71538F0B1004C5FA7 /* DDTTYLogger.m in Sources */,
 				DCC369B81538F0B1004C5FA7 /* ContextFilterLogFormatter.m in Sources */,
 				DCC369B91538F0B1004C5FA7 /* DispatchQueueLogFormatter.m in Sources */,
+				01CD3319154CB444000B5E7E /* icNetstatViewController.m in Sources */,
+				01CD331E154CB462000B5E7E /* icReportDashboardViewController.m in Sources */,
+				01CD3326154CB5AE000B5E7E /* icDataManager.m in Sources */,
+				01CD332A154CB6BC000B5E7E /* icrowd.xcdatamodeld in Sources */,
+				01CD3334154CB8F0000B5E7E /* icUser.m in Sources */,
+				01CD333A154CB90D000B5E7E /* icGrain.m in Sources */,
+				01CD3340154CBD42000B5E7E /* MainAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +520,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		01CD3328154CB6BC000B5E7E /* icrowd.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				01CD3329154CB6BC000B5E7E /* icrowd.xcdatamodel */,
+			);
+			currentVersion = 01CD3329154CB6BC000B5E7E /* icrowd.xcdatamodel */;
+			name = icrowd.xcdatamodeld;
+			path = Resources/icrowd.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }
