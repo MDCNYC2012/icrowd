@@ -11,23 +11,35 @@
         // initialize
         init:function () {
             __initView();
-            __initFeedback();
+//            __initFeedback();
+            __initUser();
         },
 
         // handle mouse motion
         touchDidMove:function (e) {
             // if not currently touching, do nothing
             if (!__feedbackIsTouching) return;
-            __updateFeedback(e.pageX, e.pageY);
+            __feedbackUpdate(e.pageX, e.pageY);
         },
 
         // handle mouse touch / exit
         touchDidStart:function (e) {
-            __updateFeedback(e.pageX, e.pageY);
+            __feedbackUpdate(e.pageX, e.pageY);
             __feedbackTouch();
         },
         touchDidStop:function (e) {
             __feedbackExit();
+        },
+
+        // user
+        userId:function () {
+            return __userId;
+        },
+
+        // user hello receive response
+        userHelloRecv:function (p) {
+            // TODO: parse payload and save user id
+            console.log("received payload for user hello response",p);
         },
 
         // report if feedback is touching
@@ -54,7 +66,6 @@
 
         // view initialization
     function __initView() {
-        console.log(__baseUrl());
     }
 
     // view update
@@ -74,6 +85,24 @@
         $("#mainColorBlock").css({
             backgroundColor:colorstring
         });
+    }
+
+    var __userId;
+    // user initialization
+    function __initUser() {
+        // TODO: set user id assign from host during hello method
+        __userId = 5;
+    }
+
+    // send current feedback state to host
+    function __userHelloSend(data) {
+        $.ajax({
+            type:'POST',
+            url:__baseUrl() + 'hello',
+            data:data
+        }).done(function (data) {
+                $.icrowd.userHelloRecv(data);
+            });
     }
 
     // feedback initialization
@@ -107,15 +136,15 @@
     }
 
     // feedback update
-    function __updateFeedback(x, y) {
+    function __feedbackUpdate(x, y) {
         // feedback f = range -1 (i hate it) to 0 (indifferent) to +1 (i love it)
         var f = ( ( x / $(window).width() ) - .5 ) * 2;
         // intensity from 0 (indifferent) to 1 (intense)
         var i = 1 - ( y / $(window).height() );
-        // update feedback with f,i
 //            console.log('x=' + x + ', y=' + y + ' in window w=' + $(window).width() + ', h=' + $(window).height()  + ' will update view to f=' + f + ', i=' + i);
-        // TODO: send grain of data to host
+        // send grain of data to host
         __storeFeedback(f, i);
+        // update the view
         __updateView(f, i);
     }
 
@@ -143,8 +172,9 @@
     function __feedbackSendToHost() {
         $.ajax({
             type:'POST',
-            url:__baseUrl() + 'post.html',
+            url:__baseUrl() + 'grain',
             data:{
+                u:__userId,
                 f:__feedbackCurrentFeeling,
                 i:__feedbackCurrentIntensity
             }
