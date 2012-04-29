@@ -43,20 +43,21 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     // init window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // create VCs
-    // #warning TODO link these tabs to the root nibs of "Set Targets" and "Go To There" tabs respectively.
-    UIViewController *tabOneController = [[icNetstatViewController alloc] initWithNibName:@"icNetstatViewController" bundle:nil];
+    // init navigation controller for "cloud" tab
+    UIViewController *viewOneController = [[icNetstatViewController alloc] initWithNibName:@"icNetstatViewController" bundle:nil];
+    UINavigationController * navOneController = [[UINavigationController alloc] init];
+    [navOneController.navigationBar setBarStyle:UIBarStyleBlack];
+    [navOneController pushViewController: viewOneController animated:NO];
     
-    // init navigation controller for "Set Targets" tab, and push the root view into it
-    //    UINavigationController * tabOneController = [[UINavigationController alloc] init];
-    //    [tabOneController pushViewController: viewController1 animated:NO];
-    
-    // init view controller for "Go To There" tab
-    UIViewController * tabTwoController = [[icReportDashboardViewController alloc] initWithNibName:@"icReportDashboardViewController" bundle:nil];    
-    
-    // init tab bar controllers
+    // init navigation controller for "dashboard" tab
+    UIViewController *viewTwoController = [[icReportDashboardViewController alloc] initWithNibName:@"icReportDashboardViewController" bundle:nil];    
+    UINavigationController * navTwoController = [[UINavigationController alloc] init];
+    [navTwoController.navigationBar setBarStyle:UIBarStyleBlack];
+    [navTwoController pushViewController: viewTwoController animated:NO];
+        
+    // init tab bar controller
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:tabOneController, tabTwoController,nil];
+    self.tabBarController.viewControllers = [[NSMutableArray alloc] initWithObjects:navOneController, navTwoController,nil];
     self.window.rootViewController = self.tabBarController;
     //    self.tabBarController.delegate = self.singleton;
     

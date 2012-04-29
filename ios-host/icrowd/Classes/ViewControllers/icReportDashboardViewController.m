@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Dashboard", @"Dashboard");
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-Dashboard"];
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-Chart"];
     }
     return self;
 }

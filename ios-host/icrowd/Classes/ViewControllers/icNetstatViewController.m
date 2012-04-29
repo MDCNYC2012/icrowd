@@ -18,8 +18,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Dashboard", @"Dashboard");
-        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-Dashboard"];
+        self.title = NSLocalizedString(@"Cloud Status", @"Cloud Status");
+        self.tabBarItem.image = [UIImage imageNamed:@"tabBarIcon-Cloud"]; 
     }
     return self;
 }
